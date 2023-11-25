@@ -1,0 +1,396 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+#fakeHeight {
+	width: 100%;
+	height: 3500px;
+	background: var(--bg-body);
+}
+
+
+:root {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-smooth: never;
+
+	font-size: 62.5%;
+
+	--ff-body: 'Mulish', sans-serif;
+	--ff-heading: 'Jost', sans-serif;
+
+	/* Font Size */
+	--fs-xxl: 4.6rem;
+	--fs-xl: 3.2rem;
+	--fs-l: 2.4rem;
+
+	--fs-16: 1.6rem;
+	--fs-15: 1.5rem;
+	--fs-14: 1.4rem;
+	--fs-13: 1.3rem;
+	--fs-12: 1.2rem;
+	--fs-11: 1.1rem;
+	--fs-10: 1rem;
+
+	--fw-regular: 400;
+	--fw-medium: 500;
+	--fw-semi-bold: 600;
+	--fw-bold: 700;
+
+
+	/* ===== Colors ===== */
+
+	/* Primary | Secondary | Tertiary */
+	--primary-1: #10002B;
+	--primary-2: #240046;
+	--primary-3: #3C096C;
+	--primary-4: #5A189A;
+	--primary-5: #7121C2;
+	--primary-6: #7B2CBF;
+	--secondary: #D96F04;
+	--tertiary: #70BF2B;
+
+	/* Others */
+	--search-text: #979DAC;
+	--section-border: rgba(16, 0, 43, 0.1);
+
+	/* Gradients */
+	--gradient-default: linear-gradient(90deg, #7000FF -4.07%, #FF9B05 129.29%);
+	--gradient-transparent: linear-gradient(90deg, rgba(112, 0, 255, 0.50) -4.07%, rgba(255, 155, 5, 0.50) 129.29%);
+	--gradient-hero-text: linear-gradient(278deg, #3C096C 22.63%, #621CA3 95.05%);
+	--gradient-hero-shape-bg: linear-gradient(180deg, rgba(149, 116, 221, 0.40) 0%, rgba(149, 116, 221, 0.00) 100%);
+
+	/* Backgrounds */
+	--bg-hero: linear-gradient(180deg, #FFF 0%, #EFE9F6 100%);
+	--bg-body: linear-gradient(180deg, #EFE9F6 0%, #FFF 100%);
+	--bg-footer: linear-gradient(180deg, #FFF -12.35%, #EFE9F6 100%);
+
+	/* Body Text */
+	--body: rgba(16, 0, 43, 1);
+	--body-90: rgba(16, 0, 43, 0.8);
+	--body-80: rgba(16, 0, 43, 0.8);
+
+	/* Whites */
+	--white: rgba(255, 255, 255, 1);
+	--white-80: rgba(255, 255, 255, 0.8);
+	--white-50: rgba(255, 255, 255, 0.5);
+	--white-40: rgba(255, 255, 255, 0.4);
+}
+
+
+
+body {
+	font-size: 1.6rem;
+	font-family: var(--ff-heading);
+}
+
+body header {
+	display: flex;
+	padding: 4.8rem 16rem;
+	justify-content: space-between;
+	align-items: center;
+}
+
+body nav {
+	display: flex;
+	padding: 0rem 2rem;
+	justify-content: center;
+	align-items: center;
+	gap: 4.8rem;
+}
+
+body nav * {
+	color: var(--primary-1);
+	font-size: var(--fs-13);
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	letter-spacing: 0.24rem;
+	text-transform: uppercase;
+}
+
+body nav svg {
+	fill: var(--primary-1);
+}
+
+#headerHero {
+	background: var(--bg-hero);
+}
+
+h1 {
+	font-size: 4.6rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 180%; /* 8.28rem */
+	letter-spacing: 0.4rem;
+	margin: 0;
+	background: var(--gradient-hero-text);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+h1.small {
+	font-size: 3.2rem;
+	font-weight: 400;
+	letter-spacing: 0.24rem;
+}
+
+h1.small span {
+	font-weight: 700;
+}
+
+
+#heroSection {
+	display: flex;
+	flex-flow: row;
+	justify-content: space-evenly;
+	align-items: center;
+	position: relative;
+	padding-top: 9px;
+	padding-bottom: 102px;
+
+	background: url(../img/gradient/hero_bg.svg);
+	background-repeat: no-repeat;
+	background-size: initial;
+  background-origin: border-box;
+  background-position: bottom right;
+}
+
+#heroSection .left {
+/*	position: relative;
+	z-index: 1;*/
+	max-width: 540px;
+	display: flex;
+	flex-flow: column;
+	gap: 3rem;
+	transform: translateY(15px);
+}
+
+#heroSection .heroSearch{
+	display: flex;
+	padding: 1.6rem 3.2rem;
+	align-items: center;
+	gap: 1.6rem;
+	align-self: stretch;
+	background: linear-gradient(#F8F5FB, #F8F5FB) padding-box, var(--gradient-transparent) border-box;
+	border: 2px solid transparent;
+	border-radius: 10rem;
+}
+
+#heroSection .heroSearch svg {
+	fill: var(--secondary);
+}
+
+#heroSection .heroSearch input {
+	width: 100%;
+	padding: 0;
+	background: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+#heroSection .heroSearch input::placeholder {
+	color: var(--search-text);
+	font-size: 1.4rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	letter-spacing: 0.24rem;
+	text-transform: uppercase;
+}
+
+#heroSection .right {
+	max-width: 680px;
+/*	position: relative;
+	z-index: 1;*/
+}
+
+#heroSection .right #playContainer {
+	display: flex;
+	flex-flow: row;
+	align-items: center;
+	margin-bottom: 15px;
+	transform: translateX(-15px);
+}
+
+#circleProgressContainer {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+#playButton {
+	fill: #3C096C;
+	position: absolute;
+	top: 23px;
+	left: 23px;
+	z-index: 1;
+}
+
+svg#circleProgress {	
+	transform:rotate(-90deg);
+	position: relative;
+	z-index: 1;
+/*	width: 40px;
+	height: 40px;*/
+/*	filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));*/
+}
+
+#circleProgress .default {
+	fill: var(--white);
+	stroke: #e0e0e0;
+	stroke-width: 2;
+	stroke-dasharray: 157;
+	stroke-dashoffset: 0;
+}
+
+#circleProgress .progress {
+	fill: transparent;
+	stroke: var(--tertiary);
+	stroke-width: 2;
+	stroke-linecap: round;
+	stroke-dasharray: 157;
+	stroke-dashoffset: 157;
+}
+#circleProgress .progress.active {
+	animation: circleProgressBar 10s linear forwards infinite;
+}
+@keyframes circleProgressBar {
+    from {
+    stroke-dashoffset: 157;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+#playContainer span.stepCount {
+	display: inline-flex;
+	padding: 0.4rem 1.4rem 0.4rem 1.8rem;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	border-radius: 0rem 0.8rem 0.8rem 0rem;
+	background: #F6F2FC;
+
+	color: var(--primary-6);
+	font-size: var(--fs-13);
+	font-weight: var(--fw-semi-bold);
+	letter-spacing: 0.24rem;
+	text-transform: uppercase;
+	height: fit-content;
+
+	transform: translateX(-20px);
+  z-index: 0;
+}
+
+#playContainer span.stepCount span.running {
+	transition: all .2s ease;
+	animation: stepCountAnimate 10s linear infinite;
+}
+@keyframes stepCountAnimate {
+  0% {
+		transform: translateX(-20px);
+/*		opacity: 0;*/
+
+	}
+	5%, 100% {
+		transform: translateX(0px);
+/*		opacity: 1;*/
+	}
+}
+
+#heroSteps {
+	display: flex;
+	flex-flow: row wrap;
+	gap: 40px;
+}
+
+/*[class^="step-"] */
+
+#heroSteps .step {
+	position: relative;
+	z-index: 1;
+	background: lightgrey;
+	min-width: 32rem;
+	padding: 22px 32px;
+	border-radius: 1.6rem;
+	border: 2px solid rgba(255, 255, 255, .5);
+	border-right: 2px solid rgba(255, 255, 255, .24);
+	border-bottom: 2px solid rgba(255, 255, 255, .24);
+	background: linear-gradient(105deg, rgba(255, 255, 255, 0.40) 16.65%, rgba(255, 255, 255, 0.10) 79.09%);
+/*	background: 
+		linear-gradient(105deg, rgba(255, 255, 255, 0.40) 16.65%, rgba(255, 255, 255, 0.10) 79.09%) padding-box, 
+		linear-gradient(104deg, rgba(255, 255, 255, 0.50) 21.51%, rgba(255, 255, 255, 0.00) 51.06%, rgba(255, 255, 255, 0.00) 75.75%, rgba(255, 255, 255, 0.24) 93.33%) border-box;
+*/
+/*	Black Transparent Border */
+	box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.10);
+	/*	Pink Transparent Border */
+/*	box-shadow: 0px 4px 8px 0px rgba(23, 14, 65, 0.10);*/
+/*	backdrop-filter: blur(10px);*/
+	backdrop-filter: blur(20px);
+}
+
+#heroSteps .step svg.heroIcon {
+	display: block;
+	fill: var(--secondary);
+	transition: all .5s 0s ease;
+}
+
+#heroSteps .step.active svg.heroIcon {
+	transform: translateX(-54px);
+	transition: all .5s 0s ease;
+}
+
+
+#heroSteps .step h4 {
+	color: var(--primary-1, #10002B);
+	font-size: var(--fs-16);
+	font-weight: var(--fw-semi-bold);
+	letter-spacing: 0.24rem;
+	text-transform: uppercase;
+	margin: 2rem 0 0;
+	transition: all .5s 0s ease;
+}
+
+#heroSteps .step.active h4 {
+	transform: translateY(-50px);
+	transition: all .5s 0s ease;
+}
+
+#heroSteps .step p.content {
+	opacity: 0;
+	max-width: 265px;
+	position: absolute;
+	left: 34px;
+	bottom: 0px;
+
+	color: rgba(16, 0, 43, 0.84);
+	font-family: var(--ff-body);
+	font-size: var(--fs-14);
+	font-style: normal;
+	font-weight: var(--fw-normal);;
+	line-height: 140%;
+	transition: all .2s 0s ease;
+}
+
+#heroSteps .step.active p.content {
+	opacity: 1;
+	transform: translateY(-20px);
+	transition: all .5s .3s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
