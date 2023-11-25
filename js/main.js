@@ -1,12 +1,17 @@
 function MorphedSVG(svgId, firstPath, secondPath, styleClass){
-  this.elem = document.getElementById(svgId);
+  
+  console.log("onClick");
+
+  this.elem = document.getElementById('play-svg-1');
   this.path = this.elem.getElementsByTagName('path')[0];
   this.anim = this.path.getElementsByTagName('animate')[0];
   this.animDur = parseFloat(this.anim.getAttribute('dur')) * 1000;
 
   this.originalPath = this.path.getAttribute('d');
-  this.firstPath = firstPath;
-  this.secondPath = secondPath;
+  // this.firstPath = firstPath;
+  this.firstPath = 'M11,8 L18,11.74 18,20.28 11,24 11,8   M18,11.74 L26,16 26,16 18,20.28 18,11.74';
+  // this.secondPath = secondPath;
+  this.secondPath = 'M9,8  L14,8     14,24    9,24  9,8    M19,8     L24,8  24,24 19,24    19,8';
   this.state = MorphedSVG.STATE_1;
   this.styleClass = styleClass;
 
@@ -40,7 +45,7 @@ MorphedSVG.prototype.toState = function(state){
   }
 }
 
-MorphedSVG.prototype.toggle = function(){
+MorphedSVG.prototype.toggle = function(state){
   this.toState(!this.state);
 }
 
@@ -67,21 +72,25 @@ MorphedSVG.prototype._resetOriginal = function(){
 const PLAY_PATH_1  = 'M11,8 L18,11.74 18,20.28 11,24 11,8   M18,11.74 L26,16 26,16 18,20.28 18,11.74',
       PAUSE_PATH_1 = 'M9,8  L14,8     14,24    9,24  9,8    M19,8     L24,8  24,24 19,24    19,8';
 
-var theButtonHor = new MorphedSVG(
-  'play-svg-1', PLAY_PATH_1, PAUSE_PATH_1
-);
+// var theButtonHor = new MorphedSVG(
+//   'play-svg-1', PLAY_PATH_1, PAUSE_PATH_1
+// );
 
-theButtonHor.elem.parentNode.addEventListener('click', function(){
-  this.toggle();
-}.bind(theButtonHor));
+// var theButtonHor = new MorphedSVG();
+
+// document.getElementById('play-svg-1').addEventListener('click', function(){
+//   console.log(this)
+//   this.toggle();
+// }.bind(theButtonHor));
 
 
 
+var playController = new MorphedSVG();
 
-// u('#playButton').on('click', function(e) {
-//   console
-//   this.toggle(true);
-// });
+
+u('#playButton').on('click', function(e) {
+  playController.toState(false);
+});
 
 
 
