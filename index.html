@@ -57,7 +57,19 @@
               <circle class="default" r="25" cx="35" cy="35"></circle>
               <circle class="progress" r="25" cx="35" cy="35"></circle>
             </svg>
-            <svg id="playButton" width="24" height="24" viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#play"></use></svg>
+            <!-- <svg id="playButton" width="24" height="24" viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#play"></use></svg> -->
+            <!-- <div id="play-button-container"> -->
+              <!-- <span class="play-button play-button-before"></span> -->
+              <!-- <span class="play-button play-button-after"></span> -->
+            <!-- </div> -->
+            <button id="playButton" class="unbuttonize">
+              <svg id='play-svg-1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'>
+                <path           d='M11,8 L26,16 11,24 11,8'>
+                  <animate attributeName='d' fill='freeze' dur='0.1s'
+                           calc-mode='spline' keySplines='0.19 1 0.22 1'/>
+                </path>
+              </svg>
+            </button>
           </div>
           <span class="stepCount"><span>Play</span></span>
         </div>

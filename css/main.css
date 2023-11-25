@@ -209,6 +209,7 @@ h1.small span {
 }
 
 #heroSection .right #playContainer {
+	position: relative;
 	display: flex;
 	flex-flow: row;
 	align-items: center;
@@ -222,13 +223,13 @@ h1.small span {
 	align-items: center;
 }
 
-#playButton {
+/*#playButton {
 	fill: #3C096C;
 	position: absolute;
 	top: 23px;
 	left: 23px;
 	z-index: 1;
-}
+}*/
 
 svg#circleProgress {	
 	transform:rotate(-90deg);
@@ -388,6 +389,64 @@ svg#circleProgress {
 
 
 
+/*
+  #play-button-container {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background: #009688;
+  }*/
+/* .play-button {
+    display: inline-block;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    transition: clip-path .3s ease;
+    background: #009688;
+  }
+  .play-button-before {
+    clip-path: polygon(0 0, 50% 25%, 50% 75%, 0% 100%);
+  }
+  .play-button-after {
+    clip-path: polygon(50% 25%, 100% 50%, 100% 50%, 50% 75%);
+  }
+  #playContainer:hover .play-button-before {
+    clip-path: polygon(0 0, 30% 0, 30% 100%, 0% 100%);
+  }
+  #playContainer:hover .play-button-after{
+    clip-path: polygon(70% 0, 100% 0, 100% 100%, 70% 100%)
+  }
+*/
+
+
+/*This removes styles added by default to button elements.
+  For when something should semantically be a button,
+  but isn't buttony in appearance.*/
+.unbuttonize {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  text-align: inherit;
+  font: inherit;
+  border-radius: 0;
+  appearance: none; // Just in case we missed anything.
+}
+
+#playButton {
+	width: 26px;
+	height: 26px;
+	fill: var(--primary-6);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: 1;
+}
 
 
 
