@@ -1,6 +1,4 @@
-function MorphedSVG(svgId, firstPath, secondPath, styleClass){
-  
-  console.log("onClick");
+function MorphedSVG(svgId, firstPath, secondPath, styleClass) {
 
   this.elem = document.getElementById('play-svg-1');
   this.path = this.elem.getElementsByTagName('path')[0];
@@ -23,7 +21,7 @@ MorphedSVG.STATE_2 = false;
 
 MorphedSVG.prototype.toState = function(state){
   if(state == this.state) return;
-  
+
   switch(state){
   case MorphedSVG.STATE_1:
     this._set(this.firstPath, this.secondPath, this.firstPath);
@@ -88,9 +86,9 @@ const PLAY_PATH_1  = 'M11,8 L18,11.74 18,20.28 11,24 11,8   M18,11.74 L26,16 26,
 var playController = new MorphedSVG();
 
 
-u('#playButton').on('click', function(e) {
-  playController.toState(false);
-});
+// u('#playButton').on('click', function(e) {
+//   playController.toState(false);
+// });
 
 
 
@@ -106,8 +104,8 @@ u('#playButton').on('click', function(e) {
 
 
 // Trigger after 5s
-const timeout = setTimeout(function(){
-  u('#circleProgress').trigger('click');
+const pageLoad5 = setTimeout(function(){
+  u('#playButton').trigger('click');
 }, 5000);
 
 
@@ -120,19 +118,19 @@ const ref = {
   1 : "one",
   2 : "two",
   3 : "three",
-  4 : "four" 
+  4 : "four"
 }
 
 
 // On click of the Play Button
-u('#circleProgress').on('click', function(e) {
+u('#playButton').on('click', function(e) {
+  // Clears the timeout() if User clicks play before it
+  clearTimeout(pageLoad5);
 
   // Don't enter if its already playing
   if(!play) {
-    // Clears the timeout() if User clicks play before it
-    clearTimeout(timeout);
-
     play = true;
+    playController.toState(false);
     u('#playContainer .stepCount span').addClass("running");
 
     // Calls each of the 4 step's
@@ -141,16 +139,16 @@ u('#circleProgress').on('click', function(e) {
       u('#circleProgress .progress').addClass("active");
       u('.stepWrapper .step.' + ref[stepNumber]).addClass("active");
       stepNumber++;
-      // Reset
-      if(stepNumber > 4) { 
-        stepNumber = 1;
-      }
 
       window.stepTimer = setTimeout(function(){
+        // Reset
+        if(stepNumber > 4) {
+          stepNumber = 1;
+        }
         // If step1 -> remove step4's active Else add active
         if(stepNumber == 1) u('.stepWrapper .step.four').removeClass("active");
         else u('.stepWrapper .step.' + ref[stepNumber-1]).removeClass("active");
-       
+
         // and schedule a repeat
         callSteps();
         // if (play) setTimeout(callSteps, 500);
@@ -159,28 +157,36 @@ u('#circleProgress').on('click', function(e) {
 
     // start the cycle
     callSteps();
+  } else {
+    play = false;
+    playController.toState(true);
+    // Clear any running Steps
+    clearTimeout(window.stepTimer);
+      u('#playContainer .stepCount span').removeClass("running");
+      u('#playContainer .stepCount span').text('Paused');
+      // Remove Circle Progress Bar on indivudal step active
+      u('#circleProgress .progress').removeClass("active");
+      stepNumber = stepNumber - 1;
   }
 });
 
 
 // On click of individal step card
 u('.step').on('click', function(e) {
+
   play = false;
+  playController.toState(true);
   // Clear any running Steps
   clearTimeout(window.stepTimer);
 
-  // If the elemenent is already active skip it
-  if(u(this).data('step') !== stepNumber)
-  {
-    u('#playContainer .stepCount span').removeClass("running");
-    u('#playContainer .stepCount span').text('Paused'); 
-    
-    stepNumber = u(this).data('step');
+  u('#playContainer .stepCount span').removeClass("running");
+  u('#playContainer .stepCount span').text('Paused');
+  // Remove Circle Progress Bar on indivudal step active
+  u('#circleProgress .progress').removeClass("active");
 
-    // Remove Circle Progress Bar on indivudal step active
-    u('#circleProgress .progress').removeClass("active");
+  u('.step').removeClass("active")
+  u(this).addClass("active");
 
-    u('.step').removeClass("active")
-    u(this).addClass("active");
-  }
+  stepNumber = u(this).data('step');
+
 });
