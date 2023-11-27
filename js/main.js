@@ -152,7 +152,7 @@ u('#playButton').on('click', function(e) {
         // and schedule a repeat
         callSteps();
         // if (play) setTimeout(callSteps, 500);
-      }, 10000);
+      }, 6000);
     }
 
     // start the cycle

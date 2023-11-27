@@ -231,7 +231,7 @@ h1.small span {
 	z-index: 1;
 }*/
 
-svg#circleProgress {	
+svg#circleProgress {
 	transform:rotate(-90deg);
 	position: relative;
 	z-index: 1;
@@ -257,7 +257,7 @@ svg#circleProgress {
 	stroke-dashoffset: 157;
 }
 #circleProgress .progress.active {
-	animation: circleProgressBar 10s linear forwards infinite;
+	animation: circleProgressBar 6s linear forwards infinite;
 }
 @keyframes circleProgressBar {
     from {
@@ -290,7 +290,7 @@ svg#circleProgress {
 
 #playContainer span.stepCount span.running {
 	transition: all .2s ease;
-	animation: stepCountAnimate 10s linear infinite;
+	animation: stepCountAnimate 6s linear infinite;
 }
 @keyframes stepCountAnimate {
   0% {
@@ -323,8 +323,8 @@ svg#circleProgress {
 	border-right: 2px solid rgba(255, 255, 255, .24);
 	border-bottom: 2px solid rgba(255, 255, 255, .24);
 	background: linear-gradient(105deg, rgba(255, 255, 255, 0.40) 16.65%, rgba(255, 255, 255, 0.10) 79.09%);
-/*	background: 
-		linear-gradient(105deg, rgba(255, 255, 255, 0.40) 16.65%, rgba(255, 255, 255, 0.10) 79.09%) padding-box, 
+/*	background:
+		linear-gradient(105deg, rgba(255, 255, 255, 0.40) 16.65%, rgba(255, 255, 255, 0.10) 79.09%) padding-box,
 		linear-gradient(104deg, rgba(255, 255, 255, 0.50) 21.51%, rgba(255, 255, 255, 0.00) 51.06%, rgba(255, 255, 255, 0.00) 75.75%, rgba(255, 255, 255, 0.24) 93.33%) border-box;
 */
 /*	Black Transparent Border */
@@ -447,9 +447,3 @@ svg#circleProgress {
 	margin: auto;
 	z-index: 1;
 }
-
-
-
-
-
-
