@@ -242,8 +242,8 @@ svg#circleProgress {
 
 #circleProgress .default {
 	fill: var(--white);
-	stroke: #e0e0e0;
-	stroke-width: 2;
+	stroke: #F6F2FC;
+	stroke-width: 1;
 	stroke-dasharray: 157;
 	stroke-dashoffset: 0;
 }
@@ -323,17 +323,33 @@ svg#circleProgress {
 	border-right: 2px solid rgba(255, 255, 255, .24);
 	border-bottom: 2px solid rgba(255, 255, 255, .24);
 	background: linear-gradient(105deg, rgba(255, 255, 255, 0.40) 16.65%, rgba(255, 255, 255, 0.10) 79.09%);
+/*background: linear-gradient(105deg, rgba(255, 255, 255, 0.50) 16.65%, rgba(255, 255, 255, 0.20) 79.09%);*/
+
 /*	background:
 		linear-gradient(105deg, rgba(255, 255, 255, 0.40) 16.65%, rgba(255, 255, 255, 0.10) 79.09%) padding-box,
 		linear-gradient(104deg, rgba(255, 255, 255, 0.50) 21.51%, rgba(255, 255, 255, 0.00) 51.06%, rgba(255, 255, 255, 0.00) 75.75%, rgba(255, 255, 255, 0.24) 93.33%) border-box;
 */
 /*	Black Transparent Border */
-	box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.10);
+/*	box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.10);*/
 	/*	Pink Transparent Border */
-/*	box-shadow: 0px 4px 8px 0px rgba(23, 14, 65, 0.10);*/
+	box-shadow: 0px 4px 8px 0px rgba(23, 14, 65, 0.10);
 /*	backdrop-filter: blur(10px);*/
-	backdrop-filter: blur(20px);
+	backdrop-filter: blur(14px);
+	transform: scale(1);
+	transition: all .2s;
+	cursor: pointer;
+
 }
+
+#heroSteps .step:hover {
+/*	transform: scale(1.02);*/
+	box-shadow: 0px 12px 24px 0px rgba(23, 14, 65, 0.10);
+}
+
+/*#heroSteps .step.active:hover {
+	transform: scale(1);
+	box-shadow: 0px 4px 8px 0px rgba(23, 14, 65, 0.10);
+}*/
 
 #heroSteps .step svg.heroIcon {
 	display: block;
@@ -342,7 +358,8 @@ svg#circleProgress {
 }
 
 #heroSteps .step.active svg.heroIcon {
-	transform: translateX(-54px);
+/*	transform: translateX(-54px);*/
+	transform: translateX(-50px);
 	transition: all .5s 0s ease;
 }
 
@@ -436,8 +453,9 @@ svg#circleProgress {
 }
 
 #playButton {
-	width: 26px;
-	height: 26px;
+	width: 50px;
+	height: 50px;
+	padding: 10px;
 	fill: var(--primary-6);
 	position: absolute;
 	top: 0;
@@ -446,4 +464,14 @@ svg#circleProgress {
 	right: 0;
 	margin: auto;
 	z-index: 1;
+	cursor: pointer;
+	transform: scale(.8);
+	transition: transform .2s;
 }
+
+#playButton:hover {
+	transform: scale(1);
+}
+
+
+

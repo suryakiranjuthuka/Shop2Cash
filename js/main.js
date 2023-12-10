@@ -96,16 +96,23 @@ var playController = new MorphedSVG();
 
 
 
-
-
-
-
-
+// Countdown timer for 5seconds
+var timeleft = 4;
+var downloadTimer = setInterval(function(){
+  if(!play) {
+    if(timeleft <= 0){
+      clearInterval(downloadTimer);
+    } else {
+      document.getElementById("countdown").innerHTML = "Playing in..." + timeleft;
+    }
+    timeleft -= 1;
+  }
+}, 1000);
 
 
 // Trigger after 5s
 const pageLoad5 = setTimeout(function(){
-  u('#playButton').trigger('click');
+  if(!play) u('#playButton').trigger('click');
 }, 5000);
 
 
@@ -126,6 +133,7 @@ const ref = {
 u('#playButton').on('click', function(e) {
   // Clears the timeout() if User clicks play before it
   clearTimeout(pageLoad5);
+  clearInterval(downloadTimer);
 
   // Don't enter if its already playing
   if(!play) {
@@ -164,6 +172,7 @@ u('#playButton').on('click', function(e) {
     clearTimeout(window.stepTimer);
       u('#playContainer .stepCount span').removeClass("running");
       u('#playContainer .stepCount span').text('Paused');
+
       // Remove Circle Progress Bar on indivudal step active
       u('#circleProgress .progress').removeClass("active");
       stepNumber = stepNumber - 1;
@@ -177,10 +186,13 @@ u('.step').on('click', function(e) {
   play = false;
   playController.toState(true);
   // Clear any running Steps
+  clearTimeout(pageLoad5);
   clearTimeout(window.stepTimer);
+  clearInterval(downloadTimer);
 
   u('#playContainer .stepCount span').removeClass("running");
-  u('#playContainer .stepCount span').text('Paused');
+  // u('#playContainer .stepCount span').text('Paused');
+  u('#playContainer .stepCount span').text('Step ' + u(this).data('step'));
   // Remove Circle Progress Bar on indivudal step active
   u('#circleProgress .progress').removeClass("active");
 
