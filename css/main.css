@@ -14,6 +14,8 @@ a { text-decoration: none; display: inline-block; }
 	-moz-osx-font-smoothing: grayscale;
 	font-smooth: never;
 
+	/* Base Font size to use Rem's easily	*/
+	/* 1rem = 10px	*/
 	font-size: 62.5%;
 
 	--ff-body: 'Mulish', sans-serif;
@@ -650,4 +652,178 @@ background: linear-gradient(229deg, rgba(241, 236, 248, 0.00) 66.37%, #F2ECF8 10
 text-align: center;
 }
 
+#featuredProductsWrapper {
+	display: flex;
+	padding: 0rem 4rem;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	gap: 6rem 4rem;
+	flex-wrap: wrap;
+}
+
+.eachProduct {
+	display: flex;
+	width: 30rem;
+	flex-direction: column;
+	align-items: flex-start;
+	flex-shrink: 0;
+
+	border-radius: 2rem;
+	border: 1px solid rgba(255, 255, 255, 0.50);
+	background: linear-gradient(105deg, rgba(255, 255, 255, 0.40) 16.65%, rgba(255, 255, 255, 0.10) 79.09%);
+	box-shadow: 1px 1px 1px 0px rgba(255, 255, 255, 0.50) inset, 0px 15px 30px 0px rgba(23, 14, 65, 0.03);
+}
+
+.eachProduct header {
+	display: flex;
+	padding: 2rem;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 1rem;
+	align-self: stretch;
+}
+
+.eachProduct .productPhoto {
+	position: relative;
+	display: flex;
+	height: 25.2rem;
+	padding: 4.8rem 0rem;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-self: stretch;
+	border-radius: 2rem;
+	background: var(--white-100, #FFF);
+	box-shadow: 0px 8px 16px 0px rgba(23, 14, 65, 0.02), 1px 1px 1px 0px rgba(255, 255, 255, 0.50) inset;
+}
+
+.eachProduct .productPhoto::after {
+	position: absolute;
+	right: 0rem;
+	top: 2.8rem;
+
+	display: flex;
+	padding: 0.6rem 1.4rem;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+
+	border-radius: 1rem 0rem 0rem 1rem;
+	border-top: 1px solid #E4C8FC;
+	border-bottom: 1px solid #E4C8FC;
+	border-left: 1px solid #E4C8FC;
+	background: #FCF8FF;
+}
+
+.eachProduct img {
+	width: 15.4rem;
+	height: 20rem;
+	flex-shrink: 0;
+}
+
+.eachProduct footer {
+	display: flex;
+	height: 15.2rem;
+	padding: 0.4rem 2.6rem 2rem 2.6rem;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 2.4rem;
+	align-self: stretch;
+}
+
+.eachProduct .productDetails {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 1.4rem;
+	align-self: stretch;
+}
+
+.eachProduct .productDetails h5 {
+	color: var(--primary-1, #10002B);
+	font-family: Mulish;
+	font-size: 1.3rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 133.2%; /* 1.7316rem */
+	letter-spacing: 0.14rem;
+	text-transform: uppercase;
+}
+
+.eachProduct .productDetails .productPrice{
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.productDetails .productPrice .discounted {
+	color: var(--primary-1, #10002B);
+	font-family: Mulish;
+	font-size: 1.5rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 133.2%; /* 1.998rem */
+	letter-spacing: 0.14rem;
+}
+
+.productDetails .productPrice .original {
+	color: #5C5862;
+	font-family: Mulish;
+	font-size: 1.5rem;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 133.2%; /* 1.998rem */
+	letter-spacing: 0.14rem;
+	text-decoration-line: strikethrough;
+}
+
+.buttonsContainer {
+	display: flex;
+	align-items: center;
+	gap: 1.6rem;
+}
+
+.buttonsContainer a:nth-child(1) {
+	display: flex;
+	padding: 0.8rem 1.6rem;
+	align-items: center;
+	gap: 0.8rem;
+	border-radius: 10rem;
+	border: 1px dashed #D4BAEA;
+
+	color: var(--primary-3, #3C096C);
+	font-family: Jost;
+	font-size: 1.2rem;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 133.2%; /* 1.5984rem */
+	letter-spacing: 0.1rem;
+}
+
+.buttonsContainer a:nth-child(2) {
+	display: flex;
+	padding: 0.8rem 1.6rem;
+	align-items: center;
+	gap: 0.8rem;
+	align-self: stretch;
+	border-radius: 10rem;
+	border: 1px dashed var(--gradient-transparent, #7000FF);
+	background: var(--white-40, rgba(255, 255, 255, 0.40));
+
+	/* Button */
+	font-family: Jost;
+	font-size: 1.2rem;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 133.2%; /* 1.5984rem */
+	letter-spacing: 0.1rem;
+
+	background: var(--gradient-default, linear-gradient(90deg, #7000FF -4.07%, #FF9B05 129.29%));
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
 
