@@ -94,7 +94,7 @@ body nav {
 	padding: 0rem 2rem;
 	justify-content: center;
 	align-items: center;
-	gap: 4.8rem;
+/*	gap: 4.8rem;*/
 }
 
 body nav * {
@@ -105,10 +105,29 @@ body nav * {
 	line-height: normal;
 	letter-spacing: 0.24rem;
 	text-transform: uppercase;
+	cursor: pointer;
+}
+
+body nav a {
+	padding: .5rem 2.4rem;
+	border-radius: 2.4rem;
+	transition: all .2s;
+	border: 1px dashed transparent;
+}
+
+body nav a:hover {
+	color: var(--primary-5);
+	background-color: #FCF8FF;
+	border-color: #E4C8FC;
 }
 
 body nav svg {
 	fill: var(--primary-1);
+	margin-left: 2.4rem;
+}
+
+body nav svg:hover {
+	fill: var(--primary-5);
 }
 
 #headerHero {
@@ -165,9 +184,19 @@ h1.small span {
 	transform: translateY(15px);
 }
 
+#heroSection h1 {
+	position: relative;
+}
+
+#heroSection h1 span {
+	background-image: url("../img/gradient/highlight.svg");
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+
 #heroSection .heroSearch{
 	display: flex;
-	padding: 1.6rem 3.2rem;
+	padding: 0rem 3.2rem;
 	align-items: center;
 	gap: 1.6rem;
 	align-self: stretch;
@@ -176,13 +205,17 @@ h1.small span {
 	border-radius: 10rem;
 }
 
+#heroSection .heroSearch:focus-within {
+	background: linear-gradient(#FEFCFF, #FEFCFF) padding-box, var(--gradient-transparent) border-box;
+}
+
 #heroSection .heroSearch svg {
 	fill: var(--secondary);
 }
 
 #heroSection .heroSearch input {
 	width: 100%;
-	padding: 0;
+	padding: 2.4rem 0;
 	background: none;
 	border: none;
 	border-radius: 0;
@@ -190,13 +223,19 @@ h1.small span {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
+	color: var(--primary-3);
+	letter-spacing: 0.14rem;
+	font-family: var(--ff-body);
+	font-weight: var(--fw-semi-bold);
+	text-transform: capitalize;
 }
 
 #heroSection .heroSearch input::placeholder {
+	font-family: var(--ff-heading);
 	color: var(--search-text);
 	font-size: 1.4rem;
 	font-style: normal;
-	font-weight: 600;
+	font-weight: var(--fw-semi-bold);
 	line-height: normal;
 	letter-spacing: 0.24rem;
 	text-transform: uppercase;
@@ -242,7 +281,8 @@ svg#circleProgress {
 
 #circleProgress .default {
 	fill: var(--white);
-	stroke: #F6F2FC;
+/*	stroke: #F6F2FC;*/
+	stroke: #E4C8FC;
 	stroke-width: 1;
 	stroke-dasharray: 157;
 	stroke-dashoffset: 0;
@@ -275,18 +315,29 @@ svg#circleProgress {
 	align-items: center;
 	gap: 1rem;
 	border-radius: 0rem 0.8rem 0.8rem 0rem;
-	background: #F6F2FC;
-
+/*	background: #f9f1ff;*/
+/*	background: var(--white);*/
+	background-color: #FEFCFF;
+	border: 1px dashed #E4C8FC;
+	border-style: solid;
 	color: var(--primary-6);
 	font-size: var(--fs-13);
 	font-weight: var(--fw-semi-bold);
 	letter-spacing: 0.24rem;
 	text-transform: uppercase;
 	height: fit-content;
+	transition: all.2s;
 
-	transform: translateX(-20px);
+	transform: translateX(-21px);
   z-index: 0;
 }
+
+#playContainer span.stepCount.initial {
+	background: #f9f1ff;
+	border-color: transparent;
+}
+
+
 
 #playContainer span.stepCount span.running {
 	transition: all .2s ease;

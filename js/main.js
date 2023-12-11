@@ -134,6 +134,7 @@ u('#playButton').on('click', function(e) {
   // Clears the timeout() if User clicks play before it
   clearTimeout(pageLoad5);
   clearInterval(downloadTimer);
+  u('#playContainer .stepCount').removeClass("initial");
 
   // Don't enter if its already playing
   if(!play) {
@@ -195,6 +196,7 @@ u('.step').on('click', function(e) {
   u('#playContainer .stepCount span').text('Step ' + u(this).data('step'));
   // Remove Circle Progress Bar on indivudal step active
   u('#circleProgress .progress').removeClass("active");
+  u('#playContainer .stepCount').removeClass("initial");
 
   u('.step').removeClass("active")
   u(this).addClass("active");
