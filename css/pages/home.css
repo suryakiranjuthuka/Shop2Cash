@@ -15,8 +15,9 @@ div#headerWrapper {
 section#hero {
 	display: flex;
 	flex-flow: row;
-	justify-content: space-evenly;
+	justify-content: center;
 	align-items: center;
+	gap: 15rem;
 	position: relative;
 	padding-top: 9px;
 	padding-bottom: 102px;
@@ -379,14 +380,13 @@ section#brands {
 	position: relative;
 	display: flex;
 	flex-flow: row;
-	margin: 0 10% 0 10% ;
+	justify-content: center;
+	gap: 4rem;
 }
 
 section#brands .contentBlock {
-	flex: 1;
 	position: relative;
 	z-index: 2;
-/*	padding: 12rem 0;*/
 	padding: 10rem 0;
 }
 
@@ -397,20 +397,17 @@ section#brands .gradientBG {
 	z-index: 1;
 	width: 100%;
 	height: 100%;
-/*	background: linear-gradient(229deg, rgba(241, 236, 248, 0.00) 66.37%, #F2ECF8 101.68%), linear-gradient(98deg, #EFE9F6 40.73%, rgba(239, 233, 246, 0.00) 53.36%);*/
-/*	background: linear-gradient(229deg, rgba(241, 236, 248, 0.00) 66.37%, #F2ECF8 101.68%), linear-gradient(99deg, #EFE9F6 36.73%, rgba(239, 233, 246, 0.00) 48.49%);*/
-background: linear-gradient(229deg, rgba(241, 236, 248, 0.00) 66.37%, #F2ECF8 101.68%), linear-gradient(99deg, #EFE9F6 41.16%, rgba(239, 233, 246, 0.00) 49.38%);
+	background: linear-gradient(180deg, rgba(241, 236, 248, 0.00) 85.44%, #F2ECF8 100%), linear-gradient(96deg, #EFE9F6 42.46%, rgba(239, 233, 246, 0.00) 49.68%);
 }
 
 section#brands .brandsBlock {
-	flex: 1.5;
   position: relative;
+	display: flex;
+	align-items: center;
   z-index: 0;
-  background: url(../../img/brands2x.png);
-  background-repeat: no-repeat;
-  background-origin: content-box;
-  background-position: right center;
-  background-size: auto 276px;
+}
+section#brands .brandsBlock img {
+	max-height: 276px;
 }
 
 section#brands .contentBlock .link {
@@ -424,7 +421,7 @@ section#brands .contentBlock .link {
 
 
 section#featuredProducts {
-	padding: 10rem 10rem;
+	padding: 10rem 10rem 8.8rem;
 	text-align: center;
 }
 
@@ -436,7 +433,7 @@ section#featuredProducts .titleBlock {
 section#featuredProducts .wrapper {
 	display: flex;
 	padding: 0rem 4rem;
-	margin: 4.8rem 0;
+	margin: 4.8rem 0 6rem;
 	justify-content: center;
 	align-items: center;
 	align-content: center;

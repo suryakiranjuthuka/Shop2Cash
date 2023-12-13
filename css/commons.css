@@ -1,3 +1,7 @@
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-size: 1.6rem;
 	font-family: var(--ff-heading);
@@ -37,7 +41,7 @@ h2 {
 	text-transform: uppercase;
 }
 
-h6 { 
+h6 {
 	/* Label */
 	color: var(--primary-1, #10002B);
 	font-size: 1.2rem;
@@ -56,7 +60,7 @@ p {
 	line-height: 165%; /* 2.64rem */
 }
 
-.highlight { 
+.highlight {
 	position: relative;
 	display: inline-block;
 	font-weight: var(--fw-bold);
@@ -128,4 +132,8 @@ p {
 
 .bold {
 	font-weight: var(--fw-bold);
+}
+
+.displayNone {
+	display: none !important;
 }

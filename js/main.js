@@ -204,3 +204,14 @@ u('.stepBlock').on('click', function(e) {
   stepNumber = u(this).data('step');
 
 });
+
+// FAQ's
+u('#faqs .faq').on('click', function(e) {
+  u('#faqs .faq').removeClass("active");
+  u(this).addClass("active");
+});
+
+u('#faqs .viewMoreButton').on('click', function(e) {
+  u('#faqs .faq').removeClass("hidden");
+  u(this).addClass("displayNone");
+});

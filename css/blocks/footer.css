@@ -32,3 +32,140 @@ section#about .contentBlock  {
 	gap: 2rem;
 }
 
+
+
+section#faqs {
+	padding: 10rem 0;
+	text-align: center;
+}
+
+section#faqs .contentBlock {
+	display: flex;
+	padding: 3.2rem 7.5rem;
+	/* margin-bottom: 4.8rem; */
+	flex-direction: column;
+	/* gap: 1rem; */
+
+	max-width: 90rem;
+	margin: 4.8rem auto;
+	border-radius: 4rem;
+	border: 5px solid #FAF3FF;
+	background: var(--white-100, #FFF);
+}
+
+.faq {
+	border-top: 1px solid rgba(16, 0, 43, 0.10);
+	cursor: pointer;
+	transition: all .1s;
+}
+.faq:hover {
+	background: #FAF7FC;
+}
+.faq.active {
+	background: #FAF7FC !important;
+}
+
+.faq:first-child {
+	border-top: 0px;
+}
+
+.faq .question {
+	position: relative;
+	display: flex;
+	padding: 2.5rem 5rem 2.5rem 1rem;
+	align-items: center;
+	align-self: stretch;
+
+	color: var(--body-100, #10002B);
+	font-family: var(--ff-body);
+	font-size: var(--fs-18);
+	font-weight: var(--fw-medium);
+	line-height: 133.2%; /* 2.3976rem */
+	letter-spacing: 0.1rem;
+	text-align: left;
+	transition: all .1s
+}
+
+.faq.active .question {
+	/* padding-left: 2rem; */
+	transform: translateX(1rem);
+}
+
+.faq .question::after {
+	position: absolute;
+	top: 2.2rem;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+	content: '';
+	background: url(../../img/gradient/down_arrow.svg);
+	transition: all .2s;
+}
+.faq.active .question::after {
+	transform: rotate(-90deg) translateY(-1rem);
+}
+
+.faq .content {
+	pointer-events: none;
+	display: flex;
+	flex-flow: column;
+	gap: 1.6rem;
+	opacity: 0;
+	height: 0;
+	color: #727682;
+	font-size: var(--fs-18);
+	text-align: left;
+	padding: 0 5rem 0rem 2rem;
+	transition: all .2s;
+}
+
+.faq.active .content {
+	pointer-events: auto;
+	opacity: 1;
+	height: auto;
+	padding-bottom: 2.5rem;
+}
+
+
+.faq.hidden {
+	display: none;
+}
+
+.viewMoreButton {
+	margin-top: 3rem;
+	position: relative;
+	display: inline-block;
+	width: fit-content;
+	/* margin: 0 auto; */
+	color: var(--primary-3, #3C096C);
+	font-size: 1.4rem;
+	font-weight: var(--fw-medium);
+	line-height: normal;
+	letter-spacing: 0.3rem;
+	text-transform: uppercase;
+	padding: 1rem 2rem;
+	padding-left: 4.5rem;
+	/* background: #FAF7FC; */
+	border: 1px dashed #D4BAEA;
+	border-radius: 1rem;
+	transition: all .2s;
+	cursor: pointer;
+}
+
+.viewMoreButton::before {
+	position: absolute;
+	width: 32px;
+	height: 32px;
+	content: "";
+	left: 5px;
+	top: 4px;
+	background: url(../../img/gradient/down_arrow.svg);
+	background-repeat: no-repeat;
+  background-origin: border-box;
+  background-position: left top;
+  transition: all .2s;
+}
+
+.viewMoreButton:hover::before {
+	transform: rotate(-90deg);
+}
