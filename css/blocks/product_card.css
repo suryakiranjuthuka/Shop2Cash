@@ -1,0 +1,186 @@
+/* Product Card */
+
+.eachProduct {
+	display: flex;
+	width: 30rem;
+	flex-direction: column;
+	align-items: flex-start;
+	flex-shrink: 0;
+
+	border-radius: 2rem;
+	border: 1px solid rgba(255, 255, 255, 0.50);
+	border-right-color: #EAE4F0;
+/*  border-bottom-color: #f2e9fa;*/
+  border-bottom-color: #eae4f0;
+  box-sizing: border-box;
+	background: linear-gradient(105deg, rgba(255, 255, 255, 0.40) 16.65%, rgba(255, 255, 255, 0.10) 79.09%);
+	box-shadow: 1px 0px 0px 0px rgba(255, 255, 255, 0.30) inset, 0px 15px 30px 0px rgba(23, 14, 65, 0.03);
+}
+
+.eachProduct header {
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-self: stretch;
+}
+
+.eachProduct .productPhoto {
+	position: relative;
+	display: flex;
+	height: 25.2rem;
+	justify-content: center;
+	align-items: center;
+	align-self: stretch;
+	border-radius: 2rem;
+	background: var(--white-100, #FFF);
+	box-shadow: 0px 8px 16px 0px rgba(23, 14, 65, 0.02), 1px 1px 1px 0px rgba(255, 255, 255, 0.50) inset;
+}
+
+/* Product Brand Tag  */
+.eachProduct .productPhoto::after {
+	content: attr(brand);
+	position: absolute;
+	right: 0rem;
+	top: 2.8rem;
+
+	display: flex;
+	padding: 0.5rem 1.3rem;
+	justify-content: center;
+	align-items: center;
+
+	border-radius: 1rem 0rem 0rem 1rem;
+	border: 1px dashed #E4C8FC;
+	border-right-width: 0px;
+	background: #FCF8FF;
+
+	color: var(--primary-1, #10002B);
+	font-size: var(--fs-10);
+	font-weight: var(--fw-regular);
+	text-transform: uppercase;
+	line-height: 133.2%; /* 1.332rem */
+	letter-spacing: 0.1rem;
+}
+
+.eachProduct img {
+	width: 15.4rem;
+	height: 20rem;
+	flex-shrink: 0;
+}
+
+.eachProduct footer {
+	display: flex;
+	height: 15.2rem;
+	padding: 0.4rem 2.6rem 2rem 2.6rem;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 2.4rem;
+	align-self: stretch;
+}
+
+.eachProduct .productDetails {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 1.4rem;
+	align-self: stretch;
+}
+
+.eachProduct .productDetails h5 {
+	color: var(--primary-1, #10002B);
+	font-family: var(--ff-body);
+	font-size: var(--fs-13);
+	font-weight: var(--fw-bold);
+	line-height: 133.2%; /* 1.7316rem */
+	letter-spacing: 0.14rem;
+	text-align: left;
+	text-transform: uppercase;
+}
+
+.eachProduct .productDetails .productPrice{
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.productDetails .productPrice span{
+	color: var(--primary-1, #10002B);
+	font-family: var(--ff-body);
+	font-size: var(--fs-15);
+	font-style: normal;
+	font-weight: var(--fw-bold);
+	line-height: 133.2%; /* 1.998rem */
+	letter-spacing: 0.14rem;
+}
+
+.productDetails .productPrice span.original {
+/*	color: #5C5862;*/
+/*	color: #65616b;*/
+	color: #6f6d73;
+	font-weight: var(--fw-regular);
+	text-decoration: line-through;
+}
+
+.buttonsContainer {
+	display: flex;
+	align-items: center;
+	gap: 1.6rem;
+}
+
+.buttonsContainer a {
+	position: relative;
+	display: flex;
+	padding: 0.8rem 1.55rem;
+	align-items: center;
+	gap: 0.8rem;
+	align-self: stretch;
+	border-radius: 1rem;
+	font-size: var(--fs-12);
+	font-weight: var(--fw-medium);
+	line-height: 133.2%; /* 1.5984rem */
+	letter-spacing: 0.1rem;
+	text-transform: uppercase;
+	transition: all .2s;
+}
+
+.buttonsContainer a img {
+	width: 2rem;
+	height: 2rem;
+}
+
+.buttonsContainer a.buy {
+	background: var(--white-40);
+}
+
+.buttonsContainer a.buy span {
+	background: var(--gradient-default);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.buttonsContainer a:hover {
+	background: white;
+}
+
+.buttonsContainer a:after {
+	position: absolute;
+	content: "";
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px dashed #D4BAEA;
+  border-radius: 1rem;
+  transition: .25s;
+}
+
+.buttonsContainer a:hover:after {
+	top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 1px dashed var(--secondary);
+}

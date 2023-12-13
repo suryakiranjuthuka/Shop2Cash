@@ -1,0 +1,47 @@
+body header {
+	display: flex;
+	padding: 4.8rem 10%;
+	justify-content: space-between;
+	align-items: center;
+}
+
+body nav {
+	display: flex;
+	padding: 0rem 2rem;
+	justify-content: center;
+	align-items: center;
+/*	gap: 4.8rem;*/
+}
+
+body nav * {
+	color: var(--primary-1);
+	font-size: var(--fs-13);
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	letter-spacing: 0.24rem;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+body nav a {
+	padding: .5rem 2.4rem;
+	border-radius: 2.4rem;
+	transition: all .2s;
+	border: 1px dashed transparent;
+}
+
+body nav a:hover {
+	color: var(--primary-5);
+	background-color: #FCF8FF;
+	border-color: #E4C8FC;
+}
+
+body nav svg {
+	fill: var(--primary-1);
+	margin-left: 2.4rem;
+}
+
+body nav svg:hover {
+	fill: var(--primary-5);
+}

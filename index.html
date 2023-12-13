@@ -6,21 +6,15 @@
   <title>Shop2Cash - Home Page</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/hero_animation.css">
+  <link rel="stylesheet" href="css/pages/home.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Mulish:wght@400;600&display=swap" rel="stylesheet">
-  <style type="text/css">
-
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <div id="headerHero">
+  <div id="headerWrapper">
     <header>
       <img src="./img/shop2cash_logo.svg">
       <nav>
@@ -30,7 +24,7 @@
         <a>About</a>
         <a>Contact</a>
         <svg width="30" height="30" viewBox="0 0 30 30">
-              <use xlink:href="./img/all_svgs.svg#account"></use>
+          <use xlink:href="./img/all_svgs.svg#account"></use>
         </svg>
       </nav>
     </header>
@@ -126,7 +120,7 @@
 
 
 
-    <div id="bodyContentsContainer">
+    <div id="bodyContentsWrapper">
 
       <section id="brandsSection">
         <div id="brandsSectionContent">
@@ -139,18 +133,19 @@
       </section>
 
       <section id="featuredProductsSection">
-        <h6>FEATURED PRODUCTS</h6>
-        <h2>BROWSE OUR TOP PRODUCTS</h2>
+        <div class="titleContainer">
+          <h6>FEATURED PRODUCTS</h6>
+          <h2>BROWSE OUR TOP PRODUCTS</h2>
+        </div>
         <div id="featuredProductsWrapper">
 
 
           <div class="eachProduct">
             <header>
-              <div class="productPhoto">
+              <div class="productPhoto" brand="Mama Earth">
                 <img src="./img/products/1.png">
               </div>
             </header>
-
             <footer>
               <div class="productDetails">
                 <h5>Allen Solly Men's Cotton Crew Neck Sweatshirt</h5>
@@ -160,15 +155,182 @@
                 </div>
               </div>
               <div class="buttonsContainer">
-                <a href="">Buy</a>
-                <a href="">Play & Earn</a>
+                <a class="shop" href=""><img src="./img/gradient/shop.svg">Buy</a>
+                <a class="buy" href=""><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
+              </div>
+            </footer>
+          </div>
+
+          <div class="eachProduct">
+            <header>
+              <div class="productPhoto" brand="Amazon">
+                <img src="./img/products/2.png">
+              </div>
+            </header>
+            <footer>
+              <div class="productDetails">
+                <h5>WANQLYN Ethnic Style Oxford Backpack</h5>
+                <div class="productPrice">
+                  <span class="discounted">₹ 899</span>
+                  <span class="original">₹1999</span>
+                </div>
+              </div>
+              <div class="buttonsContainer">
+                <a class="shop" href=""><img src="./img/gradient/shop.svg">Buy</a>
+                <a class="buy" href=""><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
+              </div>
+            </footer>
+          </div>
+
+          <div class="eachProduct">
+            <header>
+              <div class="productPhoto" brand="Chroma">
+                <img src="./img/products/3.png">
+              </div>
+            </header>
+            <footer>
+              <div class="productDetails">
+                <h5>HP v236w 32GB 2.0 Pen Drive</h5>
+                <div class="productPrice">
+                  <span class="discounted">₹ 339</span>
+                  <span class="original">₹750</span>
+                </div>
+              </div>
+              <div class="buttonsContainer">
+                <a class="shop" href=""><img src="./img/gradient/shop.svg">Buy</a>
+                <a class="buy" href=""><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
+              </div>
+            </footer>
+          </div>
+
+          <div class="eachProduct">
+            <header>
+              <div class="productPhoto" brand="Myntra">
+                <img src="./img/products/4.png">
+              </div>
+            </header>
+            <footer>
+              <div class="productDetails">
+                <h5>UDee Heavy Quality Car Windshield Sun Shade</h5>
+                <div class="productPrice">
+                  <span class="discounted">₹ 950</span>
+                  <span class="original">₹1405</span>
+                </div>
+              </div>
+              <div class="buttonsContainer">
+                <a class="shop" href=""><img src="./img/gradient/shop.svg">Buy</a>
+                <a class="buy" href=""><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
+              </div>
+            </footer>
+          </div>
+
+          <div class="eachProduct">
+            <header>
+              <div class="productPhoto" brand="Myntra">
+                <img src="./img/products/5.png">
+              </div>
+            </header>
+            <footer>
+              <div class="productDetails">
+                <h5>U.S. POLO ASSN. Mens Clanal Sneakers</h5>
+                <div class="productPrice">
+                  <span class="discounted">₹ 2279</span>
+                  <span class="original">₹3599</span>
+                </div>
+              </div>
+              <div class="buttonsContainer">
+                <a class="shop" href=""><img src="./img/gradient/shop.svg">Buy</a>
+                <a class="buy" href=""><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
+              </div>
+            </footer>
+          </div>
+
+          <div class="eachProduct">
+            <header>
+              <div class="productPhoto" brand="Amazon">
+                <img src="./img/products/6.png">
+              </div>
+            </header>
+            <footer>
+              <div class="productDetails">
+                <h5>AELOMART Men's Cotton Full Sleeve T Shirt</h5>
+                <div class="productPrice">
+                  <span class="discounted">₹ 593</span>
+                  <span class="original">₹1499</span>
+                </div>
+              </div>
+              <div class="buttonsContainer">
+                <a class="shop" href=""><img src="./img/gradient/shop.svg">Buy</a>
+                <a class="buy" href=""><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
+              </div>
+            </footer>
+          </div>
+
+          <div class="eachProduct">
+            <header>
+              <div class="productPhoto" brand="Flipkart">
+                <img src="./img/products/7.png">
+              </div>
+            </header>
+            <footer>
+              <div class="productDetails">
+                <h5>Kraasa ProRider Running Shoes for Men</h5>
+                <div class="productPrice">
+                  <span class="discounted">₹ 199</span>
+                  <span class="original">₹499</span>
+                </div>
+              </div>
+              <div class="buttonsContainer">
+                <a class="shop" href=""><img src="./img/gradient/shop.svg">Buy</a>
+                <a class="buy" href=""><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
+              </div>
+            </footer>
+          </div>
+
+          <div class="eachProduct">
+            <header>
+              <div class="productPhoto" brand="Ajio">
+                <img src="./img/products/8.png">
+              </div>
+            </header>
+            <footer>
+              <div class="productDetails">
+                <h5>UGULAR Men's Slim Fit Track pants</h5>
+                <div class="productPrice">
+                  <span class="discounted">₹ 425</span>
+                  <span class="original">₹999</span>
+                </div>
+              </div>
+              <div class="buttonsContainer">
+                <a class="shop" href=""><img src="./img/gradient/shop.svg">Buy</a>
+                <a class="buy" href=""><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
               </div>
             </footer>
           </div>
 
 
         </div>
+        <a class="link" href="#">View All Products</a>
       </section>
+
+
+        <section id="about">
+          <section class="photo">
+            <!-- <img src=""> -->
+          </section>
+          <section class="content">
+            <div class="titleBlock">
+              <h6>About Us</h6>
+              <h2>Shop2cash with <br><span class="highlight">Discount Bank</span> Rewards</h2>
+            </div>
+            <div class="contentBlock">
+              <p>Festive sales and discounts are the new normal when it comes to shopping, but can you imagine earning further rewards on every purchase, no matter what day of the year it is?</p>
+              <p>Shop2cash collaborates with Discount Bank (DB) to create a platform where our customers can <span class="bold">earn incentives and rewards up to 100% of their transaction amount</span> while shopping! Do you think this is too good to be true? Well, it only gets better. All you have to do to earn these incredible rewards is PLAY GAMES!</p>
+              <p>Welcome to the future of shopping!</p>
+            </div>
+          </section>
+        </section>
+
 
     </div>
 

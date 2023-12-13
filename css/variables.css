@@ -1,0 +1,71 @@
+/* Root Styles + CSS Variables  */
+
+:root {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-smooth: never;
+
+	/* Base Font size to use Rem's easily	*/
+	/* 1rem = 10px	*/
+	font-size: 62.5%;
+
+	--ff-body: 'Mulish', sans-serif;
+	--ff-heading: 'Jost', sans-serif;
+
+	/* Font Size */
+	--fs-xxl: 4.6rem;
+	--fs-xl: 3.2rem;
+	--fs-l: 2.4rem;
+
+	--fs-16: 1.6rem;
+	--fs-15: 1.5rem;
+	--fs-14: 1.4rem;
+	--fs-13: 1.3rem;
+	--fs-12: 1.2rem;
+	--fs-11: 1.1rem;
+	--fs-10: 1rem;
+
+	--fw-regular: 400;
+	--fw-medium: 500;
+	--fw-semi-bold: 600;
+	--fw-bold: 700;
+
+
+	/* ===== Colors ===== */
+
+	/* Primary | Secondary | Tertiary */
+	--primary-1: #10002B;
+	--primary-2: #240046;
+	--primary-3: #3C096C;
+	--primary-4: #5A189A;
+	--primary-5: #7121C2;
+	--primary-6: #7B2CBF;
+	--secondary: #D96F04;
+	--tertiary: #70BF2B;
+
+	/* Others */
+	--search-text: #979DAC;
+	--section-border: rgba(16, 0, 43, 0.1);
+
+	/* Gradients */
+	--gradient-default: linear-gradient(90deg, #7000FF -4.07%, #FF9B05 129.29%);
+	--gradient-transparent: linear-gradient(90deg, rgba(112, 0, 255, 0.50) -4.07%, rgba(255, 155, 5, 0.50) 129.29%);
+	--gradient-hero-text: linear-gradient(278deg, #3C096C 22.63%, #621CA3 95.05%);
+	--gradient-hero-shape-bg: linear-gradient(180deg, rgba(149, 116, 221, 0.40) 0%, rgba(149, 116, 221, 0.00) 100%);
+
+	/* Backgrounds */
+	--bg-hero: linear-gradient(180deg, #FFF 0%, #EFE9F6 100%);
+	--bg-body: linear-gradient(180deg, #EFE9F6 0%, #FFF 100%);
+	--bg-footer: linear-gradient(180deg, #FFF -12.35%, #EFE9F6 100%);
+
+	/* Body Text */
+	--body: rgba(16, 0, 43, 1);
+	--body-90: rgba(16, 0, 43, 0.9);
+	--body-80: rgba(16, 0, 43, 0.8);
+
+	/* Whites */
+	--white: rgba(255, 255, 255, 1);
+	--white-80: rgba(255, 255, 255, 0.8);
+	--white-50: rgba(255, 255, 255, 0.5);
+	--white-40: rgba(255, 255, 255, 0.4);
+}
