@@ -1,11 +1,11 @@
-body header {
+header#header {
 	display: flex;
 	padding: 4.8rem 10%;
 	justify-content: space-between;
 	align-items: center;
 }
 
-body nav {
+#header nav {
 	display: flex;
 	padding: 0rem 2rem;
 	justify-content: center;
@@ -13,7 +13,7 @@ body nav {
 /*	gap: 4.8rem;*/
 }
 
-body nav * {
+#header nav * {
 	color: var(--primary-1);
 	font-size: var(--fs-13);
 	font-style: normal;
@@ -24,24 +24,24 @@ body nav * {
 	cursor: pointer;
 }
 
-body nav a {
+#header nav a {
 	padding: .5rem 2.4rem;
 	border-radius: 2.4rem;
 	transition: all .2s;
 	border: 1px dashed transparent;
 }
 
-body nav a:hover {
+#header nav a:hover {
 	color: var(--primary-5);
 	background-color: #FCF8FF;
 	border-color: #E4C8FC;
 }
 
-body nav svg {
+#header nav svg {
 	fill: var(--primary-1);
 	margin-left: 2.4rem;
 }
 
-body nav svg:hover {
+#header nav svg:hover {
 	fill: var(--primary-5);
 }

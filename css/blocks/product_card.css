@@ -160,27 +160,6 @@ div.productCard footer .buttonsBlock a.play span {
 	-webkit-text-fill-color: transparent;
 }
 
-div.productCard footer .buttonsBlock a:hover {
+ div.productCard footer .buttonsBlock a:hover {
 	background: white;
-}
-
-div.productCard footer .buttonsBlock a:after {
-	position: absolute;
-	content: "";
-  display: block;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px dashed #D4BAEA;
-  border-radius: 1rem;
-  transition: .25s;
-}
-
-div.productCard footer .buttonsBlock a:hover:after {
-	top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
-  border: 1px dashed var(--secondary);
 }

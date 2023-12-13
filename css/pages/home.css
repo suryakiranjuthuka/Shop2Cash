@@ -49,7 +49,26 @@ section#hero h1 span {
 	background-position: bottom;
 }
 
-section#hero .searchBlock{
+section#hero .searchBlock {
+	border: 2px solid transparent;
+	background: linear-gradient(#F8F5FB, #F8F5FB) padding-box, var(--gradient-transparent) border-box;
+}
+section#hero .searchBlock:focus-within {
+	background: linear-gradient(#FEFCFF, #FEFCFF) padding-box, var(--gradient-transparent) border-box;
+}
+section#hero .searchBlock svg {
+	width: 30px;
+	height: 30px;
+}
+section#hero .searchBlock input {
+	padding: 2.4rem 0;
+}
+section#hero .searchBlock input::placeholder {
+	font-size: 1.4rem;
+}
+
+
+/* section#hero .searchBlock{
 	display: flex;
 	padding: 0rem 3.2rem;
 	align-items: center;
@@ -94,7 +113,7 @@ section#hero .searchBlock input::placeholder {
 	line-height: normal;
 	letter-spacing: 0.24rem;
 	text-transform: uppercase;
-}
+} */
 
 section#hero section.right {
 	max-width: 680px;
@@ -372,7 +391,6 @@ section#heroSteps .stepBlock.active p {
 
 #bodyContentsWrapper {
 	width: 100%;
-	height: 3500px;
 	background: var(--bg-body);
 }
 

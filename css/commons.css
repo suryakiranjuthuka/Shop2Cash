@@ -41,7 +41,7 @@ h2 {
 	text-transform: uppercase;
 }
 
-h6 {
+.label {
 	/* Label */
 	color: var(--primary-1, #10002B);
 	font-size: 1.2rem;
@@ -116,6 +116,27 @@ p {
 	transform: translateX(-36px);
 }
 
+/* Button Style */
+.fancyButton:after {
+	position: absolute;
+	content: "";
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px dashed #D4BAEA;
+  border-radius: 1rem;
+  transition: .25s;
+}
+.fancyButton:hover:after {
+	top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 1px dashed var(--secondary);
+}
+
 /*This removes styles added by default to button elements.
   For when something should semantically be a button,
   but isn't buttony in appearance.*/
@@ -136,4 +157,54 @@ p {
 
 .displayNone {
 	display: none !important;
+}
+
+/* Global Search Styles */
+.search{
+	display: flex;
+	padding: 0rem 3.2rem;
+	align-items: center;
+	gap: 1.6rem;
+	align-self: stretch;
+	/* background: linear-gradient(#F8F5FB, #F8F5FB) padding-box, var(--gradient-transparent) border-box; */
+	background: linear-gradient(#FCFAFD, #FCFAFD) padding-box, var(--gradient-transparent) border-box;
+	border: 1px solid transparent;
+	border-radius: 10rem;
+}
+.search:focus-within {
+	/* background: linear-gradient(#FEFCFF, #FEFCFF) padding-box, var(--gradient-transparent) border-box; */
+	background: linear-gradient(#FFFFFF, #FFFFFF) padding-box, var(--gradient-transparent) border-box;
+}
+.search svg {
+	fill: var(--secondary);
+	width: 24px;
+	height: 24px;
+}
+.search input {
+	width: 100%;
+	/* padding: 2.4rem 0; */
+	padding: 1.3rem 0;
+	background: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	color: var(--primary-3);
+	letter-spacing: 0.14rem;
+	font-family: var(--ff-body);
+	font-weight: var(--fw-semi-bold);
+	/* text-transform: capitalize; */
+}
+.search input::placeholder {
+	font-family: var(--ff-heading);
+	color: var(--search-text);
+	font-size: 1.2rem;
+	/* font-size: 1.4rem; */
+	font-style: normal;
+	font-weight: var(--fw-semi-bold);
+	line-height: normal;
+	letter-spacing: 0.24rem;
+	text-transform: uppercase;
 }
