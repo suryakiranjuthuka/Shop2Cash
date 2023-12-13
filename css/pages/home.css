@@ -8,11 +8,11 @@
 @import "../blocks/product_card.css";
 @import "../blocks/footer.css";
 
-#headerHeroWrapper {
+div#headerWrapper {
 	background: var(--bg-hero);
 }
 
-#heroSection {
+section#hero {
 	display: flex;
 	flex-flow: row;
 	justify-content: space-evenly;
@@ -28,7 +28,7 @@
   background-position: bottom right;
 }
 
-#heroSection .left {
+section#hero section.left {
 /*	position: relative;
 	z-index: 1;*/
 	max-width: 540px;
@@ -38,17 +38,17 @@
 	transform: translateY(15px);
 }
 
-#heroSection h1 {
+section#hero h1 {
 	position: relative;
 }
 
-#heroSection h1 span {
+section#hero h1 span {
 	background-image: url("../../img/gradient/highlight.svg");
 	background-repeat: no-repeat;
 	background-position: bottom;
 }
 
-#heroSection .heroSearch{
+section#hero .searchBlock{
 	display: flex;
 	padding: 0rem 3.2rem;
 	align-items: center;
@@ -59,15 +59,15 @@
 	border-radius: 10rem;
 }
 
-#heroSection .heroSearch:focus-within {
+section#hero .searchBlock:focus-within {
 	background: linear-gradient(#FEFCFF, #FEFCFF) padding-box, var(--gradient-transparent) border-box;
 }
 
-#heroSection .heroSearch svg {
+section#hero .searchBlock svg {
 	fill: var(--secondary);
 }
 
-#heroSection .heroSearch input {
+section#hero .searchBlock input {
 	width: 100%;
 	padding: 2.4rem 0;
 	background: none;
@@ -84,7 +84,7 @@
 	text-transform: capitalize;
 }
 
-#heroSection .heroSearch input::placeholder {
+section#hero .searchBlock input::placeholder {
 	font-family: var(--ff-heading);
 	color: var(--search-text);
 	font-size: 1.4rem;
@@ -95,13 +95,13 @@
 	text-transform: uppercase;
 }
 
-#heroSection .right {
+section#hero section.right {
 	max-width: 680px;
 /*	position: relative;
 	z-index: 1;*/
 }
 
-#heroSection .right #playContainer {
+section#hero section.right section#playController {
 	position: relative;
 	display: flex;
 	flex-flow: row;
@@ -110,7 +110,7 @@
 	transform: translateX(-15px);
 }
 
-#circleProgressContainer {
+#circularProgressBlock {
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -124,7 +124,7 @@
 	z-index: 1;
 }*/
 
-svg#circleProgress {
+svg#circularProgress {
 	transform:rotate(-90deg);
 	position: relative;
 	z-index: 1;
@@ -133,7 +133,7 @@ svg#circleProgress {
 /*	filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));*/
 }
 
-#circleProgress .default {
+#circularProgress .default {
 	fill: var(--white);
 /*	stroke: #F6F2FC;*/
 	stroke: #E4C8FC;
@@ -142,7 +142,7 @@ svg#circleProgress {
 	stroke-dashoffset: 0;
 }
 
-#circleProgress .progress {
+#circularProgress .progress {
 	fill: transparent;
 	stroke: var(--tertiary);
 	stroke-width: 2;
@@ -150,7 +150,7 @@ svg#circleProgress {
 	stroke-dasharray: 157;
 	stroke-dashoffset: 157;
 }
-#circleProgress .progress.active {
+#circularProgress .progress.active {
 	animation: circleProgressBar 6s linear forwards infinite;
 }
 @keyframes circleProgressBar {
@@ -162,7 +162,7 @@ svg#circleProgress {
   }
 }
 
-#playContainer span.stepCount {
+section#playController span.stepCount {
 	display: inline-flex;
 	padding: 0.4rem 1.4rem 0.4rem 1.8rem;
 	justify-content: center;
@@ -186,14 +186,14 @@ svg#circleProgress {
   z-index: 0;
 }
 
-#playContainer span.stepCount.initial {
+section#playController span.stepCount.initial {
 	background: #f9f1ff;
 	border-color: transparent;
 }
 
 
 
-#playContainer span.stepCount span.running {
+section#playController span.stepCount span.running {
 	transition: all .2s ease;
 	animation: stepCountAnimate 6s linear infinite;
 }
@@ -209,7 +209,7 @@ svg#circleProgress {
 	}
 }
 
-#heroSteps {
+section#heroSteps {
 	display: flex;
 	flex-flow: row wrap;
 	gap: 40px;
@@ -217,7 +217,7 @@ svg#circleProgress {
 
 /*[class^="step-"] */
 
-#heroSteps .step {
+section#heroSteps .stepBlock {
 	position: relative;
 	z-index: 1;
 	background: lightgrey;
@@ -246,30 +246,30 @@ svg#circleProgress {
 
 }
 
-#heroSteps .step:hover {
+section#heroSteps .stepBlock:hover {
 /*	transform: scale(1.02);*/
 	box-shadow: 0px 12px 24px 0px rgba(23, 14, 65, 0.10);
 }
 
-/*#heroSteps .step.active:hover {
+/*section#heroSteps .stepBlock.active:hover {
 	transform: scale(1);
 	box-shadow: 0px 4px 8px 0px rgba(23, 14, 65, 0.10);
 }*/
 
-#heroSteps .step svg.heroIcon {
+section#heroSteps .stepBlock svg {
 	display: block;
 	fill: var(--secondary);
 	transition: all .5s 0s ease;
 }
 
-#heroSteps .step.active svg.heroIcon {
+section#heroSteps .stepBlock.active svg {
 /*	transform: translateX(-54px);*/
 	transform: translateX(-50px);
 	transition: all .5s 0s ease;
 }
 
 
-#heroSteps .step h4 {
+section#heroSteps .stepBlock h4 {
 	color: var(--primary-1, #10002B);
 	font-size: var(--fs-16);
 	font-weight: var(--fw-semi-bold);
@@ -279,12 +279,12 @@ svg#circleProgress {
 	transition: all .5s 0s ease;
 }
 
-#heroSteps .step.active h4 {
+section#heroSteps .stepBlock.active h4 {
 	transform: translateY(-50px);
 	transition: all .5s 0s ease;
 }
 
-#heroSteps .step p.content {
+section#heroSteps .stepBlock p {
 	opacity: 0;
 	max-width: 265px;
 	position: absolute;
@@ -300,7 +300,7 @@ svg#circleProgress {
 	transition: all .2s 0s ease;
 }
 
-#heroSteps .step.active p.content {
+section#heroSteps .stepBlock.active p {
 	opacity: 1;
 	transform: translateY(-20px);
 	transition: all .5s .3s ease;
@@ -337,10 +337,10 @@ svg#circleProgress {
   .play-button-after {
     clip-path: polygon(50% 25%, 100% 50%, 100% 50%, 50% 75%);
   }
-  #playContainer:hover .play-button-before {
+  section#playController:hover .play-button-before {
     clip-path: polygon(0 0, 30% 0, 30% 100%, 0% 100%);
   }
-  #playContainer:hover .play-button-after{
+  section#playController:hover .play-button-after{
     clip-path: polygon(70% 0, 100% 0, 100% 100%, 70% 100%)
   }
 */
@@ -375,14 +375,14 @@ svg#circleProgress {
 	background: var(--bg-body);
 }
 
-#brandsSection {
+section#brands {
 	position: relative;
 	display: flex;
 	flex-flow: row;
 	margin: 0 10% 0 10% ;
 }
 
-#brandsSectionContent {
+section#brands .contentBlock {
 	flex: 1;
 	position: relative;
 	z-index: 2;
@@ -390,7 +390,7 @@ svg#circleProgress {
 	padding: 10rem 0;
 }
 
-#brandsGradient {
+section#brands .gradientBG {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -402,7 +402,7 @@ svg#circleProgress {
 background: linear-gradient(229deg, rgba(241, 236, 248, 0.00) 66.37%, #F2ECF8 101.68%), linear-gradient(99deg, #EFE9F6 41.16%, rgba(239, 233, 246, 0.00) 49.38%);
 }
 
-#brandsSectionBanner {
+section#brands .brandsBlock {
 	flex: 1.5;
   position: relative;
   z-index: 0;
@@ -413,7 +413,7 @@ background: linear-gradient(229deg, rgba(241, 236, 248, 0.00) 66.37%, #F2ECF8 10
   background-size: auto 276px;
 }
 
-#brandsSectionContent .link {
+section#brands .contentBlock .link {
 	margin-top: 40px;
 }
 
@@ -423,17 +423,17 @@ background: linear-gradient(229deg, rgba(241, 236, 248, 0.00) 66.37%, #F2ECF8 10
 
 
 
-#featuredProductsSection {
+section#featuredProducts {
 	padding: 10rem 10rem;
 	text-align: center;
 }
 
-#featuredProductsSection .titleContainer {
+section#featuredProducts .titleBlock {
 	text-align: center;
 	margin-bottom: 4.8rem;
 }
 
-#featuredProductsWrapper {
+section#featuredProducts .wrapper {
 	display: flex;
 	padding: 0rem 4rem;
 	margin: 4.8rem 0;

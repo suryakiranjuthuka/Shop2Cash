@@ -29,13 +29,13 @@
       </nav>
     </header>
 
-    <section id="heroSection">
+    <section id="hero">
       <section class="left">
-        <div class="titleContainer">
+        <div class="titleBlock">
           <h1>PLAY TO WIN</h1>
           <h1 class="small">UPTO <span>100% CASHBACK</span> <br>ON YOUR FAVOURITE PRODUCTS</h1>
         </div>
-        <div class="heroSearch">
+        <div class="searchBlock">
           <svg width="30" height="30" viewBox="0 0 30 30">
               <use xlink:href="./img/all_svgs.svg#search"></use>
             </svg>
@@ -45,55 +45,47 @@
 
       <section class="right">
 
-        <div id="playContainer">
-          <div id="circleProgressContainer">
-            <svg id="circleProgress" width="70" height="70" viewBox="-8.75 -8.75 87.5 87.5" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <section id="playController">
+          <div id="circularProgressBlock">
+            <svg id="circularProgress" width="70" height="70" viewBox="-8.75 -8.75 87.5 87.5" version="1.1" xmlns="http://www.w3.org/2000/svg">
               <circle class="default" r="25" cx="35" cy="35"></circle>
               <circle class="progress" r="25" cx="35" cy="35"></circle>
             </svg>
-            <!-- <svg id="playButton" width="24" height="24" viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#play"></use></svg> -->
-            <!-- <div id="play-button-container"> -->
-              <!-- <span class="play-button play-button-before"></span> -->
-              <!-- <span class="play-button play-button-after"></span> -->
-            <!-- </div> -->
             <button id="playButton" class="unbuttonize">
               <svg id='play-svg-1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'>
-                <path           d='M11,8 L26,16 11,24 11,8'>
-                  <animate attributeName='d' fill='freeze' dur='0.1s'
-                           calc-mode='spline' keySplines='0.19 1 0.22 1'/>
-                </path>
+                <path d='M11,8 L26,16 11,24 11,8'><animate attributeName='d' fill='freeze' dur='0.1s' calc-mode='spline' keySplines='0.19 1 0.22 1'/></path>
               </svg>
             </button>
           </div>
-          <span class="stepCount initial"><span id="countdown">Playing in...5</span></span>
-        </div>
+          <span class="stepCount initial"><span id="heroStepscountdown">Playing in...5</span></span>
+        </section>
 
-        <div id="heroSteps">
+        <section id="heroSteps">
 
           <div class="stepWrapper one">
-            <div class="step one" data-step=1>
-              <svg class="heroIcon" width="36" height="36" viewBox="0 0 36 36"><use xlink:href="./img/all_svgs.svg#done"></use></svg>
+            <div class="stepBlock one" data-step=1>
+              <svg width="36" height="36" viewBox="0 0 36 36"><use xlink:href="./img/all_svgs.svg#done"></use></svg>
               <h4>Select your product</h4>
-              <p class="content">Choose a product from our wide range of categories</p>
+              <p>Choose a product from our wide range of categories</p>
             </div>
             <svg class="decorate star" width="20" height="20" viewBox="0 0 20 20"><use xlink:href="./img/all_svgs.svg#star"></use></svg>
           </div>
 
           <div class="stepWrapper two">
-            <div class="step two" data-step=2>
-              <svg class="heroIcon" width="36" height="36" viewBox="0 0 36 36"><use xlink:href="./img/all_svgs.svg#game"></use></svg>
+            <div class="stepBlock two" data-step=2>
+              <svg width="36" height="36" viewBox="0 0 36 36"><use xlink:href="./img/all_svgs.svg#game"></use></svg>
               <h4>Play to earn rewards</h4>
-              <p class="content">Select a game to play and earn upto 100% rewards on the product’s price</p>
+              <p>Select a game to play and earn upto 100% rewards on the product’s price</p>
             </div>
             <svg class="decorate star1" width="20" height="20" viewBox="0 0 20 20"><use xlink:href="./img/all_svgs.svg#star"></use></svg>
             <svg class="decorate star2" width="20" height="20" viewBox="0 0 20 20"><use xlink:href="./img/all_svgs.svg#star"></use></svg>
           </div>
 
           <div class="stepWrapper three">
-            <div class="step three" data-step=3>
-              <svg class="heroIcon" width="36" height="36" viewBox="0 0 36 36"><use xlink:href="./img/all_svgs.svg#shop"></use></svg>
+            <div class="stepBlock three" data-step=3>
+              <svg width="36" height="36" viewBox="0 0 36 36"><use xlink:href="./img/all_svgs.svg#shop"></use></svg>
               <h4>Buy the product</h4>
-              <p class="content">Continue to purchase the product before your reward timeline expires</p>
+              <p>Continue to purchase the product before your reward timeline expires</p>
             </div>
             <svg class="decorate star" width="20" height="20" viewBox="0 0 20 20"><use xlink:href="./img/all_svgs.svg#star"></use></svg>
             <svg class="decorate circle" width="20" height="20" viewBox="0 0 20 20"><use xlink:href="./img/all_svgs.svg#circle"></use></svg>
@@ -101,10 +93,10 @@
          </div>
 
           <div class="stepWrapper four">
-            <div class="step four" data-step=4>
-              <svg class="heroIcon" width="36" height="36" viewBox="0 0 36 36"><use xlink:href="./img/all_svgs.svg#gift"></use></svg>
+            <div class="stepBlock four" data-step=4>
+              <svg width="36" height="36" viewBox="0 0 36 36"><use xlink:href="./img/all_svgs.svg#gift"></use></svg>
               <h4>Redeem your rewards</h4>
-              <p class="content">Upload your bill, and the reward amount will be credited to your bank account</p>
+              <p>Upload your bill, and the reward amount will be credited to your bank account</p>
             </div>
             <svg class="decorate circle1" width="20" height="20" viewBox="0 0 20 20"><use xlink:href="./img/all_svgs.svg#circle"></use></svg>
             <svg class="decorate circle2" width="20" height="20" viewBox="0 0 20 20"><use xlink:href="./img/all_svgs.svg#circle"></use></svg>
@@ -112,7 +104,7 @@
             <svg class="decorate circle_rings" width="20" height="20" viewBox="0 0 20 20"><use xlink:href="./img/all_svgs.svg#circle_rings"></use></svg>
           </div>
 
-        </div>
+        </section>
       </section>
 
     </section>
@@ -122,188 +114,188 @@
 
     <div id="bodyContentsWrapper">
 
-      <section id="brandsSection">
-        <div id="brandsSectionContent">
+      <section id="brands">
+        <div class="contentBlock">
           <h6>Available Brands</h6>
           <h2>Your favourite brands with <br><span class="highlight">huge</span> discounts</h2>
           <a class="link" href="#">Learn More</a>
         </div>
-        <div id="brandsGradient"></div>
-        <div id="brandsSectionBanner"></div>
+        <div class="gradientBG"></div>
+        <div class="brandsBlock"></div>
       </section>
 
-      <section id="featuredProductsSection">
-        <div class="titleContainer">
+      <section id="featuredProducts">
+        <div class="titleBlock">
           <h6>FEATURED PRODUCTS</h6>
           <h2>BROWSE OUR TOP PRODUCTS</h2>
         </div>
-        <div id="featuredProductsWrapper">
+        <div class="wrapper">
 
 
-          <div class="eachProduct">
+          <div class="productCard">
             <header>
-              <div class="productPhoto" brand="Mama Earth">
+              <div class="photoBlock" brand="Mama Earth">
                 <img src="./img/products/1.png">
               </div>
             </header>
             <footer>
-              <div class="productDetails">
+              <div class="detailsBlock">
                 <h5>Allen Solly Men's Cotton Crew Neck Sweatshirt</h5>
-                <div class="productPrice">
+                <div class="priceBlock">
                   <span class="discounted">₹ 719</span>
                   <span class="original">₹1499</span>
                 </div>
               </div>
-              <div class="buttonsContainer">
-                <a class="shop" href=""><img src="./img/gradient/shop.svg">Buy</a>
-                <a class="buy" href=""><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
+              <div class="buttonsBlock">
+                <a class="buy" href=""><img src="./img/gradient/shop.svg">Buy</a>
+                <a class="play" href=""><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
               </div>
             </footer>
           </div>
 
-          <div class="eachProduct">
+          <div class="productCard">
             <header>
-              <div class="productPhoto" brand="Amazon">
+              <div class="photoBlock" brand="Amazon">
                 <img src="./img/products/2.png">
               </div>
             </header>
             <footer>
-              <div class="productDetails">
+              <div class="detailsBlock">
                 <h5>WANQLYN Ethnic Style Oxford Backpack</h5>
-                <div class="productPrice">
+                <div class="priceBlock">
                   <span class="discounted">₹ 899</span>
                   <span class="original">₹1999</span>
                 </div>
               </div>
-              <div class="buttonsContainer">
-                <a class="shop" href=""><img src="./img/gradient/shop.svg">Buy</a>
-                <a class="buy" href=""><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
+              <div class="buttonsBlock">
+                <a class="buy" href=""><img src="./img/gradient/shop.svg">Buy</a>
+                <a class="play" href=""><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
               </div>
             </footer>
           </div>
 
-          <div class="eachProduct">
+          <div class="productCard">
             <header>
-              <div class="productPhoto" brand="Chroma">
+              <div class="photoBlock" brand="Chroma">
                 <img src="./img/products/3.png">
               </div>
             </header>
             <footer>
-              <div class="productDetails">
+              <div class="detailsBlock">
                 <h5>HP v236w 32GB 2.0 Pen Drive</h5>
-                <div class="productPrice">
+                <div class="priceBlock">
                   <span class="discounted">₹ 339</span>
                   <span class="original">₹750</span>
                 </div>
               </div>
-              <div class="buttonsContainer">
-                <a class="shop" href=""><img src="./img/gradient/shop.svg">Buy</a>
-                <a class="buy" href=""><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
+              <div class="buttonsBlock">
+                <a class="buy" href=""><img src="./img/gradient/shop.svg">Buy</a>
+                <a class="play" href=""><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
               </div>
             </footer>
           </div>
 
-          <div class="eachProduct">
+          <div class="productCard">
             <header>
-              <div class="productPhoto" brand="Myntra">
+              <div class="photoBlock" brand="Myntra">
                 <img src="./img/products/4.png">
               </div>
             </header>
             <footer>
-              <div class="productDetails">
+              <div class="detailsBlock">
                 <h5>UDee Heavy Quality Car Windshield Sun Shade</h5>
-                <div class="productPrice">
+                <div class="priceBlock">
                   <span class="discounted">₹ 950</span>
                   <span class="original">₹1405</span>
                 </div>
               </div>
-              <div class="buttonsContainer">
-                <a class="shop" href=""><img src="./img/gradient/shop.svg">Buy</a>
-                <a class="buy" href=""><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
+              <div class="buttonsBlock">
+                <a class="buy" href=""><img src="./img/gradient/shop.svg">Buy</a>
+                <a class="play" href=""><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
               </div>
             </footer>
           </div>
 
-          <div class="eachProduct">
+          <div class="productCard">
             <header>
-              <div class="productPhoto" brand="Myntra">
+              <div class="photoBlock" brand="Myntra">
                 <img src="./img/products/5.png">
               </div>
             </header>
             <footer>
-              <div class="productDetails">
+              <div class="detailsBlock">
                 <h5>U.S. POLO ASSN. Mens Clanal Sneakers</h5>
-                <div class="productPrice">
+                <div class="priceBlock">
                   <span class="discounted">₹ 2279</span>
                   <span class="original">₹3599</span>
                 </div>
               </div>
-              <div class="buttonsContainer">
-                <a class="shop" href=""><img src="./img/gradient/shop.svg">Buy</a>
-                <a class="buy" href=""><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
+              <div class="buttonsBlock">
+                <a class="buy" href=""><img src="./img/gradient/shop.svg">Buy</a>
+                <a class="play" href=""><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
               </div>
             </footer>
           </div>
 
-          <div class="eachProduct">
+          <div class="productCard">
             <header>
-              <div class="productPhoto" brand="Amazon">
+              <div class="photoBlock" brand="Amazon">
                 <img src="./img/products/6.png">
               </div>
             </header>
             <footer>
-              <div class="productDetails">
+              <div class="detailsBlock">
                 <h5>AELOMART Men's Cotton Full Sleeve T Shirt</h5>
-                <div class="productPrice">
+                <div class="priceBlock">
                   <span class="discounted">₹ 593</span>
                   <span class="original">₹1499</span>
                 </div>
               </div>
-              <div class="buttonsContainer">
-                <a class="shop" href=""><img src="./img/gradient/shop.svg">Buy</a>
-                <a class="buy" href=""><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
+              <div class="buttonsBlock">
+                <a class="buy" href=""><img src="./img/gradient/shop.svg">Buy</a>
+                <a class="play" href=""><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
               </div>
             </footer>
           </div>
 
-          <div class="eachProduct">
+          <div class="productCard">
             <header>
-              <div class="productPhoto" brand="Flipkart">
+              <div class="photoBlock" brand="Flipkart">
                 <img src="./img/products/7.png">
               </div>
             </header>
             <footer>
-              <div class="productDetails">
+              <div class="detailsBlock">
                 <h5>Kraasa ProRider Running Shoes for Men</h5>
-                <div class="productPrice">
+                <div class="priceBlock">
                   <span class="discounted">₹ 199</span>
                   <span class="original">₹499</span>
                 </div>
               </div>
-              <div class="buttonsContainer">
-                <a class="shop" href=""><img src="./img/gradient/shop.svg">Buy</a>
-                <a class="buy" href=""><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
+              <div class="buttonsBlock">
+                <a class="buy" href=""><img src="./img/gradient/shop.svg">Buy</a>
+                <a class="play" href=""><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
               </div>
             </footer>
           </div>
 
-          <div class="eachProduct">
+          <div class="productCard">
             <header>
-              <div class="productPhoto" brand="Ajio">
+              <div class="photoBlock" brand="Ajio">
                 <img src="./img/products/8.png">
               </div>
             </header>
             <footer>
-              <div class="productDetails">
+              <div class="detailsBlock">
                 <h5>UGULAR Men's Slim Fit Track pants</h5>
-                <div class="productPrice">
+                <div class="priceBlock">
                   <span class="discounted">₹ 425</span>
                   <span class="original">₹999</span>
                 </div>
               </div>
-              <div class="buttonsContainer">
-                <a class="shop" href=""><img src="./img/gradient/shop.svg">Buy</a>
-                <a class="buy" href=""><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
+              <div class="buttonsBlock">
+                <a class="buy" href=""><img src="./img/gradient/shop.svg">Buy</a>
+                <a class="play" href=""><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
               </div>
             </footer>
           </div>

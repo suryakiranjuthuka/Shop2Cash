@@ -103,7 +103,7 @@ var downloadTimer = setInterval(function(){
     if(timeleft <= 0){
       clearInterval(downloadTimer);
     } else {
-      document.getElementById("countdown").innerHTML = "Playing in..." + timeleft;
+      document.getElementById("heroStepscountdown").innerHTML = "Playing in..." + timeleft;
     }
     timeleft -= 1;
   }
@@ -134,19 +134,19 @@ u('#playButton').on('click', function(e) {
   // Clears the timeout() if User clicks play before it
   clearTimeout(pageLoad5);
   clearInterval(downloadTimer);
-  u('#playContainer .stepCount').removeClass("initial");
+  u('#playController .stepCount').removeClass("initial");
 
   // Don't enter if its already playing
   if(!play) {
     play = true;
     playController.toState(false);
-    u('#playContainer .stepCount span').addClass("running");
+    u('#playController .stepCount span').addClass("running");
 
     // Calls each of the 4 step's
     function callSteps() {
-      u('#playContainer .stepCount span').text('Step ' + stepNumber);
-      u('#circleProgress .progress').addClass("active");
-      u('.stepWrapper .step.' + ref[stepNumber]).addClass("active");
+      u('#playController .stepCount span').text('Step ' + stepNumber);
+      u('#circularProgress .progress').addClass("active");
+      u('.stepWrapper .stepBlock.' + ref[stepNumber]).addClass("active");
       stepNumber++;
 
       window.stepTimer = setTimeout(function(){
@@ -155,8 +155,8 @@ u('#playButton').on('click', function(e) {
           stepNumber = 1;
         }
         // If step1 -> remove step4's active Else add active
-        if(stepNumber == 1) u('.stepWrapper .step.four').removeClass("active");
-        else u('.stepWrapper .step.' + ref[stepNumber-1]).removeClass("active");
+        if(stepNumber == 1) u('.stepWrapper .stepBlock.four').removeClass("active");
+        else u('.stepWrapper .stepBlock.' + ref[stepNumber-1]).removeClass("active");
 
         // and schedule a repeat
         callSteps();
@@ -171,18 +171,18 @@ u('#playButton').on('click', function(e) {
     playController.toState(true);
     // Clear any running Steps
     clearTimeout(window.stepTimer);
-      u('#playContainer .stepCount span').removeClass("running");
-      u('#playContainer .stepCount span').text('Paused');
+      u('#playController .stepCount span').removeClass("running");
+      u('#playController .stepCount span').text('Paused');
 
       // Remove Circle Progress Bar on indivudal step active
-      u('#circleProgress .progress').removeClass("active");
+      u('#circularProgress .progress').removeClass("active");
       stepNumber = stepNumber - 1;
   }
 });
 
 
 // On click of individal step card
-u('.step').on('click', function(e) {
+u('.stepBlock').on('click', function(e) {
 
   play = false;
   playController.toState(true);
@@ -191,14 +191,14 @@ u('.step').on('click', function(e) {
   clearTimeout(window.stepTimer);
   clearInterval(downloadTimer);
 
-  u('#playContainer .stepCount span').removeClass("running");
-  // u('#playContainer .stepCount span').text('Paused');
-  u('#playContainer .stepCount span').text('Step ' + u(this).data('step'));
+  u('#playController .stepCount span').removeClass("running");
+  // u('#playController .stepCount span').text('Paused');
+  u('#playController .stepCount span').text('Step ' + u(this).data('step'));
   // Remove Circle Progress Bar on indivudal step active
-  u('#circleProgress .progress').removeClass("active");
-  u('#playContainer .stepCount').removeClass("initial");
+  u('#circularProgress .progress').removeClass("active");
+  u('#playController .stepCount').removeClass("initial");
 
-  u('.step').removeClass("active")
+  u('.stepBlock').removeClass("active")
   u(this).addClass("active");
 
   stepNumber = u(this).data('step');
