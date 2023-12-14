@@ -14,7 +14,7 @@ div#headerWrapper {
 
 section#hero {
 	display: flex;
-	flex-flow: row;
+	flex-flow: row wrap;
 	justify-content: center;
 	align-items: center;
 	gap: 15rem;
@@ -27,6 +27,7 @@ section#hero {
 	background-size: initial;
   background-origin: border-box;
   background-position: bottom right;
+	overflow: hidden;
 }
 
 section#hero section.left {
@@ -64,56 +65,9 @@ section#hero .searchBlock input {
 	padding: 2.4rem 0;
 }
 section#hero .searchBlock input::placeholder {
-	font-size: 1.4rem;
+	font-size: var(--fs-14);
 }
 
-
-/* section#hero .searchBlock{
-	display: flex;
-	padding: 0rem 3.2rem;
-	align-items: center;
-	gap: 1.6rem;
-	align-self: stretch;
-	background: linear-gradient(#F8F5FB, #F8F5FB) padding-box, var(--gradient-transparent) border-box;
-	border: 2px solid transparent;
-	border-radius: 10rem;
-}
-
-section#hero .searchBlock:focus-within {
-	background: linear-gradient(#FEFCFF, #FEFCFF) padding-box, var(--gradient-transparent) border-box;
-}
-
-section#hero .searchBlock svg {
-	fill: var(--secondary);
-}
-
-section#hero .searchBlock input {
-	width: 100%;
-	padding: 2.4rem 0;
-	background: none;
-	border: none;
-	border-radius: 0;
-	outline: none;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	color: var(--primary-3);
-	letter-spacing: 0.14rem;
-	font-family: var(--ff-body);
-	font-weight: var(--fw-semi-bold);
-	text-transform: capitalize;
-}
-
-section#hero .searchBlock input::placeholder {
-	font-family: var(--ff-heading);
-	color: var(--search-text);
-	font-size: 1.4rem;
-	font-style: normal;
-	font-weight: var(--fw-semi-bold);
-	line-height: normal;
-	letter-spacing: 0.24rem;
-	text-transform: uppercase;
-} */
 
 section#hero section.right {
 	max-width: 680px;
@@ -233,6 +187,7 @@ section#heroSteps {
 	display: flex;
 	flex-flow: row wrap;
 	gap: 40px;
+	justify-content: center;
 }
 
 /*[class^="step-"] */
@@ -400,12 +355,14 @@ section#brands {
 	flex-flow: row;
 	justify-content: center;
 	gap: 4rem;
+	padding: 0 4%;
 }
 
 section#brands .contentBlock {
 	position: relative;
 	z-index: 2;
 	padding: 10rem 0;
+	min-width: 451px;
 }
 
 section#brands .gradientBG {
@@ -429,7 +386,7 @@ section#brands .brandsBlock img {
 }
 
 section#brands .contentBlock .link {
-	margin-top: 40px;
+	margin-top: 4rem;
 }
 
 

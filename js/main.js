@@ -207,8 +207,12 @@ u('.stepBlock').on('click', function(e) {
 
 // FAQ's
 u('#faqs .faq').on('click', function(e) {
-  u('#faqs .faq').removeClass("active");
-  u(this).addClass("active");
+  if(u(this).hasClass("active")) {
+    u(this).removeClass("active");
+  } else {
+    u('#faqs .faq').removeClass("active");
+    u(this).addClass("active");
+  }
 });
 
 u('#faqs .viewMoreButton').on('click', function(e) {
