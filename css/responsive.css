@@ -105,12 +105,15 @@
 
 
 @media (max-width: 720px) {
+  .label {
+    margin-bottom: 1.2rem;
+  }
 
   section#hero {
     padding-bottom: 8rem;
   }
   section#hero section.left {
-    gap: 1rem;
+    gap: 2rem;
   }
 
   section#hero .searchBlock{
@@ -139,13 +142,79 @@
     gap: 30px;
   }
 
+  section#brands {
+    padding: 0;
+    overflow: hidden;
+  }
+  section#brands .contentBlock {
+    padding-bottom: 3rem;
+  }
+  section#brands .brandsBlock img {
+    min-width: 680px;
+    max-height: unset;
+  }
+  section#brands .link {
+    display: none;
+  }
+
+  section#featuredProducts {
+    padding: 12rem 0rem 8rem;
+  }
+  section#featuredProducts .titleBlock {
+    margin-bottom: 3rem;
+  }
+  section#featuredProducts .wrapper {
+    margin: 0 0 2rem;
+    gap: 3rem;
+  }
+  section#featuredProducts div.productCard {
+    width: 26rem;
+  }
+  div.productCard header {
+    padding: 1.4rem;
+  }
+  div.productCard header .photoBlock {
+    height: 20rem;
+  }
+  div.productCard header img {
+    width: auto;
+    height: 15rem;
+  }
+  div.productCard footer {
+    height: initial;
+    padding: 0.4rem 2rem 2rem;
+    gap: 1.8rem;
+  }
+  div.productCard footer .detailsBlock {
+    gap: 1.2rem;
+  }
+  div.productCard footer .detailsBlock h5 {
+    font-size: var(--fs-12);
+  }
+  div.productCard footer .priceBlock span {
+    font-size: var(--fs-14);
+  }
+  div.productCard footer .buttonsBlock {
+    gap: 1.2rem;
+    /* flex-flow: column; */
+    width: 100%;
+  }
+  div.productCard footer .buttonsBlock a {
+    justify-content: center;
+    flex: 1;
+    gap: 1.2rem;
+  }
+  div.productCard footer .buttonsBlock a.play span {
+    width: 35px;
+    white-space: nowrap;
+  }
+
+
+
+
   section#about section.photo {
     width: 25rem;
     height: 25rem;
-  }
-  section#about section.content {
-    /* text-align: center; */
-    /* max-width: fit-content; */
   }
 
   section#faqs {
@@ -153,6 +222,7 @@
   }
   section#faqs .contentBlock {
     padding: 4rem 2rem;
+    margin-top: 3rem;
   }
   .faq .question {
     font-size: var(--fs-16);
