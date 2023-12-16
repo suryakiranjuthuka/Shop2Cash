@@ -80,6 +80,7 @@ section#hero section.right section#playController {
 	display: flex;
 	flex-flow: row;
 	align-items: center;
+	width: fit-content;
 	margin-bottom: 15px;
 	transform: translateX(-15px);
 }
@@ -337,7 +338,7 @@ section#heroSteps .stepBlock.active p {
 	transition: transform .2s;
 }
 
-#playButton:hover {
+#playController #playButton:hover {
 	transform: scale(1);
 }
 

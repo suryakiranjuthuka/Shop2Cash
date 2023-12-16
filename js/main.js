@@ -130,7 +130,7 @@ const ref = {
 
 
 // On click of the Play Button
-u('#playButton').on('click', function(e) {
+u('#playController').on('click', function(e) {
   // Clears the timeout() if User clicks play before it
   clearTimeout(pageLoad5);
   clearInterval(downloadTimer);
