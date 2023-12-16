@@ -1,4 +1,5 @@
 header#header {
+	position: relative;
 	display: flex;
 	padding: 4.8rem min(6%, 10rem);
 	justify-content: space-between;
@@ -6,7 +7,10 @@ header#header {
 }
 
 #header #logo {
+	position: relative;
 	width: 16rem;
+	z-index: 10;
+	transition: transform .2s;
 }
 
 #header nav {
@@ -31,7 +35,7 @@ header#header {
 #header nav a {
 	padding: .5rem 2.4rem;
 	border-radius: 2.4rem;
-	transition: all .2s;
+	transition: all ease .1s;
 	border: 1px dashed transparent;
 }
 
@@ -49,3 +53,86 @@ header#header {
 #header nav svg:hover {
 	fill: var(--primary-5);
 }
+
+ /* Mobile Menu Styles */
+#mobileMenu {
+	display: none;
+}
+#mobileMenu input#menu {
+    display: none;
+}
+
+#mobileMenu .icon {
+    background: transparent;
+    cursor: pointer;
+    display: block;
+    height: 24px;
+    padding: 16px;
+    width: 24px;
+}
+
+#mobileMenu label.icon {
+    /* position: fixed;
+    z-index: 200; */
+		position: relative;
+    display: block;
+}
+
+#mobileMenu .icon .menu,
+#mobileMenu .icon .menu::before,
+#mobileMenu .icon .menu::after {
+    /* background: #9FB1BD; */
+		background: var(--primary-6);
+    content: '';
+    display: block;
+    height: 2px;
+    position: absolute;
+    transition: background ease .3s, top ease .3s .3s, transform ease .3s;
+    width: 20px;
+}
+
+#mobileMenu .icon:hover .menu,
+#mobileMenu .icon:hover .menu::before,
+#mobileMenu .icon:hover .menu::after {
+    /* background: #47B74B; */
+		background: var(--secondary);
+}
+
+#mobileMenu .icon .menu {
+    /* left: 18px;
+    top: 27px; */
+		/* left: 0px;
+    top: 7px; */
+		left: 6px;
+		top: 15px;
+}
+
+#mobileMenu .icon .menu::before {
+    top: -6px;
+}
+
+#mobileMenu .icon .menu::after {
+    top: 6px;
+}
+
+#mobileMenu #menu:checked + .icon .menu {
+    background: transparent;
+}
+
+#mobileMenu #menu:checked + .icon .menu::before {
+    transform: rotate(45deg);
+}
+
+#mobileMenu #menu:checked + .icon .menu::after {
+    transform: rotate(-45deg);
+}
+
+#mobileMenu #menu:checked + .icon .menu::before,
+#mobileMenu #menu:checked + .icon .menu::after {
+    top: 0;
+    transition: top ease .3s, transform ease .3s .3s;
+}
+
+/* #menu:checked ~ nav {
+    width: 200px;
+} */

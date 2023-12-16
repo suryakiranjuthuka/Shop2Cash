@@ -219,3 +219,20 @@ u('#faqs .viewMoreButton').on('click', function(e) {
   u('#faqs .faq').removeClass("hidden");
   u(this).addClass("displayNone");
 });
+
+// Mobile Menu
+u('#mobileMenu #menu').on('click', function(e) {
+  if(u('#mobileMenu #menu').is(':checked')) {
+    u('#header nav').addClass("slide");
+    u('#header').addClass("mobile");
+  } else {
+    u('#header nav').removeClass("slide");
+    u('#header').removeClass("mobile");
+  }
+});
+// Remove Active Mobile Menu
+u('#header nav').on('click', function(e) {
+  const checkbox = document.querySelector('#mobileMenu #menu');
+  checkbox.checked = false;
+  u('#mobileMenu #menu').trigger('click');
+});
