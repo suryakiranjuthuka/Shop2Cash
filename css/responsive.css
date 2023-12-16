@@ -260,5 +260,9 @@
   	transform: translateX(-42px) scale(.8);
   }
 
+  .viewMoreButton {
+    margin-top: 1.6rem;
+  }
+
 
 }
