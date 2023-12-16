@@ -223,10 +223,10 @@ u('#faqs .viewMoreButton').on('click', function(e) {
 // Mobile Menu
 u('#mobileMenu #menu').on('click', function(e) {
   if(u('#mobileMenu #menu').is(':checked')) {
-    u('#header nav').addClass("slide");
+    u('#header').addClass("slide");
     u('#header').addClass("mobile");
   } else {
-    u('#header nav').removeClass("slide");
+    u('#header').removeClass("slide");
     u('#header').removeClass("mobile");
   }
 });

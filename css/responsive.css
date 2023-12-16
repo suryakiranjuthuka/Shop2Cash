@@ -265,10 +265,10 @@
   header#header {
     justify-content: space-between;
   }
-  header#header #logo {
+  header#header.slide #logo {
     transform: translateX(4rem);
   }
-  header#header nav.slide {
+  header#header.slide nav {
     transform: translateX(0px);
   }
   header#header nav {
