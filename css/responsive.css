@@ -164,8 +164,15 @@
     margin-bottom: 3rem;
   }
   section#featuredProducts .wrapper {
-    margin: 0 0 2rem;
     gap: 3rem;
+    flex-flow: row nowrap;
+    overflow: scroll;
+    justify-content: flex-start;
+    margin: 0rem;
+    padding: 0 4.8rem 4rem;
+  }
+  section#featuredProducts .link {
+    margin-top: 1rem;
   }
   section#featuredProducts div.productCard {
     width: 26rem;
@@ -221,7 +228,7 @@
     padding: 8rem 0 6rem;
   }
   section#faqs .contentBlock {
-    padding: 4rem 2rem;
+    padding: 2.4rem 2rem;
     margin-top: 3rem;
   }
   .faq .question {
@@ -240,9 +247,10 @@
     order: 3;
   }
 
+  /* Global Link Styles */
   .link {
     font-size: var(--fs-12);
-    margin-top: 1.8rem !important;
+    /* margin-top: 1.8rem !important; */
   }
   .link::before {
     background-position: left top -6px;
