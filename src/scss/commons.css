@@ -155,7 +155,7 @@ p {
   text-align: inherit;
   font: inherit;
   border-radius: 0;
-  appearance: none; // Just in case we missed anything.
+  appearance: none;
 }
 
 .bold {
