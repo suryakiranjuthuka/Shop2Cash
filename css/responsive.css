@@ -98,7 +98,7 @@
   }
 
   .link {
-    margin-top: 2.4rem !important;
+    margin-top: 2.4rem;
   }
 
 }
@@ -132,8 +132,6 @@
   }
 
   section#hero section.right section#playController {
-    transform: translateX(-95px);
-    justify-content: center;
     margin: 30px 0 0px;
   }
 
@@ -172,7 +170,7 @@
     padding: 0 4.8rem 4rem;
   }
   section#featuredProducts .link {
-    margin-top: 1rem;
+    margin-top: 1rem !important;
   }
   section#featuredProducts div.productCard {
     width: 26rem;
@@ -285,10 +283,24 @@
     z-index: 5;
     backdrop-filter: blur(30px);
     background: rgba(255,255,255,.3);
-    border: 1px solid rgba(23, 14, 65, 0.06);
-    box-shadow: 1px 0px 0px 0px rgba(255, 255, 255, 0.30) inset, 0px 15px 30px 0px rgba(23, 14, 65, 0.03);
-    transition: transform .3s;
-    transform: translateX(-280px);
+    border: 1px solid rgba(23, 14, 65, 0.05);
+    /* box-shadow: 1px 0px 0px 0px rgba(255, 255, 255, 0.30) inset, 0px 15px 30px 0px rgba(23, 14, 65, 0.03); */
+    transition: transform  ease.5s;
+    transform: translateX(-320px);
+    box-shadow:
+    2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    100px 100px 80px rgba(0, 0, 0, 0.07);
+    /* box-shadow:
+    1.4px 1.4px 2.2px rgba(0, 0, 0, 0.02),
+    3.3px 3.3px 5.3px rgba(0, 0, 0, 0.028),
+    6.3px 6.3px 10px rgba(0, 0, 0, 0.035),
+    11.2px 11.2px 17.9px rgba(0, 0, 0, 0.042),
+    20.9px 20.9px 33.4px rgba(0, 0, 0, 0.05),
+    50px 50px 80px rgba(0, 0, 0, 0.07); */
   }
   header#header nav a {
     width: 100%;
