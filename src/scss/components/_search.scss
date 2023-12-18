@@ -1,0 +1,67 @@
+// Search Mixin for Customization of Searchbar in different areas
+@mixin search($borderWidth: 1px, $paddingRL: 0rem 3.2rem, $paddingTB: 1.3rem 0, $gap: 1rem, $svgWidth: 24px, $svgHeight: 24px, $inputFontSize: 1.6rem, $placeholderFontSize: 1.2rem, $bg: #FCFAFD, $bgFocused: #FFFFFF) {
+  .search{
+    padding: $paddingRL;
+    border-width: $borderWidth;
+  	gap: $gap;
+    background: linear-gradient(#{$bg}, #{$bg}) padding-box, var(--gradient-transparent) border-box;
+    &:focus-within {
+    	background: linear-gradient(#{$bgFocused}, #{$bgFocused}) padding-box, var(--gradient-transparent) border-box;
+    }
+    svg {
+      width: $svgWidth;
+      height: $svgHeight;
+    }
+    input {
+    	font-size: $inputFontSize;
+      padding: $paddingTB;
+      &::placeholder {
+      	font-size: $placeholderFontSize;
+      }
+    }
+  }
+}
+
+
+// Search Styles
+.search{
+  padding: 0rem 3.2rem;
+  border: 1px solid transparent;
+  border-radius: 10rem;
+  background: linear-gradient(#FCFAFD, #FCFAFD) padding-box, var(--gradient-transparent) border-box;
+	display: flex;
+	align-items: center;
+	gap: 1.6rem;
+	align-self: stretch;
+  &:focus-within {
+    background: linear-gradient(#FFFFFF, #FFFFFF) padding-box, var(--gradient-transparent) border-box;
+  }
+  svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--secondary);
+  }
+  input {
+    color: var(--primary-3);
+    font-family: var(--ff-body);
+  	font-size: var(--fs-16);
+    font-weight: var(--fw-semi-bold);
+  	width: 100%;
+  	padding: 1.3rem 0;
+  	background: none;
+  	border: none;
+  	border-radius: 0;
+  	outline: none;
+  	appearance: none;
+  	letter-spacing: 0.14rem;
+    &::placeholder {
+      color: var(--search-text);
+    	font-family: var(--ff-heading);
+    	font-size: 1.2rem;
+    	font-weight: var(--fw-semi-bold);
+    	line-height: normal;
+    	letter-spacing: 0.24rem;
+    	text-transform: uppercase;
+    }
+  }
+}

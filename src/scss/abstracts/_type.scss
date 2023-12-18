@@ -1,0 +1,41 @@
+:root {
+
+  /* ===============
+   TYPOGRAPHY
+   =============== */
+
+  /* Show the font accurately on all Browers */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: never;
+
+  /* Base Font size to use Rem's easily	*/
+  font-size: 62.5%; /* 1rem = 10px	*/
+
+  /* Font Family */
+  --ff-body: 'Mulish', sans-serif;
+  --ff-heading: 'Jost', sans-serif;
+
+  /* Font Size Large | XL | XXL */
+  --fs-xxl: 4.6rem;
+  --fs-xl: 3.2rem;
+  --fs-l: 2.4rem;
+
+  /* Font Sizes 10px to 18px */
+  --fs-18: 1.8rem;
+  --fs-17: 1.7rem;
+  --fs-16: 1.6rem;
+  --fs-15: 1.5rem;
+  --fs-14: 1.4rem;
+  --fs-13: 1.3rem;
+  --fs-12: 1.2rem;
+  --fs-11: 1.1rem;
+  --fs-10: 1rem;
+
+  /* Font Weights Regular | Medium | Large */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+
+}

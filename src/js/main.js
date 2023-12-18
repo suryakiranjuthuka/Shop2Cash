@@ -215,6 +215,7 @@ u('#faqs .faq').on('click', function(e) {
   }
 });
 
+// View More FAQ's
 u('#faqs .viewMoreButton').on('click', function(e) {
   u('#faqs .faq').removeClass("hidden");
   u(this).addClass("displayNone");

@@ -1,0 +1,461 @@
+@use '../abstracts' as *;
+@use '../base' as *;
+@use '../components' as *;
+@use '../layouts' as *;
+
+// Wrapper for the Header & Hero Sections
+#headerHeroWrapper {
+	background: var(--bg-hero);
+}
+// Wrapper for rest of the body
+#bodyContentsWrapper {
+	background: var(--bg-body);
+}
+
+#hero {
+  position: relative;
+  padding-top: 9px;
+  padding-bottom: 102px;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15rem;
+
+  background: url("../img/gradient/hero_bg.svg");
+  background-repeat: no-repeat;
+  background-size: initial;
+  background-origin: border-box;
+  background-position: bottom right;
+  overflow: hidden;
+
+  .left {
+    max-width: 540px;
+    display: flex;
+    flex-flow: column;
+    gap: 3rem;
+    transform: translateY(15px);
+    h1 span {
+      background-image: url("../img/gradient/highlight.svg");
+      background-repeat: no-repeat;
+      background-position: bottom;
+    }
+    // SearchBar Mixin
+    @include search($borderWidth: 2px, $paddingRL: null, $paddingTB: 2.4rem 0, $gap: null, $svgWidth: 3rem, $svgHeight: 3rem, $inputFontSize: null, $placeholderFontSize: 1.4rem, $bg: #F8F5FB, $bgFocused: #FEFCFF);
+  }
+  .right {
+    max-width: 680px;
+
+    #playController {
+      position: relative;
+      width: fit-content;
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+      transform: translateX(-15px);
+
+      #circularProgressBlock {
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+
+      svg#circularProgress {
+        position: relative;
+        transform:rotate(-90deg);
+        z-index: 1;
+        .default {
+          fill: var(--white);
+          stroke: var(--light-border);
+          stroke-width: 1;
+          stroke-dasharray: 157;
+          stroke-dashoffset: 0;
+        }
+        .progress {
+        	fill: transparent;
+        	stroke: var(--tertiary);
+        	stroke-width: 2;
+        	stroke-linecap: round;
+        	stroke-dasharray: 157;
+        	stroke-dashoffset: 157;
+          &.active {
+            animation: circleProgressBar 6s linear forwards infinite;
+          }
+          @keyframes circleProgressBar {
+            from {
+              stroke-dashoffset: 157;
+            }
+            to {
+              stroke-dashoffset: 0;
+            }
+          }
+        }
+      }
+
+      #playButton {
+        width: 50px;
+        height: 50px;
+        fill: var(--primary-6);
+        padding: 10px;
+        margin: auto;
+
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform: scale(.8);
+        transition: transform .2s;
+        cursor: pointer;
+        z-index: 1;
+        &:hover {
+          transform: scale(1);
+        }
+      }
+
+      #stepCount {
+        color: var(--primary-6);
+        font-size: var(--fs-13);
+        font-weight: var(--fw-semi-bold);
+        letter-spacing: 0.24rem;
+        text-transform: uppercase;
+
+        height: fit-content;
+        background-color: #FEFCFF;
+        padding: 0.4rem 1.4rem 0.4rem 1.8rem;
+        border: 1px solid #E4C8FC;
+        border-radius: 0rem 0.8rem 0.8rem 0rem;
+
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        transition: all .2s;
+        transform: translateX(-21px);
+        z-index: 0;
+        &.initial {
+          background: #f9f1ff;
+          border-color: transparent;
+        }
+        span.running {
+          transition: all .2s ease;
+          animation: stepCountAnimate 6s linear infinite;
+        }
+        @keyframes stepCountAnimate {
+          0% {
+        		transform: translateX(-20px);
+        	}
+        	5%, 100% {
+        		transform: translateX(0px);
+        	}
+        }
+      }
+    }
+
+    #heroSteps {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      gap: 4rem;
+
+      .stepBlock {
+        position: relative;
+      	min-width: 32rem;
+      	padding: 2.2rem 3.2rem;
+      	border: 2px solid var(--white-50);
+      	border-right-color: var(--white-20);
+      	border-bottom-color: var(--white-20);
+      	border-radius: 1.6rem;
+
+        background: linear-gradient(105deg, var(--white-40) 16.65%, var(--white-10) 79.09%);
+        backdrop-filter: blur(14px);
+        transform: scale(1);
+        box-shadow: var(--shadow-elevation-medium);
+        transition: all ease .16s;
+        cursor: pointer;
+        z-index: 1;
+        &:hover {
+          border: 2px solid var(--white);
+        }
+        svg {
+					width: 3.6rem;
+					height: 3.6rem;
+          display: block;
+          fill: var(--secondary);
+          transition: all .5s 0s ease;
+        }
+        h4 {
+          color: var(--primary-1);
+          font-size: var(--fs-16);
+          font-weight: var(--fw-semi-bold);
+          letter-spacing: 0.24rem;
+          text-transform: uppercase;
+          margin: 2rem 0 0;
+          transition: all .5s 0s ease;
+        }
+        p {
+          opacity: 0;
+          color: var(--body-80);
+          font-family: var(--ff-body);
+          font-size: var(--fs-14);
+          font-style: normal;
+          font-weight: var(--fw-normal);;
+          line-height: 140%;
+          max-width: 265px;
+
+          position: absolute;
+          left: 34px;
+          bottom: 0px;
+          transition: all .2s 0s ease;
+        }
+        &.active {
+					&:hover {
+						border: 2px solid var(--white-50);
+		      	border-right-color: var(--white-20);
+		      	border-bottom-color: var(--white-20);
+	        }
+          svg {
+            transform: translateX(-50px);
+            transition: all .5s 0s ease;
+          }
+          h4 {
+            transform: translateY(-50px);
+            transition: all .5s 0s ease;
+          }
+          p {
+            opacity: 1;
+            transform: translateY(-20px);
+            transition: all .5s .3s ease;
+          }
+        }
+      }
+    }
+
+  }
+	@include breakpoint(large) {
+		justify-content: space-evenly;
+		gap: 0;
+	}
+	@include breakpoint(medium) {
+		flex-flow: column;
+		.left {
+			gap: 2rem;
+	    text-align: center;
+	    transform: translateY(0px);
+	    margin-bottom: .5rem;
+			.searchBlock{
+		    padding: 0rem 2.4rem;
+		    gap: 1.4rem;
+				svg {
+			  	width: 24px;
+			  	height: 24px;
+			  }
+				input {
+			  	padding: 1.6rem 0;
+					&::placeholder {
+				  	font-size: var(--fs-12);
+				  }
+			  }
+		  }
+		}
+		.right #playController {
+	    margin: 15px 0 0px;
+	  }
+	}
+	@include breakpoint(small) {
+		padding-bottom: 8rem;
+		.left {
+		 	gap: 2rem;
+			.searchBlock{
+		    border-width: 1.5px;
+				svg {
+			    width: 20px;
+			    height: 20px;
+			  }
+				input {
+					font-size: var(--fs-14);
+					padding: 1.2rem 0;
+					&::placeholder {
+				    font-size: var(--fs-10);
+				  }
+				}
+		  }
+		}
+		.right {
+			#playController {
+				  margin: 30px 0 0px;
+			}
+			#heroSteps {
+		    flex-flow: column;
+		    gap: 30px;
+		  }
+		}
+	}
+}
+
+
+// Partner Brands Section
+#brands {
+  position: relative;
+  padding: 0 4%;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  gap: 4rem;
+  .contentBlock {
+    position: relative;
+    min-width: 451px;
+    padding: 10rem 0;
+    z-index: 2;
+    .link {
+      margin-top: 4rem;
+    }
+  }
+  .gradientBG {
+    width: 100%;
+    height: 100%;
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  	background: linear-gradient(180deg, rgba(241, 236, 248, 0.00) 85.44%, #F2ECF8 100%), linear-gradient(96deg, #EFE9F6 42.46%, rgba(239, 233, 246, 0.00) 49.68%);
+    z-index: 1;
+  }
+  .brandsBlock {
+    position: relative;
+  	display: flex;
+  	align-items: center;
+    z-index: 0;
+    img {
+      max-height: 276px;
+    }
+  }
+	@include breakpoint(large) {
+		gap: 0;
+		.contentBlock {
+	    padding: 4rem 0;
+	  }
+	}
+	@include breakpoint(medium) {
+		flex-flow: column;
+		align-items: center;
+		gap: 0;
+		.contentBlock {
+	    text-align: center;
+	    min-width: auto;
+	  }
+		.gradientBG {
+	    display: none;
+	  }
+		.brandsBlock img {
+	    max-height: 240px;
+	  }
+	}
+	@include breakpoint(small) {
+		padding: 0;
+		overflow: hidden;
+		.contentBlock {
+	    padding-bottom: 3rem;
+	  }
+		.brandsBlock img {
+	    min-width: 650px;
+	    max-height: unset;
+	  }
+		.link {
+	    display: none;
+	  }
+	}
+}
+
+
+// Featured Products Section
+#featuredProducts {
+	padding: 10rem 10rem 8.8rem;
+	text-align: center;
+	.titleBlock {
+		text-align: center;
+		margin-bottom: 4.8rem;
+	}
+	.wrapper {
+		padding: 0rem 4rem;
+		margin: 4.8rem 0 6rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+		flex-wrap: wrap;
+		gap: 6rem 4rem;
+	}
+	@include breakpoint(medium) {
+		padding-left: 0;
+		padding-right: 0;
+		.wrapper {
+	    gap: 4rem;
+	    margin: 4.8rem 0;
+	  }
+	}
+	@include breakpoint(small) {
+		padding: 12rem 0rem 8rem;
+		.titleBlock {
+	    margin-bottom: 3rem;
+	  }
+		.wrapper {
+	    gap: 3rem;
+	    flex-flow: row nowrap;
+	    overflow: scroll;
+	    justify-content: flex-start;
+	    margin: 0rem;
+	    padding: 0 4.8rem 4rem;
+			.productCard {
+		    width: 26rem;
+				header {
+				  padding: 1.4rem;
+					.photoBlock {
+				    height: 20rem;
+						&::after {
+							font-size: 9px;
+    					padding: 0.5rem 1.2rem;
+						}
+				  }
+					img {
+						width: auto;
+						height: 15rem;
+					}
+				}
+				footer {
+					height: initial;
+					padding: 0.4rem 2rem 2rem;
+					gap: 1.8rem;
+					.detailsBlock {
+						gap: 1.2rem;
+						h5 {
+							font-size: var(--fs-12);
+						}
+					}
+					.priceBlock span {
+				    font-size: var(--fs-14);
+				  }
+					.buttonsBlock {
+				    gap: 1.2rem;
+				    width: 100%;
+						a {
+							justify-content: center;
+							flex: 1;
+							gap: 1.2rem;
+							&.play span {
+								width: 35px;
+								white-space: nowrap;
+							}
+						}
+				  }
+				}
+		  }
+	  }
+		.link {
+			  margin-top: 1rem !important;
+		}
+	}
+
+}

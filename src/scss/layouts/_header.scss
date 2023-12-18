@@ -1,0 +1,175 @@
+@use '../abstracts/breakpoints' as *;
+
+#header {
+  position: relative;
+  padding: 4.8rem min(6%, 10rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  #logo {
+    position: relative;
+    width: 16rem;
+    transition: transform .5s;
+    z-index: 10;
+  }
+
+  nav {
+    padding: 0rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    a {
+      color: var(--primary-1);
+      font-size: var(--fs-13);
+      font-weight: var(--fw-semi-bold);
+      letter-spacing: 0.24rem;
+      text-transform: uppercase;
+      padding: .5rem 2.4rem;
+      border: 1px dashed transparent;
+      border-radius: 2.4rem;
+      transition: all .1s;
+      &:hover, &:focus {
+        color: var(--primary-5);
+        background-color: var(--light-bg);
+        border-color: var(--light-border);
+      }
+    }
+    svg {
+      width: 3rem;
+      height: 3rem;
+      fill: var(--primary-1);
+      margin-left: 2.4rem;
+      &:hover, &:focus {
+        fill: var(--primary-5);
+      }
+    }
+  }
+
+  // Hamburger Icon Container(for Mobile Only)
+  #mobileMenu {
+    display: none;
+    .icon {
+      position: relative;
+      display: block;
+      height: 24px;
+      width: 24px;
+      padding: 1.6rem;
+      background: transparent;
+      cursor: pointer;
+
+      .menu, .menu::before, .menu::after  {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: var(--primary-6);
+        transition: background ease .3s, top ease .3s .3s, transform ease .3s;
+      }
+      .menu {
+        left: 6px;
+        top: 15px;
+      }
+      .menu::before {
+        top: -6px;
+      }
+      .menu::after {
+        top: 6px;
+      }
+
+      &:hover, &:focus {
+        .menu, .menu::before, .menu::after {
+          background: var(--secondary);
+        }
+      }
+    }
+
+    input#menu {
+      display: none;
+    }
+    #menu:checked + .icon .menu {
+        background: transparent;
+    }
+    #menu:checked + .icon .menu::before {
+        transform: rotate(45deg);
+        top: 0;
+        transition: top ease .3s, transform ease .3s .3s;
+    }
+    #menu:checked + .icon .menu::after {
+        transform: rotate(-45deg);
+        top: 0;
+        transition: top ease .3s, transform ease .3s .3s;
+    }
+  }
+  @include breakpoint(medium) {
+    justify-content: center;
+    #logo {
+    	width: 14rem;
+    }
+  }
+  @include breakpoint(small) {
+    padding-top: 2.4rem;
+    justify-content: space-between;
+    &.slide {
+      #logo {
+        transform: translate(4rem, 2.4rem);
+      }
+      nav {
+        transform: translateX(0px);
+      }
+    }
+    nav {
+      position: absolute;
+      left: 6%;
+      top: 2.4rem;
+      flex-flow: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 0;
+      border-radius: 1.2rem;
+      min-width: 22rem;
+      padding: 7rem 0 0rem;
+      z-index: 5;
+      backdrop-filter: blur(30px);
+      background: rgba(255,255,255,.3);
+      border: 1px solid rgba(23, 14, 65, 0.05);
+      /* box-shadow: 1px 0px 0px 0px rgba(255, 255, 255, 0.30) inset, 0px 15px 30px 0px rgba(23, 14, 65, 0.03); */
+      transition: transform  ease .5s;
+      transform: translateX(-320px);
+      box-shadow:
+      2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+      6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+      12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+      22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+      41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+      100px 100px 80px rgba(0, 0, 0, 0.07);
+      /* box-shadow:
+      1.4px 1.4px 2.2px rgba(0, 0, 0, 0.02),
+      3.3px 3.3px 5.3px rgba(0, 0, 0, 0.028),
+      6.3px 6.3px 10px rgba(0, 0, 0, 0.035),
+      11.2px 11.2px 17.9px rgba(0, 0, 0, 0.042),
+      20.9px 20.9px 33.4px rgba(0, 0, 0, 0.05),
+      50px 50px 80px rgba(0, 0, 0, 0.07); */
+      a {
+        width: 100%;
+        padding: 2rem 4rem;
+        border: 0px solid white;
+        border-bottom: 1px solid rgba(16, 0, 43, .1);
+        border-radius: 0;
+        border-right-width: 0;
+        border-left-width: 0;
+        text-align: center;
+        &:hover {
+          background-color: rgba(252, 248, 255, .4);
+        }
+      }
+      svg {
+        margin: 2rem auto;
+      }
+    }
+    #mobileMenu {
+    		display: block
+    }
+  }
+}

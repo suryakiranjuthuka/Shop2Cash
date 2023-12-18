@@ -1,0 +1,309 @@
+@use '../abstracts/breakpoints' as *;
+
+
+/* ===== About Us ===== */
+#about {
+  padding: 10rem 0;
+  border-top: 1px solid var(--section-border);
+  border-bottom: 1px solid var(--section-border);
+
+	display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16rem;
+  .photo {
+    width: 40rem;
+  	height: 40rem;
+  	border-radius: 2.4rem;
+  	background: var(--white-80);
+    box-shadow: var(--shadow-card-low);
+  }
+  .contentBlock {
+    max-width: 510px;
+    display: flex;
+    flex-flow: column;
+    gap: 2.4rem;
+    .content {
+      display: flex;
+      flex-flow: column;
+      gap: 2rem;
+    }
+  }
+  @include breakpoint(medium) {
+    padding: 8rem 2rem;
+    justify-content: space-around;
+    gap: 4rem;
+    section.photo {
+    	width: 30rem;
+    	height: 30rem;
+    }
+  }
+  @include breakpoint(small) {
+    .photo {
+      width: 25rem;
+      height: 25rem;
+    }
+  }
+}
+
+
+
+/* ===== FAQ's ===== */
+#faqs {
+  padding: 10rem 0;
+  text-align: center;
+  .contentBlock {
+    max-width: 90rem;
+    padding: 3.2rem 7.5rem;
+    margin: 4.8rem auto 0;
+    border: 5px solid #F9F1FF;
+    border-radius: 4rem;
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    .faq {
+    	border-top: 1px solid rgba(16, 0, 43, 0.10);
+    	cursor: pointer;
+    	transition: all .1s;
+      &:hover {
+        background: #FAF7FC;
+      }
+      &:first-child {
+      	border-top: 0px;
+      }
+      .question {
+      	position: relative;
+        padding: 2.5rem 5rem 2.5rem 1rem;
+      	display: flex;
+      	align-items: center;
+      	align-self: stretch;
+
+      	color: var(--body);
+      	font-family: var(--ff-body);
+      	font-size: var(--fs-18);
+      	font-weight: var(--fw-medium);
+      	line-height: 133.2%; /* 2.3976rem */
+      	letter-spacing: 0.1rem;
+      	text-align: left;
+      	transition: all .1s;
+        &::after {
+          content: '';
+          width: 32px;
+          height: 32px;
+          position: absolute;
+          top: 2.2rem;
+          right: 10px;
+          background: url("../img/gradient/down_arrow.svg");
+          transition: all .2s;
+        }
+      }
+      .content {
+        opacity: 0;
+        height: 0;
+        pointer-events: none;
+        color: #727682;
+        font-size: var(--fs-16);
+        text-align: left;
+        padding: 0 5rem 0rem 2rem;
+        display: flex;
+        flex-flow: column;
+        gap: 1.6rem;
+        transition: all .2s;
+      }
+      &.active {
+        background: #FAF7FC !important;
+        .question {
+          transform: translateX(1rem);
+          &::after {
+            transform: rotate(-90deg) translateY(-1rem);
+          }
+        }
+        .content {
+          height: auto;
+          padding-bottom: 2.5rem;
+          pointer-events: auto;
+          opacity: 1;
+        }
+      }
+      &.hidden {
+        display: none;
+      }
+    }
+  }
+  @include breakpoint(small) {
+    padding: 8rem 0 6rem;
+    .contentBlock {
+      padding: 2.4rem 2rem;
+      margin-top: 3rem;
+    }
+    .faq {
+      .question {
+        font-size: var(--fs-16);
+        padding: 2rem 5rem 2rem 1rem;
+        &::after {
+          top: 1.5rem;
+        }
+      }
+      .content p{
+        font-size: var(--fs-15);
+      }
+
+    }
+
+  }
+}
+
+
+
+/* ===== Footer Styles ===== */
+#footer {
+  padding: 6rem 0 8rem;
+	background: var(--bg-footer);
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+	gap: 2rem;
+  > section {
+  	display: flex;
+  	flex-flow: column;
+  	gap: 3.2rem;
+  }
+  .label {
+    color: var(--primary-3);
+  	width: fit-content;
+  	padding: .4rem 0 .3rem;
+    margin-bottom: 0px;
+  	border-bottom: 1px dashed var(--secondary);
+  }
+  #nav {
+    .navBlock {
+    	display: flex;
+    	flex-flow: column;
+      a {
+        color: var(--body);
+        padding: .8rem 0;
+        font-family: var(--ff-body);
+        font-size: var(--fs-13);
+        font-weight: var(--fw-bold);
+        line-height: normal;
+        letter-spacing: 0.24rem;
+        text-transform: uppercase;
+        transition: all .1s;
+        &:hover {
+          color: var(--primary-5);
+        }
+        &:first-child {
+        	padding-top: 0;
+        }
+      }
+    }
+  }
+  #search {
+    min-width: 420px;
+    .seperator {
+    	width: 100%;
+    	height: 1px;
+    	margin: 3.2rem 0;
+    	background: rgba(16, 0, 43, 0.10);
+    }
+    p.copyright {
+    	color: var(--body);
+    	text-align: center;
+    	font-family: var(--ff-body);
+    	font-size: var(--fs-11);
+    	font-weight: var(--fw-bold);;
+    	letter-spacing: 0.26rem;
+    	text-transform: uppercase;
+    }
+  }
+  #contact {
+    .phoneEmail {
+    	display: flex;
+    	flex-flow: column;
+    	gap: 1.6rem;
+      span {
+      	display: flex;
+      	flex-flow: row;
+      	align-items: center;
+      	gap: 1.6rem;
+        a {
+          color: var(--body);
+          font-family: var(--ff-body);
+          font-size: var(--fs-14);
+          font-weight: var(--fw-semi-bold);;
+          letter-spacing: 0.24rem;
+          transition: all .1s;
+          &:hover {
+            	color: var(--primary-5);
+          }
+        }
+        svg {
+          width: 2rem;
+          height: 2rem;
+          fill: var(--secondary);
+        }
+      }
+    }
+    .social {
+      display: flex;
+      flex-flow: row;
+      justify-content: space-between;
+      margin-top: 2.4rem;
+      span {
+        position: relative;
+        width: 5rem;
+        height: 5rem;
+        padding: 1rem;
+        border-radius: 5rem;
+        background-color: var(--white-50);
+        box-sizing: border-box;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all .2s;
+        &:hover {
+          background: var(--white);
+          svg {
+          	transform: scale(1.2);
+          }
+        }
+        &.fancyBorder {
+          &::after {
+          	border-radius: 5rem;
+          }
+          &:hover::after {
+            top: -8px;
+            left: -8px;
+            right: -8px;
+            bottom: -8px;
+          }
+        }
+      }
+      svg {
+        width: 2rem;
+        height: 2rem;
+        fill: none;
+        stroke: rgb(85, 26, 139);
+        transition: all .2s;
+      }
+    }
+  }
+  @include breakpoint(medium) {
+    padding: 4rem 0 5rem;
+    #search {
+      order: 3;
+      .label {
+        display: none;
+      }
+    }
+  }
+  @include breakpoint(small) {
+    #search {
+      min-width: 80%;
+      order: 3;
+    }
+  }
+}

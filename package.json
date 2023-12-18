@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "Join the Cashback Revolution: India's No.1 Cashback Website",
   "scripts": {
-    "start": "rm -rf src/css/* && parcel watch src/scss/pages/home.css src/scss/responsive.css --dist-dir src/css",
-    "build": "rm -rf src/css/* && parcel build src/scss/pages/home.css src/scss/responsive.css --dist-dir src/css"
+    "start": "rm -rf src/css/* && parcel watch src/scss/main.scss --dist-dir src/css",
+    "build": "rm -rf src/css/* && parcel build src/scss/main.scss --dist-dir src/css"
   },
   "author": "Surya Kiran Juthuka",
   "license": "ISC",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.10.3",
     "parcel": "^2.10.3",
     "sass": "^1.69.5"
   }

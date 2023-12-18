@@ -1,0 +1,56 @@
+:root {
+
+  /* ===============
+   COLORS
+   =============== */
+
+  /* Primary | Secondary | Tertiary */
+  --primary-1: #10002B;
+  --primary-2: #240046;
+  --primary-3: #3C096C;
+  --primary-4: #5A189A;
+  --primary-5: #7121C2;
+  --primary-6: #7B2CBF;
+  --secondary: #D96F04;
+  --tertiary: #70BF2B;
+
+  /* Gradients */
+  --gradient-default: linear-gradient(90deg, #7000FF -4.07%, #FF9B05 129.29%);
+  --gradient-transparent: linear-gradient(90deg, rgba(112, 0, 255, 0.50) -4.07%, rgba(255, 155, 5, 0.50) 129.29%);
+  --gradient-hero-text: linear-gradient(278deg, #3C096C 22.63%, #621CA3 95.05%);
+  --gradient-hero-shape-bg: linear-gradient(180deg, rgba(149, 116, 221, 0.40) 0%, rgba(149, 116, 221, 0.00) 100%);
+
+  /* Backgrounds */
+  --bg-hero: linear-gradient(180deg, #FFF 0%, #EFE9F6 100%);
+  --bg-body: linear-gradient(180deg, #EFE9F6 0%, #FFF 100%);
+  --bg-footer: linear-gradient(180deg, #FFF -12.35%, #EFE9F6 100%);
+
+  /* Body Text */
+  --body: rgba(16, 0, 43, 1);
+  --body-90: rgba(16, 0, 43, 0.9);
+  --body-80: rgba(16, 0, 43, 0.8);
+
+  /* Whites */
+  --white: rgba(255, 255, 255, 1);
+  --white-90: rgba(255, 255, 255, 0.9);
+  --white-80: rgba(255, 255, 255, 0.8);
+  --white-70: rgba(255, 255, 255, 0.7);
+  --white-60: rgba(255, 255, 255, 0.6);
+  --white-50: rgba(255, 255, 255, 0.5);
+  --white-40: rgba(255, 255, 255, 0.4);
+  --white-30: rgba(255, 255, 255, 0.3);
+  --white-20: rgba(255, 255, 255, 0.2);
+  --white-10: rgba(255, 255, 255, 0.1);
+
+  /* Others */
+  --search-text: #979DAC;
+  --section-border: rgba(16, 0, 43, 0.1);
+
+  --light-bg: #FCF8FF;
+  --light-border: #E4C8FC;
+  --light-border2: #D4BAEA;
+
+  --deactivated: #6f6d73;
+
+
+}

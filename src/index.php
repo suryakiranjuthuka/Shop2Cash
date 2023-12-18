@@ -6,16 +6,14 @@
   <title>Shop2Cash - Home Page</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/pages/home.css">
-  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
-  <div id="headerWrapper">
+  <div id="headerHeroWrapper">
     <header id="header">
       <img id="logo" src="./img/shop2cash_logo.svg">
       <nav>
@@ -24,9 +22,7 @@
         <a href="#faqs">FAQ's</a>
         <a href="#about">About</a>
         <a href="#footer">Contact</a>
-        <svg width="30" height="30" viewBox="0 0 30 30">
-          <use xlink:href="./img/all_svgs.svg#account"></use>
-        </svg>
+        <svg viewBox="0 0 30 30"><use xlink:href="./img/all_svgs.svg#account"></use></svg>
       </nav>
       <div id="mobileMenu">
         <input type="checkbox" id="menu">
@@ -43,9 +39,7 @@
           <h1 class="small">UPTO <span class="bold">100% CASHBACK</span> <br>ON YOUR FAVOURITE PRODUCTS</h1>
         </div>
         <div class="searchBlock search">
-          <svg width="30" height="30" viewBox="0 0 30 30">
-              <use xlink:href="./img/all_svgs.svg#search"></use>
-            </svg>
+          <svg viewBox="0 0 30 30"><use xlink:href="./img/all_svgs.svg#search"></use></svg>
           <input type="search" name="Search Products" placeholder="Search Products">
         </div>
       </section>
@@ -64,51 +58,51 @@
               </svg>
             </button>
           </div>
-          <span class="stepCount initial"><span id="heroStepscountdown">Playing in...5</span></span>
+          <span id="stepCount" class="stepCount initial"><span id="heroStepscountdown">Playing in...5</span></span>
         </section>
 
         <section id="heroSteps">
 
           <div class="stepWrapper one">
             <div class="stepBlock one" data-step=1>
-              <svg width="36" height="36" viewBox="0 0 36 36"><use xlink:href="./img/all_svgs.svg#done"></use></svg>
+              <svg viewBox="0 0 36 36"><use xlink:href="./img/all_svgs.svg#done"></use></svg>
               <h4>Select your product</h4>
               <p>Choose a product from our wide range of categories</p>
             </div>
-            <svg class="decorate star" width="20" height="20" viewBox="0 0 20 20"><use xlink:href="./img/all_svgs.svg#star"></use></svg>
+            <svg class="decorate star" viewBox="0 0 20 20"><use xlink:href="./img/all_svgs.svg#star"></use></svg>
           </div>
 
           <div class="stepWrapper two">
             <div class="stepBlock two" data-step=2>
-              <svg width="36" height="36" viewBox="0 0 36 36"><use xlink:href="./img/all_svgs.svg#game"></use></svg>
+              <svg viewBox="0 0 36 36"><use xlink:href="./img/all_svgs.svg#game"></use></svg>
               <h4>Play to earn rewards</h4>
               <p>Select a game to play and earn upto 100% rewards on the product’s price</p>
             </div>
-            <svg class="decorate star1" width="20" height="20" viewBox="0 0 20 20"><use xlink:href="./img/all_svgs.svg#star"></use></svg>
-            <svg class="decorate star2" width="20" height="20" viewBox="0 0 20 20"><use xlink:href="./img/all_svgs.svg#star"></use></svg>
+            <svg class="decorate star1" viewBox="0 0 20 20"><use xlink:href="./img/all_svgs.svg#star"></use></svg>
+            <svg class="decorate star2" viewBox="0 0 20 20"><use xlink:href="./img/all_svgs.svg#star"></use></svg>
           </div>
 
           <div class="stepWrapper three">
             <div class="stepBlock three" data-step=3>
-              <svg width="36" height="36" viewBox="0 0 36 36"><use xlink:href="./img/all_svgs.svg#shop"></use></svg>
+              <svg viewBox="0 0 36 36"><use xlink:href="./img/all_svgs.svg#shop"></use></svg>
               <h4>Buy the product</h4>
               <p>Continue to purchase the product before your reward timeline expires</p>
             </div>
-            <svg class="decorate star" width="20" height="20" viewBox="0 0 20 20"><use xlink:href="./img/all_svgs.svg#star"></use></svg>
-            <svg class="decorate circle" width="20" height="20" viewBox="0 0 20 20"><use xlink:href="./img/all_svgs.svg#circle"></use></svg>
-            <svg class="decorate circle_rings" width="20" height="20" viewBox="0 0 20 20"><use xlink:href="./img/all_svgs.svg#circle_rings"></use></svg>
+            <svg class="decorate star" viewBox="0 0 20 20"><use xlink:href="./img/all_svgs.svg#star"></use></svg>
+            <svg class="decorate circle" viewBox="0 0 20 20"><use xlink:href="./img/all_svgs.svg#circle"></use></svg>
+            <svg class="decorate circle_rings" viewBox="0 0 20 20"><use xlink:href="./img/all_svgs.svg#circle_rings"></use></svg>
          </div>
 
           <div class="stepWrapper four">
             <div class="stepBlock four" data-step=4>
-              <svg width="36" height="36" viewBox="0 0 36 36"><use xlink:href="./img/all_svgs.svg#gift"></use></svg>
+              <svg viewBox="0 0 36 36"><use xlink:href="./img/all_svgs.svg#gift"></use></svg>
               <h4>Redeem your rewards</h4>
               <p>Upload your bill, and the reward amount will be credited to your bank account</p>
             </div>
-            <svg class="decorate circle1" width="20" height="20" viewBox="0 0 20 20"><use xlink:href="./img/all_svgs.svg#circle"></use></svg>
-            <svg class="decorate circle2" width="20" height="20" viewBox="0 0 20 20"><use xlink:href="./img/all_svgs.svg#circle"></use></svg>
-            <svg class="decorate circle3" width="20" height="20" viewBox="0 0 20 20"><use xlink:href="./img/all_svgs.svg#circle"></use></svg>
-            <svg class="decorate circle_rings" width="20" height="20" viewBox="0 0 20 20"><use xlink:href="./img/all_svgs.svg#circle_rings"></use></svg>
+            <svg class="decorate circle1" viewBox="0 0 20 20"><use xlink:href="./img/all_svgs.svg#circle"></use></svg>
+            <svg class="decorate circle2" viewBox="0 0 20 20"><use xlink:href="./img/all_svgs.svg#circle"></use></svg>
+            <svg class="decorate circle3" viewBox="0 0 20 20"><use xlink:href="./img/all_svgs.svg#circle"></use></svg>
+            <svg class="decorate circle_rings" viewBox="0 0 20 20"><use xlink:href="./img/all_svgs.svg#circle_rings"></use></svg>
           </div>
 
         </section>
@@ -156,8 +150,8 @@
                 </div>
               </div>
               <div class="buttonsBlock">
-                <a class="buy fancyButton" href=""><img src="./img/gradient/shop.svg">Buy</a>
-                <a class="play fancyButton" href=""><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
+                <a class="buy button fancyBorder" href=""><img src="./img/gradient/shop.svg">Buy</a>
+                <a class="play button fancyBorder" href=""><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
               </div>
             </footer>
           </div>
@@ -177,8 +171,8 @@
                 </div>
               </div>
               <div class="buttonsBlock">
-                <a class="buy fancyButton" href=""><img src="./img/gradient/shop.svg">Buy</a>
-                <a class="play fancyButton" href=""><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
+                <a class="buy button fancyBorder" href=""><img src="./img/gradient/shop.svg">Buy</a>
+                <a class="play button fancyBorder" href=""><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
               </div>
             </footer>
           </div>
@@ -198,8 +192,8 @@
                 </div>
               </div>
               <div class="buttonsBlock">
-                <a class="buy fancyButton" href=""><img src="./img/gradient/shop.svg">Buy</a>
-                <a class="play fancyButton" href=""><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
+                <a class="buy button fancyBorder" href=""><img src="./img/gradient/shop.svg">Buy</a>
+                <a class="play button fancyBorder" href=""><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
               </div>
             </footer>
           </div>
@@ -219,8 +213,8 @@
                 </div>
               </div>
               <div class="buttonsBlock">
-                <a class="buy fancyButton" href=""><img src="./img/gradient/shop.svg">Buy</a>
-                <a class="play fancyButton" href=""><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
+                <a class="buy button fancyBorder" href=""><img src="./img/gradient/shop.svg">Buy</a>
+                <a class="play button fancyBorder" href=""><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
               </div>
             </footer>
           </div>
@@ -240,8 +234,8 @@
                 </div>
               </div>
               <div class="buttonsBlock">
-                <a class="buy fancyButton" href=""><img src="./img/gradient/shop.svg">Buy</a>
-                <a class="play fancyButton" href=""><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
+                <a class="buy button fancyBorder" href=""><img src="./img/gradient/shop.svg">Buy</a>
+                <a class="play button fancyBorder" href=""><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
               </div>
             </footer>
           </div>
@@ -261,8 +255,8 @@
                 </div>
               </div>
               <div class="buttonsBlock">
-                <a class="buy fancyButton" href=""><img src="./img/gradient/shop.svg">Buy</a>
-                <a class="play fancyButton" href=""><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
+                <a class="buy button fancyBorder" href=""><img src="./img/gradient/shop.svg">Buy</a>
+                <a class="play button fancyBorder" href=""><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
               </div>
             </footer>
           </div>
@@ -282,8 +276,8 @@
                 </div>
               </div>
               <div class="buttonsBlock">
-                <a class="buy fancyButton" href=""><img src="./img/gradient/shop.svg">Buy</a>
-                <a class="play fancyButton" href=""><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
+                <a class="buy button fancyBorder" href=""><img src="./img/gradient/shop.svg">Buy</a>
+                <a class="play button fancyBorder" href=""><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
               </div>
             </footer>
           </div>
@@ -303,8 +297,8 @@
                 </div>
               </div>
               <div class="buttonsBlock">
-                <a class="buy fancyButton" href=""><img src="./img/gradient/shop.svg">Buy</a>
-                <a class="play fancyButton" href=""><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
+                <a class="buy button fancyBorder" href=""><img src="./img/gradient/shop.svg">Buy</a>
+                <a class="play button fancyBorder" href=""><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
               </div>
             </footer>
           </div>
@@ -319,12 +313,12 @@
           <section class="photo">
             <!-- <img src=""> -->
           </section>
-          <section class="content">
+          <section class="contentBlock">
             <div class="titleBlock">
               <h6 class="label">About Us</h6>
               <h2>Shop2cash with <br><span class="highlight">Discount Bank</span> Rewards</h2>
             </div>
-            <div class="contentBlock">
+            <div class="content">
               <p>Festive sales and discounts are the new normal when it comes to shopping, but can you imagine earning further rewards on every purchase, no matter what day of the year it is?</p>
               <p>Shop2cash collaborates with Discount Bank (DB) to create a platform where our customers can <span class="bold">earn incentives and rewards up to 100% of their transaction amount</span> while shopping! Do you think this is too good to be true? Well, it only gets better. All you have to do to earn these incredible rewards is PLAY GAMES!</p>
               <p>Welcome to the future of shopping!</p>
@@ -419,9 +413,7 @@
             <div class="label">Search</div>
             <div class="contentBlock">
               <div class="search">
-                <svg width="30" height="30" viewBox="0 0 30 30">
-                    <use xlink:href="./img/all_svgs.svg#search"></use>
-                  </svg>
+                <svg viewBox="0 0 30 30"><use xlink:href="./img/all_svgs.svg#search"></use></svg>
                 <input type="search" name="Search Products" placeholder="Search Products">
               </div>
               <div class="seperator"></div>
@@ -433,33 +425,23 @@
             <div class="contentBlock">
               <div class="phoneEmail">
                 <span>
-                  <svg width="30" height="30" viewBox="0 0 30 30">
-                    <use xlink:href="./img/all_svgs.svg#phone"></use>
-                  </svg>
+                  <svg viewBox="0 0 30 30"><use xlink:href="./img/all_svgs.svg#phone"></use></svg>
                   <a href="tel:+919030067149">+91 90300-67149</a>
                 </span>
                 <span>
-                  <svg width="30" height="30" viewBox="0 0 30 30">
-                    <use xlink:href="./img/all_svgs.svg#email"></use>
-                  </svg>
+                  <svg viewBox="0 0 30 30"><use xlink:href="./img/all_svgs.svg#email"></use></svg>
                   <a href = "mailto:help@shop2cash.in">help@shop2cash.in</a>
                 </span>
               </div>
               <div class="social">
-                <span class="fancyButton">
-                  <svg width="30" height="30" viewBox="0 0 30 30">
-                    <use xlink:href="./img/all_svgs.svg#facebook"></use>
-                  </svg>
+                <span class="button fancyBorder">
+                  <svg viewBox="0 0 30 30"><use xlink:href="./img/all_svgs.svg#facebook"></use></svg>
                 </span>
-                <span class="fancyButton">
-                  <svg width="30" height="30" viewBox="0 0 30 30">
-                    <use xlink:href="./img/all_svgs.svg#twitter"></use>
-                  </svg>
+                <span class="button fancyBorder">
+                  <svg viewBox="0 0 30 30"><use xlink:href="./img/all_svgs.svg#twitter"></use></svg>
                 </span>
-                <span class="fancyButton">
-                  <svg width="30" height="30" viewBox="0 0 30 30">
-                    <use xlink:href="./img/all_svgs.svg#whatsapp"></use>
-                  </svg>
+                <span class="button fancyBorder">
+                  <svg viewBox="0 0 30 30"><use xlink:href="./img/all_svgs.svg#whatsapp"></use></svg>
                 </span>
               </div>
             </div>
