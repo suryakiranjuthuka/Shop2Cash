@@ -2,15 +2,13 @@
 
 // Small Link Mixin
 @mixin link_small() {
-  .link {
-    font-size: var(--fs-12);
-    padding-left: 3.6rem;
-    &::before {
-      transform: translateX(-18px) scale(.8);
-    }
-    &:hover::before {
-      transform: translateX(-10px) scale(.8);
-    }
+  font-size: var(--fs-12);
+  padding-left: 3.6rem;
+  &::before {
+    transform: translateX(-18px) scale(.8);
+  }
+  &:hover::before {
+    transform: translateX(-10px) scale(.8);
   }
 }
 
@@ -49,10 +47,9 @@
   @include breakpoint(medium) {
     margin-top: 2.4rem;
   }
-}
-
-@include breakpoint(small) {
-  @include link_small();
+  @include breakpoint(small) {
+    @include link_small();
+  }
 }
 
 
@@ -144,4 +141,48 @@
   @include breakpoint(small) {
     margin-top: 1.6rem;
   }
+}
+
+
+.chip {
+  display: inline-flex;
+  flex-flow: row;
+  align-items: center;
+  gap: .6rem;
+  padding: .6rem .8rem .6rem 1rem;
+  // border: 1px solid var(--light-border);
+  border-radius: 3rem;
+  background: var(--light-bg);
+  border: 1px solid var(--light-border);
+  // box-shadow: var(--shadow-elevation-medium);
+  box-shadow: var(--shadow-card-low);
+  // transition: all .25s;
+  &:hover {
+    // box-shadow: var(--shadow-elevation-medium);
+    svg.close {
+      fill: var(--primary-6);
+    }
+  }
+  svg {
+    width: 1.6rem;
+    height: 1.6rem;
+    fill: var(--primary-2);
+    &.close {
+      fill: var(--light-border2);
+      width: 1.8rem;
+      height: 1.8rem;
+      margin-left: .2rem;
+    }
+  }
+  span {
+    color: var(--primary-2);
+    text-align: center;
+    font-size: var(--fs-14);
+    font-weight: var(--fw-regular);
+    line-height: 2rem; /* 142.857% */
+    letter-spacing: 0.04rem;
+    // text-transform: uppercase;
+    text-wrap: nowrap;
+  }
+
 }

@@ -33,3 +33,27 @@ h1, h2, h3, h4, h5, h6, p {
     background-size: initial;
     z-index: -1;
 }
+
+input {
+	color: var(--primary-3);
+	font-family: var(--ff-body);
+	font-size: var(--fs-16);
+	font-weight: var(--fw-semi-bold);
+	width: 100%;
+	padding: 1.3rem 0;
+	background: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	appearance: none;
+	letter-spacing: 0.14rem;
+	&::placeholder {
+		color: var(--search-text);
+		font-family: var(--ff-heading);
+		font-size: 1.2rem;
+		font-weight: var(--fw-semi-bold);
+		line-height: normal;
+		letter-spacing: 0.24rem;
+		text-transform: uppercase;
+	}
+}

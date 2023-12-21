@@ -1,6 +1,6 @@
 // Search Mixin for Customization of Searchbar in different areas
 @mixin search($borderWidth: 1px, $paddingRL: 0rem 3.2rem, $paddingTB: 1.3rem 0, $gap: 1rem, $svgWidth: 24px, $svgHeight: 24px, $inputFontSize: 1.6rem, $placeholderFontSize: 1.2rem, $bg: #FCFAFD, $bgFocused: #FFFFFF) {
-  .search{
+  .search {
     padding: $paddingRL;
     border-width: $borderWidth;
   	gap: $gap;
@@ -40,28 +40,5 @@
     width: 24px;
     height: 24px;
     fill: var(--secondary);
-  }
-  input {
-    color: var(--primary-3);
-    font-family: var(--ff-body);
-  	font-size: var(--fs-16);
-    font-weight: var(--fw-semi-bold);
-  	width: 100%;
-  	padding: 1.3rem 0;
-  	background: none;
-  	border: none;
-  	border-radius: 0;
-  	outline: none;
-  	appearance: none;
-  	letter-spacing: 0.14rem;
-    &::placeholder {
-      color: var(--search-text);
-    	font-family: var(--ff-heading);
-    	font-size: 1.2rem;
-    	font-weight: var(--fw-semi-bold);
-    	line-height: normal;
-    	letter-spacing: 0.24rem;
-    	text-transform: uppercase;
-    }
   }
 }
