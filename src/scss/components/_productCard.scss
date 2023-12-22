@@ -30,7 +30,7 @@
 }
 
 @mixin productCard_small() {
-  width: 26rem;
+  width: 26rem !important;
   header {
     padding: 1.4rem;
     .photoBlock {
@@ -76,7 +76,7 @@
 
 
 .productCard {
-  // width: 30rem;
+  width: 30rem;
   border: 1px solid var(--white-50);
   border-right-color: #EAE4F0;
   border-bottom-color: #EAE4F0;

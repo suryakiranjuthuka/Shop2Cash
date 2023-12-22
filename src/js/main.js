@@ -16,9 +16,9 @@ u('#faqs .viewMoreButton').on('click', function(e) {
 
 // Mobile Menu
 u('#header').on('click', function(e) {
-      console.log("true");
+      // console.log("true");
   if(u('#mobileMenu #menu').is(':checked')) {
-    console.log("true");
+    // console.log("true");
     u('#header').addClass("slide");
     u('#header').addClass("mobile");
   } else {
@@ -32,4 +32,27 @@ u('#header nav').on('click', function(e) {
   const checkbox = document.querySelector('#mobileMenu #menu');
   checkbox.checked = false;
   u('#mobileMenu #menu').trigger('click');
+});
+
+
+// Product Filters Display Mobile
+// u('#productsPage .filterButton').on('click', function(e) {
+//   u('#productsPage .filters').addClass("fixed");
+// });
+// u('#productsPage .filters').on('click', function(e) {
+//   if (u(this).hasClass("fixed")) {
+//     u('#productsPage .filters').removeClass("fixed");
+//   }
+// });
+
+u('#productsPage .filterButton').on('click', function(e) {
+  u('#overlay').addClass("active");
+  u('#productsPage .filters').addClass("popup");
+});
+u('#overlay').on('click', function(e) {
+  // if (u(this).hasClass("fixed")) {
+  //   u('#productsPage .filters').removeClass("fixed");
+  // }
+  u(this).removeClass("active");
+  u('#productsPage .filters').removeClass("popup");
 });
