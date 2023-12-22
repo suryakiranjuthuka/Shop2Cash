@@ -136,21 +136,20 @@
     .contentBlock {
       padding: 2.4rem 2rem;
       margin-top: 3rem;
-    }
-    .faq {
-      .question {
-        font-size: var(--fs-16);
-        padding: 2rem 5rem 2rem 1rem;
-        &::after {
-          top: 1.5rem;
+      .faq {
+        .question {
+          font-size: var(--fs-16);
+          padding: 2rem 5rem 2rem 1rem;
+          &::after {
+            top: 1.5rem;
+          }
         }
-      }
-      .content p{
-        font-size: var(--fs-15);
-      }
+        .content p{
+          font-size: var(--fs-15);
+        }
 
+      }
     }
-
   }
 }
 

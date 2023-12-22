@@ -1,2 +1,2 @@
-@use './pages/home' as *;
-@use './pages/products' as *;
+@forward './pages/home';
+@forward './pages/products';
