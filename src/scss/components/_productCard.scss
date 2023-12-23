@@ -205,8 +205,12 @@
   @include breakpoint(huge) {
     @include productCard_medium();
   }
-  @include breakpoint(small) {
-    @include productCard_small();
-  }
+}
 
+#homePage {
+  .productCard {
+    @include breakpoint(small) {
+      @include productCard_small();
+    }
+  }
 }

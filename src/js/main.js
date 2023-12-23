@@ -36,23 +36,11 @@ u('#header nav').on('click', function(e) {
 
 
 // Product Filters Display Mobile
-// u('#productsPage .filterButton').on('click', function(e) {
-//   u('#productsPage .filters').addClass("fixed");
-// });
-// u('#productsPage .filters').on('click', function(e) {
-//   if (u(this).hasClass("fixed")) {
-//     u('#productsPage .filters').removeClass("fixed");
-//   }
-// });
-
 u('#productsPage .filterButton').on('click', function(e) {
   u('#overlay').addClass("active");
-  u('#productsPage .filters').addClass("popup");
+  u('#productsPage #filters').addClass("popup");
 });
 u('#overlay').on('click', function(e) {
-  // if (u(this).hasClass("fixed")) {
-  //   u('#productsPage .filters').removeClass("fixed");
-  // }
   u(this).removeClass("active");
-  u('#productsPage .filters').removeClass("popup");
+  u('#productsPage #filters').removeClass("popup");
 });

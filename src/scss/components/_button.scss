@@ -150,15 +150,11 @@
   align-items: center;
   gap: .6rem;
   padding: .6rem .8rem .6rem 1rem;
-  // border: 1px solid var(--light-border);
   border-radius: 3rem;
   background: var(--light-bg);
   border: 1px solid var(--light-border);
-  // box-shadow: var(--shadow-elevation-medium);
   box-shadow: var(--shadow-card-low);
-  // transition: all .25s;
   &:hover {
-    // box-shadow: var(--shadow-elevation-medium);
     svg.close {
       fill: var(--primary-6);
     }
@@ -181,7 +177,6 @@
     font-weight: var(--fw-regular);
     line-height: 2rem; /* 142.857% */
     letter-spacing: 0.04rem;
-    // text-transform: uppercase;
     text-wrap: nowrap;
   }
 
