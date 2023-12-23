@@ -207,10 +207,10 @@
   }
 }
 
-#homePage {
+// #homePage {
   .productCard {
     @include breakpoint(small) {
       @include productCard_small();
     }
   }
-}
+// }
