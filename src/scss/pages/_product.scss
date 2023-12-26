@@ -90,7 +90,7 @@
           }
         }
         p {
-          font-size: var(--fs-14);
+          // font-size: var(--fs-14);
           // font-size: var(--fs-15);
         }
       }
@@ -384,12 +384,31 @@
       gap: 3rem !important;
       #info {
         header {
+          position: relative;
           cursor: pointer;
           transition: background-color .25s;
+          .pre, .post {
+            &::after {
+              content: '';
+              width: 26px;
+              height: 26px;
+              position: absolute;
+              // top: 36px;
+              top: calc(50% - 13px);
+              right: 30px;
+              background: url("../img/others/expand_circle_down.svg");
+              background-repeat: no-repeat;
+              background-size: contain;
+              background-origin: border-box;
+              background-position: center center;
+              overflow: hidden;
+              transform: rotate(0deg);
+              transition: all .25s;
+            }
+          }
           .pre {
             gap: 6px;
-            padding-left: 3rem;
-            padding-right: 3rem;
+            padding: 2rem 3rem;
             align-items: flex-start;
             p {
               font-size: var(--fs-18);
@@ -398,22 +417,23 @@
               font-size: var(--fs-18);
             }
           }
-          &::after {
-            content: '';
-            position: absolute;
-            top: 36px;
-            right: 30px;
-            width: 26px;
-            height: 26px;
-            background: url("../img/others/expand_circle_down.svg");
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-origin: border-box;
-            background-position: center center;
-            overflow: hidden;
-            transform: rotate(0deg);
-            transition: all .25s;
-          }
+          // &::after {
+          //   content: '';
+          //   width: 26px;
+          //   height: 26px;
+          //   position: absolute;
+          //   // top: 36px;
+          //   top: calc(50% - 13px);
+          //   right: 30px;
+          //   background: url("../img/others/expand_circle_down.svg");
+          //   background-repeat: no-repeat;
+          //   background-size: contain;
+          //   background-origin: border-box;
+          //   background-position: center center;
+          //   overflow: hidden;
+          //   transform: rotate(0deg);
+          //   transition: all .25s;
+          // }
           &:hover {
             background-color: var(--white);
           }
@@ -431,10 +451,11 @@
         &.open {
           header {
             // background-color: var(--white-30);
-            &::after {
-              transform: rotate(-90deg);
+            .pre, .post {
+              &::after {
+                transform: rotate(-90deg);
+              }
             }
-
           }
           .content {
             .pre, .post {
@@ -448,7 +469,9 @@
       }
       #product {
         width: 100% !important;
-
+        .productDisplay .detailsBlock h5, .productDisplay .priceBlock span {
+          font-size: var(--fs-18) !important;
+        }
       }
     }
   }
