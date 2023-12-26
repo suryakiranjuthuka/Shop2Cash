@@ -112,7 +112,7 @@
   }
 
   #info {
-    // background: linear-gradient(105deg, var(--white-50) 16.65%, var(--white-20) 79.09%);
+    background: linear-gradient(105deg, var(--white-50) 16.65%, var(--white-20) 79.09%);
     .pre, .post {
       display: none !important;
       &.active {
@@ -129,7 +129,8 @@
       text-align: center;
       background-color: var(--white-30);
       border-radius: 2rem;
-      box-shadow: 0px 8px 16px 0px rgba(23, 14, 65, 0.02), 1px 1px 1px 0px rgba(255, 255, 255, 0.50) inset;
+      box-shadow: 0px 8px 16px 0px rgba(23, 14, 65, 0.025), 1px 1px 1px 0px rgba(255, 255, 255, 0.50) inset;
+      // box-shadow: var(--shadow-card-low);
       .pre, .post {
         display: flex;
         flex-flow: column;
@@ -525,7 +526,7 @@
         }
         &.open {
           header {
-            // background-color: var(--white-30);
+            background-color: var(--white-80);
             .pre, .post {
               &::after {
                 transform: rotate(-90deg);
