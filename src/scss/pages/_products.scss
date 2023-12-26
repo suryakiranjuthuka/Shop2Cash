@@ -1,4 +1,5 @@
-@use '../abstracts/breakpoints' as *;
+@use '../abstracts' as *;
+@use '../base' as *;
 
 #productsPage {
   background: var(--bg-body);
@@ -62,16 +63,9 @@
     }
   }
   .productFilters {
-    position: relative;
     min-width: 23rem;
-    height: fit-content;
     border-radius: 1rem;
-    border: 1px solid var(--white-50);
-    box-shadow: var(--shadow-card-medium);
-    border-bottom-color: #eae4f0;
-    border-right-color: #eae4f0;
-    box-sizing: border-box;
-    background: linear-gradient(105deg, var(--white-40) 16.65%, var(--white-10) 79.09%);
+    // @extend %bgCard;
     header {
       padding: 1rem 2rem;
       display: flex;

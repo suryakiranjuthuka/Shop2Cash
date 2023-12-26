@@ -44,3 +44,10 @@ u('#overlay').on('click', function(e) {
   u(this).removeClass("active");
   u('#productsPage #filters').removeClass("popup");
 });
+
+
+// Product Info Open Close on Mobile Layout
+u('#productPage #info header').on('click', function(e) {
+  u('#productPage #info').toggleClass("open");
+  // u('#productsPage #filters').removeClass("popup");
+});

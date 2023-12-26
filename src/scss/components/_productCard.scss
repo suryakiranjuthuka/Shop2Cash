@@ -1,4 +1,5 @@
 @use '../abstracts/breakpoints' as *;
+@use '../base/utilities' as *;
 
 // Small Link Mixin
 @mixin productCard_medium() {
@@ -77,18 +78,11 @@
 
 .productCard {
   width: 30rem;
-  border: 1px solid var(--white-50);
-  border-right-color: #EAE4F0;
-  border-bottom-color: #EAE4F0;
-  border-radius: 2rem;
-  box-sizing: border-box;
-
+  @extend %bgCard;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   flex-shrink: 0;
-  background: linear-gradient(105deg, var(--white-40) 16.65%, var(--white-10) 79.09%);
-  box-shadow: var(--shadow-card-medium);
 
   header {
     padding: 2rem;

@@ -19,3 +19,15 @@
 .displayNone {
 	display: none !important;
 }
+
+%bgCard {
+  position: relative;
+  height: fit-content;
+  border-radius: 2rem;
+  border: 1px solid var(--white-50);
+  border-bottom-color: #eae4f0;
+  border-right-color: #eae4f0;
+  box-sizing: border-box;
+  box-shadow: var(--shadow-card-medium);
+  background: linear-gradient(105deg, var(--white-40) 16.65%, var(--white-10) 79.09%);
+}
