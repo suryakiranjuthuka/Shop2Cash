@@ -143,6 +143,49 @@
   }
 }
 
+// Individual Product Expanded Button
+.expanded_button {
+  display: flex;
+  padding: 1.1rem 1.5rem 1.1rem 2.3rem;
+  align-items: center;
+  gap: 1.6rem;
+  align-self: stretch;
+  border-radius: 100px;
+  border: 1px dashed var(--light-border);
+  background: rgba(252, 248, 255, 0.60);
+  transition: all .25s;
+  cursor: pointer;
+  // text-transform: uppercase;
+  img {
+    width: 20px;
+    height: auto;
+  }
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    // gap: 0.4rem;
+    flex: 1 0 0;
+    span {
+      align-self: stretch;
+      color: var(--Primary-1, #10002B);
+      font-family: var(--ff-heading);
+      font-size: var(--fs-14);
+      font-weight: var(--fw-medium);
+    }
+    p {
+      align-self: stretch;
+      color: var(--body-80);
+      font-size: var(--fs-11);
+    }
+  }
+  &:hover {
+    border: 1px solid var(--light-border2);
+    background: rgba(252, 248, 255, 1);
+    transform: scale(1.05);
+  }
+}
+
 
 .chip {
   display: inline-flex;
