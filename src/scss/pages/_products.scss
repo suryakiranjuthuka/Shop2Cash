@@ -210,24 +210,6 @@
 
 
 
-#overlay {
-  pointer-events: none;
-  z-index: 1000;
-  opacity: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--white-60);
-  backdrop-filter: blur(50px);
-  transition: all .25s;
-  &.active {
-    pointer-events: auto;
-    opacity: 1;
-  }
-}
-
 @media (max-width: 1000px) {
   #productsContainer {
     gap: 0;

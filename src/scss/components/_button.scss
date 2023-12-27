@@ -93,10 +93,7 @@
   transition: .25s;
 }
 .fancyBorder:hover:after {
-	top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
+  inset: -5px;
   border: 1px dashed var(--secondary);
 }
 

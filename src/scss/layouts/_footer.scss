@@ -274,10 +274,7 @@
           	border-radius: 5rem;
           }
           &:hover::after {
-            top: -8px;
-            left: -8px;
-            right: -8px;
-            bottom: -8px;
+            inset: -8px;
           }
         }
       }

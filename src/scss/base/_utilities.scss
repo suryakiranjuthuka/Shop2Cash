@@ -30,4 +30,43 @@
   box-sizing: border-box;
   box-shadow: var(--shadow-card-medium);
   background: linear-gradient(105deg, var(--white-40) 16.65%, var(--white-10) 79.09%);
+  // background: linear-gradient(105deg, var(--white-50) 16.65%, var(--white-20) 79.09%);
+}
+
+#overlay {
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  // background: var(--white-60);
+    // backdrop-filter: blur(40px);
+  background: var(--white-40);
+  backdrop-filter: blur(80px);
+  transition: all .25s .2s;
+  &.active {
+    pointer-events: auto;
+    opacity: 1;
+    transition: all .25s;
+  }
+}
+
+.overlayContainer {
+  z-index: 1100;
+  pointer-events: none;
+  opacity: 0;
+  position: fixed;
+  top: 10rem;
+  left: 50%;
+  transform: translate(-50%, -2rem);
+  transition: all .2s;
+  &.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -4rem);
+    transition: all .2s;
+  }
 }

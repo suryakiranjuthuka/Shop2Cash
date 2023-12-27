@@ -112,6 +112,8 @@
   }
 
   #info {
+    // position: sticky;
+    // top: 5rem;
     background: linear-gradient(105deg, var(--white-50) 16.65%, var(--white-20) 79.09%);
     .pre, .post {
       display: none !important;
@@ -188,7 +190,7 @@
         border-radius: 100px;
         border: 1px dashed var(--secondary);
         background: rgba(255, 255, 255, 0.50);
-        backdrop-filter: blur(2px);
+        backdrop-filter: blur(4px);
       }
     }
     .content {
@@ -215,12 +217,13 @@
             color: rgba(16, 0, 43, 0.50);
             font-size: var(--fs-16);
             font-weight: var(--fw-medium);
+            line-height: 24px;
           }
           #thirty-countdown {
             display: flex;
             flex-flow: row;
-            gap: 1rem;
-            min-height: 56px;
+            // gap: 1rem;
+            min-height: 57px;
             .mins, .secs {
               position: relative;
               display: flex;
@@ -231,20 +234,30 @@
               padding: 0.8rem;
               border-radius: 0.6rem;
               font-family: var(--ff-body);
-              background: var(--light-bg);
+              background: var(--bg-hero);
+              // border: 1px solid var(--light-border3);
               color: var(--primary-3);
               font-size: var(--fs-20);
               font-weight: var(--fw-bold);
               &::after {
                 content: attr(title);
                 position: absolute;
-                bottom: -16px;
+                bottom: -17px;
                 color: rgba(16, 0, 43, 0.50);
                 font-family: var(--ff-body);
-                font-size: var(--fs-10);
+                font-size: var(--fs-11);
                 font-weight: var(--fw-medium);
-                line-height: 13px;
+                line-height: 14px;
               }
+            }
+            .colon {
+              height: 40px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: var(--primary-3);
+              font-size: var(--fs-20);
+              margin: 0 5px;
             }
           }
         }
@@ -345,12 +358,24 @@
           }
         }
         .buttonsBlock {
+          gap: 1.5rem;
           a {
             font-size: var(--fs-14);
             padding: 1rem 2rem;
             align-items: center;
             gap: 1rem;
+            &:hover::after {
+              inset: -7px;
+            }
           }
+          // &.fancyBorder {
+          //   &::after {
+          //     border-radius: 5rem;
+          //   }
+          //   &:hover::after {
+          //     inset: -8px;
+          //   }
+          // }
         }
       }
 

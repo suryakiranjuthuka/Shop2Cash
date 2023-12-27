@@ -1,0 +1,138 @@
+@use '../abstracts/breakpoints' as *;
+
+#loginContainer {
+  min-width: 382px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  header {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6rem;
+    img.logo {
+      width: 130px;
+    }
+    .tabContainer {
+      position: relative;
+      border: 1px solid var(--secondary);
+      border-radius: 100px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      background-color: var(--white);
+      span {
+        position: relative;
+        border-radius: 100px;
+        padding: 3px 0rem;
+        width: 10rem;
+        text-align: center;
+        font-size: var(--fs-15);
+        font-weight: var(--fw-medium);
+        z-index: 1;
+        transition: all .1s;
+        color: rgba(16, 0, 43, .7);
+        cursor: pointer;
+        &.active {
+          color: var(--white-80);
+          background-color: var(--primary-3);
+          &:hover {
+            color: var(--white-80);
+          }
+        }
+        &:hover {
+          color: rgba(16, 0, 43, 1);
+        }
+      }
+    }
+  }
+  .inputs {
+    display: none;
+    position: relative;
+    flex-flow: column;
+    gap: 2rem;
+    width: 100%;
+    // Each Input style
+    .inputBlock{
+      background: var(--white);
+      padding: 0rem 2rem;
+      border: 1px solid rgba(149, 116, 221, .5);
+      border-radius: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      align-self: stretch;
+      transition: all .15s;
+      &:focus-within {
+        border-color: rgba(149, 116, 221, 1);
+        svg {
+          transform: scale(1.14);
+        }
+      }
+      svg {
+        width: 22px;
+        height: 22px;
+        fill: var(--secondary);
+        transition: all .25s;
+      }
+      input {
+        padding: 1.4rem 0;
+        &::placeholder {
+
+        }
+      }
+      input, input::placeholder {
+        font-family: var(--ff-body);
+        font-size: var(--fs-16);
+        text-transform: none;
+        letter-spacing: .4px;
+      }
+    }
+    &.active {
+      display: flex;
+    }
+  }
+
+  .forgotPassword {
+    font-size: var(--fs-14);
+    color: rgb(85, 26, 139);
+    letter-spacing: .4px;
+    text-align: right;
+    margin-left: auto;
+    text-align: center;
+    transform: translateY(-10px);
+    &:hover {
+      color: var(--primary-1);
+    }
+  }
+
+  #submit {
+    color: var(--white-80);
+    font-family: var(--ff-heading);
+    font-size: var(--fs-14);
+    padding: 1.3rem;
+    background: white;
+    border-radius: 100px;
+    text-transform: uppercase;
+    border: 2px solid var(--secondary);
+    background: linear-gradient(278deg, #3C096C 22.63%, #7B2CBF 95.05%) !important;
+    transition: all .2s;
+    cursor: pointer;
+    &:hover, &:focus {
+      color: var(--white);
+      border-color: #CAB9EE;
+      transform: scale(1.05);
+    }
+  }
+
+  @include breakpoint(small) {
+    min-width: auto;
+    width: 90%;
+    header {
+      gap: 3rem;
+    }
+  }
+}

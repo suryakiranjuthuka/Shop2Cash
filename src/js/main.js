@@ -22,7 +22,6 @@ u('#header').on('click', function(e) {
     u('#header').addClass("slide");
     u('#header').addClass("mobile");
   } else {
-    console.log("false");
     u('#header').removeClass("slide");
     u('#header').removeClass("mobile");
   }
@@ -40,11 +39,6 @@ u('#productsPage .filterButton').on('click', function(e) {
   u('#overlay').addClass("active");
   u('#productsPage #filters').addClass("popup");
 });
-u('#overlay').on('click', function(e) {
-  u(this).removeClass("active");
-  u('#productsPage #filters').removeClass("popup");
-});
-
 
 // Product Info Open Close on Mobile Layout
 u('#productPage #info header').on('click', function(e) {
@@ -52,6 +46,37 @@ u('#productPage #info header').on('click', function(e) {
   // u('#productsPage #filters').removeClass("popup");
 });
 
+
+// Login / Register Modal
+u('#header nav svg').on('click', function(e) {
+  u('#overlay').addClass("active");
+  u('#loginContainer').addClass("active");
+});
+
+// Click outside on the Overlay -> Remove Overlay & Elements on top
+u('#overlay').on('click', function(e) {
+  u(this).removeClass("active");
+  u('#loginContainer').removeClass("active");
+  u('#productsPage #filters').removeClass("popup");
+});
+
+
+
+// Login | Register Tab Click Change
+u('#loginContainer .loginTab').on('click', function(e) {
+  u(this).addClass("active");
+  u('#loginContainer .registerTab').removeClass("active");
+
+  u('#loginContainer .inputs.login').addClass("active");
+  u('#loginContainer .inputs.register').removeClass("active");
+});
+u('#loginContainer .registerTab').on('click', function(e) {
+  u(this).addClass("active");
+  u('#loginContainer .loginTab').removeClass("active");
+
+  u('#loginContainer .inputs.login').removeClass("active");
+  u('#loginContainer .inputs.register').addClass("active");
+});
 
 
 
@@ -78,14 +103,14 @@ function countdown( elementName, minutes, seconds )
         if ( msLeft < 1000 ) {
             // element.innerHTML = "Time is up!";
             element.children[0].innerHTML = "00";
-            element.children[1].innerHTML = "00";
+            element.children[2].innerHTML = "00";
 
         } else {
             time = new Date( msLeft );
             hours = time.getUTCHours();
             mins = time.getUTCMinutes();
             element.children[0].innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins);
-            element.children[1].innerHTML = twoDigits( time.getUTCSeconds() )
+            element.children[2].innerHTML = twoDigits( time.getUTCSeconds() )
             // element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
             setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
         }
