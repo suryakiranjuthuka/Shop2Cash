@@ -184,6 +184,18 @@
 }
 
 
+// Plain Link Styles
+.plain_link {
+  font-size: var(--fs-14);
+  color: rgb(85, 26, 139);
+  letter-spacing: .4px;
+  text-align: center;
+  &:hover {
+    color: var(--primary-1);
+  }
+}
+
+
 .chip {
   display: inline-flex;
   flex-flow: row;

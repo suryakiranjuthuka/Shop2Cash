@@ -81,7 +81,7 @@
         <div class="content">
           <div class="pre active">
             <span class="gift"><svg viewBox="0 0 14 14"><use xlink:href="./img/all_svgs.svg#gift1"></use></svg></span>
-            <a class="expanded_button">
+            <a id="demoButton" class="expanded_button">
               <img src="./img/gradient/right_arrow.svg" style="width:24px;">
               <div>
                 <span>PLAY THE GAME</span>
@@ -147,8 +147,8 @@
               </div>
             </div>
             <div class="buttonsBlock">
-              <a class="buy button fancyBorder" href=""><img src="./img/gradient/shop.svg">Buy</a>
-              <a class="play button fancyBorder" href="./product_rewards.html"><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
+              <a class="buy button fancyBorder"><img src="./img/gradient/shop.svg">Buy</a>
+              <a class="button fancyBorder" href="./product_rewards.html"><img src="./img/gradient/gift.svg"><span>Play & Earn</span></a>
             </div>
           </footer>
         </div>
@@ -404,6 +404,38 @@
     </section>
   </footer>
 
+  <section id="gameSelection" class="overlayContainer">
+    <div class="selectionBlock">
+      <h2>Select A Game</h2>
+      <div class="games">
+        <a><img class="mine" src="./img/discount_bank/mine_game.png"></a>
+        <a><img class="scratch" src="./img/discount_bank/scratch_game.png"></a>
+      </div>
+    </div>
+    <ul class="infoBlock">
+      <li>Earn upto 100% Cashback as Reward</li>
+      <li>Buy the product within 30 minutes to avail the Reward</li>
+    </ul>
+  </section>
+
+  <section id="redirectTo" class="overlayContainer productCard">
+    <h2>Cashback Activated</h2>
+    <p class="info">Complete your purchase with merchant and return to upload the bill on your Shop2Cash profile.</p>
+    <section class="pathAnimate">
+      <img class="logo" src="./img/shop2cash_logo.svg">
+      <div class="redirectToIndicator">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <img class="logo" src="./img/amazon_logo1.svg">
+    </section>
+    <p class="info">Cashback will be credited between 2-30 days.</p>
+    <p class="info">If you are not redirected automatically, <a class="plain_link" style="font-weight:700;">Click here</a></p>
+  </section>
+
   <section id="loginContainer" class="overlayContainer">
     <header>
       <img class="logo" src="./img/shop2cash_logo.svg">
@@ -421,7 +453,7 @@
         <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#password"></use></svg>
         <input type="password" placeholder="Password">
       </div>
-      <a class="forgotPassword" href="#">Forgot Password?</a>
+      <a class="forgotPassword plain_link" href="#">Forgot Password?</a>
       <input id="submit" type="submit" value="Login">
     </div>
     <div class="inputs register">
@@ -438,10 +470,10 @@
         <input type="email" placeholder="Email">
       </div>
       <div class="inputBlock">
-        <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#phone"></use></svg>
+        <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#password"></use></svg>
         <input type="password" placeholder="Password">
       </div>
-      <a class="forgotPassword" style="margin-left: 0;">To verify your email, we will send you a mail with an OTP.</a>
+      <a class="forgotPassword plain_link" style="margin-left: 0;">To verify your email, we will send you a mail with an OTP.</a>
       <input id="submit" type="submit" value="Register">
     </div>
   </section>

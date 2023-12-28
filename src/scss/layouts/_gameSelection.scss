@@ -1,0 +1,61 @@
+@use '../abstracts/breakpoints' as *;
+
+#gameSelection {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  .selectionBlock {
+    display: flex;
+    flex-flow: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    h2 {
+      text-align: center;
+      font-weight: var(--fw-bold);
+    }
+    .games {
+      display: flex;
+      padding: 2rem;
+      border-radius: 2rem;
+      gap: 2rem;
+      img {
+        max-width: 180px;
+        padding: 1rem;
+        border: 3px solid var(--light-border);
+        box-sizing: content-box;
+        border-radius: 1.3rem;
+        background: var(--light-bg);
+        cursor: pointer;
+        transition: all .25s;
+        &:hover {
+          border-color: var(--secondary);
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+  .infoBlock {
+    flex-flow: column;
+    gap: 0.4rem;
+    display: flex;
+    transform: translateX(20px);
+    margin-top: 2rem;
+
+    li {
+      color: var(--primary-2);
+      font-size: var(--fs-18);
+    }
+  }
+  @include breakpoint(small) {
+    .selectionBlock .games img {
+      width: 150px;
+      padding: 0.8rem;  
+    }
+    .infoBlock {
+      width: 80%;
+      transform: translateX(10px);
+    }
+  }
+}

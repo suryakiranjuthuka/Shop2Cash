@@ -24,7 +24,7 @@
   display: flex;
   flex-flow: column;
   gap: 0rem;
-  &.popup {
+  &.active {
     opacity: 1;
     transform: translate(-50%, -4rem);
     pointer-events: auto;

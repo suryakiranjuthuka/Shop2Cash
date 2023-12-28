@@ -97,16 +97,8 @@
   }
 
   .forgotPassword {
-    font-size: var(--fs-14);
-    color: rgb(85, 26, 139);
-    letter-spacing: .4px;
-    text-align: right;
     margin-left: auto;
-    text-align: center;
     transform: translateY(-10px);
-    &:hover {
-      color: var(--primary-1);
-    }
   }
 
   #submit {
