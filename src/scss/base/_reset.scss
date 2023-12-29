@@ -28,6 +28,12 @@ time, mark, audio, video {
 
 a { text-decoration: none; display: inline-block; }
 
+a:link,
+a:visited,
+a:focus {
+  color: inherit;
+}
+
 /* Remove tap highlight on Mobile Devices */
 * {
   -webkit-tap-highlight-color: transparent !important;

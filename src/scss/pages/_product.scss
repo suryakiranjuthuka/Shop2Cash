@@ -425,7 +425,7 @@
 
 @include breakpoint(medium) {
   .wrapper {
-    gap: 4rem !important;
+    gap: 4rem;
   }
   .productDisplay {
   }
@@ -538,15 +538,23 @@
           }
         }
         .content {
-          .pre, .post {
+          .pre{
             opacity: 0;
             padding: 0;
             height: 0px;
-            pointer-events: none;
+            visibility: hidden;
             transition: all .25s;
           }
-          .post .buttonsBlock {
-            align-self: stretch;
+          .post {
+            gap: 0rem;
+            padding: 0rem 2rem 1rem;
+            .buttonsBlock {
+              align-self: stretch;
+              opacity: 0;
+              height: 0px;
+              visibility: hidden;
+              transition: all .25s;
+            }
           }
         }
         &.open {
@@ -559,11 +567,20 @@
             }
           }
           .content {
-            .pre, .post {
+            .pre {
               opacity: 1;
               padding: 2.4rem 2rem;
               height: auto;
-              pointer-events: auto;
+              visibility: visible;
+            }
+            .post {
+              gap: 3rem;
+              padding: 2.4rem 2rem;
+              .buttonsBlock {
+                opacity: 1;
+                height: auto;
+                visibility: visible;
+              }
             }
           }
         }

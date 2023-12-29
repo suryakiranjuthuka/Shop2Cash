@@ -246,9 +246,6 @@
         margin: 0;
         width: 100%;
         padding: 2rem 0;
-        .accountName .name {
-          display: block;
-        }
         .accountName {
           svg {
             width: 22px;
@@ -279,6 +276,9 @@
             transform: translate(10px, 0px);
           }
         }
+      }
+      #accountMenu .name.account, #account .name.login {
+        display: block !important;
       }
     }
     #mobileMenu {
