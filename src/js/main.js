@@ -51,23 +51,43 @@ u('#faqs .viewMoreButton').on('click', function(e) {
 });
 
 
-// ######## Mobile Menu ########
-// Mobile Menu open & close control
-u('#mobileMenu').on('click', function(e) {
+// ######## Global Click on HTML ########
+u('html').on('click', function(e) {
+  e.stopPropagation();
+  // Remove opened mobile menu on Blur
   if(u('#mobileMenu #menu').is(':checked')) {
-    u('#header').addClass("slide");
-    u('#header').addClass("mobile");
-  } else {
-    u('#header').removeClass("slide");
-    u('#header').removeClass("mobile");
+    const checkbox = document.querySelector('#mobileMenu #menu');
+    checkbox.checked = false;
+    toggleMobileMenu();
+  }
+  if(u("#accountDropdown").hasClass("active")) {
+    toggleAccountMenu();
   }
 });
-// Remove Open mobile menu on Blur
-u('#header nav').on('click', function(e) {
-  const checkbox = document.querySelector('#mobileMenu #menu');
-  checkbox.checked = false;
-  u('#mobileMenu #menu').trigger('click');
+
+
+// ######## Mobile/Account Menu ########
+// Mobile Menu open & close control
+u('#mobileMenu').on('click', function(e) {
+  e.stopPropagation();
+  toggleMobileMenu();
 });
+// Toggle Menu Function
+const toggleMobileMenu = function () {
+  u("#header").toggleClass("slide mobile", u('#mobileMenu #menu').is(':checked'));
+};
+// Account Menu open & close control
+u('#accountMenu').on('click', function(e) {
+  e.stopPropagation();
+  toggleAccountMenu();
+});
+// Toggle Account Menu Function
+const toggleAccountMenu = function () {
+  u('#accountMenu #accountDropdown').toggleClass("active");
+};
+
+
+
 
 
 // ######## Mobile Layout Triggers ########
@@ -85,7 +105,7 @@ u('#productPage #info header').on('click', function(e) {
 
 // ######## Login | Register ########
 // Login / Register Overlay Modal
-u('#header nav svg').on('click', function(e) {
+u('#header nav #account').on('click', function(e) {
   u('#overlay').addClass("active");
   u('#loginContainer').addClass("active");
   u('body').addClass("overflowHidden");

@@ -110,10 +110,6 @@ var downloadTimer = setInterval(function(){
 }, 1000);
 
 
-// Trigger after 5s
-const pageLoad5 = setTimeout(function(){
-  if(!play) u('#playButton').trigger('click');
-}, 5000);
 
 
 // Variables
@@ -128,9 +124,17 @@ const ref = {
   4 : "four"
 }
 
-
+// Trigger after 5s
+const pageLoad5 = setTimeout(function(){
+  autoPlay();
+}, 5000);
 // On click of the Play Button
 u('#playController').on('click', function(e) {
+  autoPlay();
+});
+
+
+const autoPlay = function () {
   // Clears the timeout() if User clicks play before it
   clearTimeout(pageLoad5);
   clearInterval(downloadTimer);
@@ -178,7 +182,8 @@ u('#playController').on('click', function(e) {
       u('#circularProgress .progress').removeClass("active");
       stepNumber = stepNumber - 1;
   }
-});
+};
+
 
 
 // On click of individal step card

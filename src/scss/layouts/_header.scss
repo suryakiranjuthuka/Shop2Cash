@@ -18,8 +18,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
-    a {
+    > a {
       color: var(--primary-1);
       font-size: var(--fs-13);
       font-weight: var(--fw-semi-bold);
@@ -35,15 +34,84 @@
         border-color: var(--light-border);
       }
     }
-    svg {
-      width: 3rem;
-      height: 3rem;
-      fill: var(--primary-1);
+    #account, #accountMenu {
+      position: relative;
+      display: flex;
+      justify-content: center;
       margin-left: 2.4rem;
-      &:hover, &:focus {
-        fill: var(--primary-5);
+      cursor: pointer;
+      svg {
+        width: 3rem;
+        height: 3rem;
+        fill: var(--primary-1);
+        &:hover, &:focus {
+          fill: var(--primary-5);
+        }
       }
+      #accountDropdown {
+        opacity: 0;
+        visibility: hidden;
+        z-index: 10;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        backdrop-filter: blur(40px);
+        background: var(--white-50);
+        border-radius: 1rem;
+        padding: .6rem 0 1rem;
+        border: 1px solid var(--light-border3);
+        box-shadow: var(--shadow-nav-low);
+        transform: translateY(0rem);
+        transition: all .15s cubic-bezier(0.16, 1, 0.5, 1);
+        &.active {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(1rem);
+          transition: all .4s cubic-bezier(0.16, 1, 0.5, 1);
+        }
+        .user_name {
+          padding: .8rem 3rem;
+          width: 100%;
+          font-size: var(--fs-17);
+          text-align: center;
+          white-space: nowrap;
+          // color: var(--light-border3);
+          color: rgba(16, 0, 43, 0.3);
+          font-weight: var(--fw-medium) !important;
+          cursor: text;
+        }
+        a {
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 1rem;
+          font-size: var(--fs-15);
+          font-weight: var(--fw-regular);
+          color: var(--primary-3);
+          letter-spacing: .4px;
+          width: 100%;
+          white-space: nowrap;
+          padding: .8rem 2rem;
+          border-top: 1px solid var(--light-border3);
+          svg {
+            fill: var(--primary-3);
+            width: 20px;
+            height: 20px;
+          }
+          &:hover {
+            background: var(--light-bg);
+            background: #7b2cbf06;
+            color: var(--primary-5);
+            svg {
+              fill: var(--primary-5);
+            }
+          }
+        }
+      }
+
     }
+
   }
 
   // Hamburger Icon Container(for Mobile Only)
@@ -107,7 +175,7 @@
     	width: 14rem;
       min-width: 10rem;
     }
-    nav a {
+    nav > a {
       font-size: var(--fs-12);
       padding: 0.5rem 1.8rem;
     }
@@ -136,26 +204,12 @@
       padding: 7rem 0 0rem;
       z-index: 5;
       backdrop-filter: blur(40px);
-      background: rgba(255,255,255,.6);
+      background: var(--white-60);
       border: 1px solid rgba(23, 14, 65, 0.05);
-      /* box-shadow: 1px 0px 0px 0px rgba(255, 255, 255, 0.30) inset, 0px 15px 30px 0px rgba(23, 14, 65, 0.03); */
       transition: transform  ease .5s;
       transform: translateX(-320px);
-      box-shadow:
-      2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
-      6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
-      12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
-      22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
-      41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
-      100px 100px 80px rgba(0, 0, 0, 0.07);
-      /* box-shadow:
-      1.4px 1.4px 2.2px rgba(0, 0, 0, 0.02),
-      3.3px 3.3px 5.3px rgba(0, 0, 0, 0.028),
-      6.3px 6.3px 10px rgba(0, 0, 0, 0.035),
-      11.2px 11.2px 17.9px rgba(0, 0, 0, 0.042),
-      20.9px 20.9px 33.4px rgba(0, 0, 0, 0.05),
-      50px 50px 80px rgba(0, 0, 0, 0.07); */
-      a {
+      box-shadow: var(--shadow-nav-medium);
+      > a {
         width: 100%;
         padding: 2rem 4rem;
         border: 0px solid white;
@@ -170,8 +224,21 @@
           background-color: rgba(252, 248, 255, .4);
         }
       }
-      svg {
-        margin: 2rem auto;
+      #account, #accountMenu {
+        margin: 0;
+        width: 100%;
+        padding: 2rem 0;
+        #accountDropdown {
+          top: initial;
+          bottom: 0;
+          right: initial;
+          left: 100%;
+          transform: translate(0px, 0px);
+          background: var(--white);
+          &.active {
+            transform: translate(10px, 0px);
+          }
+        }
       }
     }
     #mobileMenu {

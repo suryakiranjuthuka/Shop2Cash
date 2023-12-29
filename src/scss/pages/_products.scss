@@ -25,9 +25,9 @@
   flex-flow: column;
   gap: 0rem;
   &.active {
+    visibility: visible;
     opacity: 1;
     transform: translate(-50%, -4rem);
-    pointer-events: auto;
   }
   .filterPosition {
     position: sticky;
@@ -220,7 +220,7 @@
       top: 10rem;
       left: 50%;
       transform: translate(-50%, 2rem);
-      pointer-events: none;
+      visibility: hidden;
       opacity: 0;
       transition: all .25s;
     }
