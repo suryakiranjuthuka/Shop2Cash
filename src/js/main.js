@@ -71,6 +71,9 @@ u('html').on('click', function(e) {
 u('#mobileMenu').on('click', function(e) {
   e.stopPropagation();
   toggleMobileMenu();
+  if(u("#accountDropdown").hasClass("active")) {
+    toggleAccountMenu();
+  }
 });
 // Toggle Menu Function
 const toggleMobileMenu = function () {

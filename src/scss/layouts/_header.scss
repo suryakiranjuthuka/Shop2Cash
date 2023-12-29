@@ -48,6 +48,23 @@
           fill: var(--primary-5);
         }
       }
+      .accountName {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+
+        svg {
+        }
+        .name {
+          display: none;
+          color: var(--primary-1);
+          font-size: var(--fs-13);
+          font-weight: var(--fw-semi-bold);
+          letter-spacing: 0.24rem;
+          text-transform: uppercase;
+        }
+      }
       #accountDropdown {
         opacity: 0;
         visibility: hidden;
@@ -92,7 +109,7 @@
           letter-spacing: .4px;
           width: 100%;
           white-space: nowrap;
-          padding: .8rem 2rem;
+          padding: .7rem 1.2rem;
           border-top: 1px solid var(--light-border3);
           svg {
             fill: var(--primary-3);
@@ -185,7 +202,7 @@
     justify-content: space-between;
     &.slide {
       #logo {
-        transform: translate(4rem, 2.4rem);
+        transform: translate(3.1rem, 2.5rem)
       }
       nav {
         transform: translateX(0px);
@@ -200,7 +217,8 @@
       align-items: flex-start;
       gap: 0;
       border-radius: 1.2rem;
-      min-width: 22rem;
+      // min-width: 22rem;
+      min-width: 20rem;
       padding: 7rem 0 0rem;
       z-index: 5;
       backdrop-filter: blur(40px);
@@ -228,6 +246,15 @@
         margin: 0;
         width: 100%;
         padding: 2rem 0;
+        .accountName .name {
+          display: block;
+        }
+        .accountName {
+          svg {
+            width: 22px;
+            height: 22px;
+          }
+        }
         #accountDropdown {
           top: initial;
           bottom: 0;
@@ -235,6 +262,19 @@
           left: 100%;
           transform: translate(0px, 0px);
           background: var(--white);
+          .user_name {
+            display: none;
+          }
+          a {
+            font-size: var(--fs-14);
+            svg {
+              width: 18px;
+              height: 18px;
+            }
+            &:first-of-type {
+              border-top-width: 0px;
+            }
+          }
           &.active {
             transform: translate(10px, 0px);
           }
