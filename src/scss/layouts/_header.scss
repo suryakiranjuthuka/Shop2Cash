@@ -6,6 +6,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  > a {
+    display: flex;
+    justify-content: center;
+  }
   #logo {
     position: relative;
     width: 16rem;
