@@ -387,6 +387,7 @@
 		align-content: center;
 		flex-wrap: wrap;
 		gap: 5rem 4rem;
+		@extend %removeScrollBars;
 	}
 	@include breakpoint(medium) {
 		padding-left: 0;

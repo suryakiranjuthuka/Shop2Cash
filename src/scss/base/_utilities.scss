@@ -41,3 +41,12 @@
   background: linear-gradient(105deg, var(--white-40) 16.65%, var(--white-10) 79.09%);
   // background: linear-gradient(105deg, var(--white-50) 16.65%, var(--white-20) 79.09%);
 }
+
+%removeScrollBars {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  scrollbar-width: none;
+  scrollbar-gutter: stable both-edges;
+}
+// @extend %removeScrollBars;
