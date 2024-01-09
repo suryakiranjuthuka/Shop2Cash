@@ -33,10 +33,10 @@
         <div id="accountDropdown">
           <div class="user_name">Welcome Surya</div>
           <a href="#"><svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#account1"></use></svg>My Account</a>
-          <a href="#"><svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#game2"></use></svg>My Games</a>
+          <a href="./my_games.html"><svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#game2"></use></svg>My Games</a>
           <a href="#"><svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#link"></use></svg>My Links</a>
           <a href="#"><svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#redeem"></use></svg>My Rewards</a>
-          <a href="#"><svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#wallet"></use></svg>My Wallet</a>
+          <a href="./my_wallet.html"><svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#wallet"></use></svg>My Wallet</a>
           <a href="#"><svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#payments"></use></svg>Withdraw</a>
           <a href="#"><svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#logout"></use></svg>Logout</a>
         </div>
@@ -54,27 +54,54 @@
 
   <div id="productsContainer">
 
-    <div id="filters">
-      <span class="filterPosition">
+    <div id="filters" class="sidebar">
+      <span class="sidebarPosition">
         <div class="searchBlock search">
           <svg viewBox="0 0 30 30"><use xlink:href="./img/all_svgs.svg#search"></use></svg>
           <input type="search" name="Search Products" placeholder="Search in Fashion">
         </div>
-        <section class="productFilters">
+        <section class="contentBlock">
           <header>
             <p>Filters</p>
             <svg viewBox="0 0 30 30"><use xlink:href="./img/all_svgs.svg#filter"></use></svg>
           </header>
           <section class="category">
-            <a href="#"><span>Health & Beauty</span></a>
-            <a href="#"><span>Gifts & Toys</span></a>
-            <a class="active" href="#"><span>Fashion</span></a>
-            <a href="#"><span>Sports</span></a>
-            <a href="#"><span>Home & Kitchen</span></a>
-            <a href="#"><span>Electronics</span></a>
-            <a href="#"><span>Groceries</span></a>
-            <a href="#"><span>Food</span></a>
-            <a href="#"><span>Others</span></a>
+            <a href="#">
+              <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#category"></use></svg>
+              <span>Health & Beauty</span>
+            </a>
+            <a href="#">
+              <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#category"></use></svg>
+              <span>Gifts & Toys</span>
+            </a>
+            <a class="active" href="#">
+              <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#check"></use></svg>
+              <span>Fashion</span>
+            </a>
+            <a href="#">
+              <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#category"></use></svg>
+              <span>Sports</span>
+            </a>
+            <a href="#">
+              <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#category"></use></svg>
+              <span>Home & Kitchen</span>
+            </a>
+            <a href="#">
+              <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#category"></use></svg>
+              <span>Electronics</span>
+            </a>
+            <a href="#">
+              <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#category"></use></svg>
+              <span>Groceries</span>
+            </a>
+            <a href="#">
+              <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#category"></use></svg>
+              <span>Food</span>
+            </a>
+            <a href="#">
+              <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#category"></use></svg>
+              <span>Others</span>
+            </a>
           </section>
         </section>
       </span>
@@ -83,24 +110,24 @@
     <div class="wrapper">
 
       <section id="appliedFilters">
-        <div class="filterButton">
-          <svg viewBox="0 0 30 30"><use xlink:href="./img/all_svgs.svg#filter"></use></svg>
+        <div class="sidebarTrigger">
+          <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#filter"></use></svg> Filters
         </div>
         <div>
-          <a class="appliedFilterTitle" href="./products.html">SEARCH:</a>
-          <a href="#" class="chip">
+          <span class="appliedFilterTitle">SEARCH:</span>
+          <div href="#" class="chip">
             <svg viewBox="0 0 30 30"><use xlink:href="./img/all_svgs.svg#search"></use></svg>
             <span>Allen Solley Jacket</span>
             <svg class="close" viewBox="0 0 30 30"><use xlink:href="./img/all_svgs.svg#close"></use></svg>
-          </a>
+          </div>
         </div>
         <div>
-          <a class="appliedFilterTitle" href="./products.html">CATEGORY:</a>
-          <a href="#" class="chip">
-            <svg viewBox="0 0 30 30"><use xlink:href="./img/all_svgs.svg#category"></use></svg>
+          <span class="appliedFilterTitle">CATEGORY:</span>
+          <div class="chip">
+            <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#category"></use></svg>
             <span>Fashion</span>
             <svg class="close" viewBox="0 0 30 30"><use xlink:href="./img/all_svgs.svg#close"></use></svg>
-          </a>
+          </div>
         </div>
 
       </section>
@@ -446,6 +473,18 @@
 
 
       </section>
+
+      <section id="pagination">
+        <a class="disabled prevNext" href="#"><svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#prev"></use></svg></a>
+        <a href="#">1</a>
+        <a class="active" href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">...</a>
+        <!-- <a href="#">5</a> -->
+        <a href="#">48</a>
+        <a class="prevNext" href="#"><svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#next"></use></svg></a>
+      </section>
+
     </div>
   </div>
 
