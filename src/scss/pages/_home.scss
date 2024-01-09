@@ -188,10 +188,12 @@
           transition: all .5s 0s ease;
         }
         h4 {
+					font-family: var(--ff-heading);
           color: var(--primary-1);
           font-size: var(--fs-16);
           font-weight: var(--fw-semi-bold);
           letter-spacing: 0.24rem;
+					line-height: normal;
           text-transform: uppercase;
           margin: 2rem 0 0;
           transition: all .5s 0s ease;
@@ -308,11 +310,65 @@
   .contentBlock {
     position: relative;
     min-width: 451px;
-    padding: 10rem 0;
+    padding: 7rem 0;
     z-index: 2;
-    .link {
-      margin-top: 4rem;
-    }
+		.infoBlock {
+			max-width: 350px;
+			margin-top: 3.2rem;
+			.externalProductLink {
+				display: flex;
+				padding: 0rem 0.4rem 0rem 0.8rem;
+				align-items: center;
+				border-radius: 0.4rem;
+				background-color: var(--light-bg2);
+				svg{
+					width: 24px;
+					height: 24px;
+					fill: var(--primary-2);
+				}
+				.enterButton {
+					display: flex;
+					padding: 0.4rem;
+					border-radius: 0.4rem;
+					background: var(--gradient-hero-text);
+					transition: all .2s;
+					cursor: pointer;
+					svg {
+						fill: var(--white-90);
+						transition: all .2s;
+					}
+					&:hover {
+						transform: scale(1.2);
+						svg {
+							fill: var(--white);
+						}
+					}
+				}
+				input, input::placeholder {
+					color: var(--primary-2, #240046);
+					font-family: var(--ff-body);
+					text-transform: none;
+					font-size: 1.4rem;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 165%; /* 2.31rem */
+					letter-spacing: normal;
+				}
+				input {
+					padding: 0.9rem 1.6rem;
+					// padding-left: 16px;
+					&::placeholder {
+						opacity: 0.6;
+					}
+				}
+				&:focus-within {
+					background: var(--light-bg);
+				}
+			}
+			p {
+				margin-top: 1.6rem;
+			}
+		}
   }
   .gradientBG {
     width: 100%;
@@ -358,6 +414,11 @@
 		overflow: hidden;
 		.contentBlock {
 	    padding-bottom: 3rem;
+			.infoBlock {
+				margin-top: 2rem;
+				margin-left: auto;
+				margin-right: auto;
+			}
 	  }
 		.brandsBlock img {
 	    min-width: 650px;

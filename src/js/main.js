@@ -95,9 +95,9 @@ const toggleAccountMenu = function () {
 
 // ######## Mobile Layout Triggers ########
 // OnClick -> Display Product Filters on Mobile
-u('#productsPage .filterButton').on('click', function(e) {
+u('.sidebarTrigger').on('click', function(e) {
   u('#overlay').addClass("active");
-  u('#productsPage #filters').addClass("active");
+  u('.sidebar').addClass("active");
   u('body').addClass("overflowHidden");
 });
 // OnClick -> Display Product Info on Mobile
@@ -158,7 +158,7 @@ u('#demoButton').on('click', function(e) {
 u('#overlay').on('click', function(e) {
   u(this).removeClass("active");
   u('#loginContainer').removeClass("active");
-  u('#productsPage #filters').removeClass("active");
+  u('.sidebar').removeClass("active");
   u('#redirectTo').removeClass("active");
   u('#gameSelection').removeClass("active");
   u('body').removeClass("overflowHidden");

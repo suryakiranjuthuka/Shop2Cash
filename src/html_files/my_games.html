@@ -1,0 +1,354 @@
+<!doctype html>
+<html class="no-js" lang="" xmlns:xlink="http://www.w3.org/1999/xlink">
+<head>
+  <meta charset="utf-8">
+  <title>Shop2Cash - My Games | Join the Cashback Revolution: India's No.1 Cashback Website</title>
+  <meta name="description" content="Unlock incredible online shopping rewards and discounts on our platform. Save big while you shop for your favorite products in India.">
+  <meta name="keywords" content="Online shopping rewards, Online Shopping Cashback Offers, Best Deals on Online Shopping, Online shopping offers, Online Shopping Offers in India, Online shopping discounts, Online Shopping Discounts in India, Online shopping cashback, Exclusive Online Shopping Offers">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+  <link rel="shortcut icon" href="./img/favicon/favicon.ico">
+  <link rel="manifest" href="./img/favicon/site.webmanifest">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body id="myAccountPage">
+
+  <header id="header">
+    <a href="./"><img id="logo" src="./img/shop2cash_logo.svg"></a>
+    <nav>
+      <a href="./">Home</a>
+      <a href="./products.html">Products</a>
+      <a href="#faqs">FAQ's</a>
+      <a href="./index.html#about">About</a>
+      <a href="#footer">Contact</a>
+      <!-- Use ID "#account" before Login & ID "#accountMenu" after Login with PHP -->
+      <div id="accountMenu">
+        <div class="accountName active"><svg viewBox="0 0 30 30"><use xlink:href="./img/all_svgs.svg#account"></use></svg><span class="name login">Login</span><span class="name account">Surya</span></div>
+        <div id="accountDropdown">
+          <div class="user_name">Welcome Surya</div>
+          <a href="#"><svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#account1"></use></svg>My Account</a>
+          <a href="./my_games.html"><svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#game2"></use></svg>My Games</a>
+          <a href="#"><svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#link"></use></svg>My Links</a>
+          <a href="#"><svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#redeem"></use></svg>My Rewards</a>
+          <a href="./my_wallet.html"><svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#wallet"></use></svg>My Wallet</a>
+          <a href="#"><svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#payments"></use></svg>Withdraw</a>
+          <a href="#"><svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#logout"></use></svg>Logout</a>
+        </div>
+      </div>
+    </nav>
+    <div id="mobileMenu">
+      <input type="checkbox" id="menu">
+      <label for="menu" class="icon">
+        <div class="menu"></div>
+      </label>
+    </div>
+  </header>
+
+
+
+  <div id="myAccountContainer">
+
+    <div class="sidebar">
+      <span class="sidebarPosition">
+        <div class="searchBlock search">
+          <svg viewBox="0 0 30 30"><use xlink:href="./img/all_svgs.svg#search"></use></svg>
+          <input type="search" name="Search Products" placeholder="Search Products">
+        </div>
+        <section class="contentBlock">
+          <header>
+            <p>Account</p>
+            <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#settings"></use></svg>
+          </header>
+          <section class="category">
+            <a href="#">
+              <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#account1"></use></svg>
+              <span>My Account</span>
+            </a>
+            <a class="active" href="./my_games.html">
+              <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#game2"></use></svg>
+              <span>My Games</span>
+            </a>
+            <a href="#">
+              <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#link"></use></svg>
+              <span>My Links</span>
+            </a>
+            <a href="#">
+              <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#redeem"></use></svg>
+              <span>My Rewards</span>
+            </a>
+            <a href="./my_wallet.html">
+              <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#wallet"></use></svg>
+              <span>My Wallet</span>
+            </a>
+            <a href="#">
+              <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#payments"></use></svg>
+              <span>Withdraw</span>
+            </a>
+            <a href="#">
+              <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#logout"></use></svg>
+              <span>Logout</span>
+            </a>
+          </section>
+        </section>
+      </span>
+    </div>
+
+    <div class="wrapper">
+      <div class="sidebarTrigger">
+        <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#settings"></use></svg>My Account
+      </div>
+
+      <h3>My Games</h3>
+      <div class="scroll-container">
+        <table class="table scroll">
+          <thead>
+            <tr>
+              <td>Date</td>
+              <td>Product</td>
+              <td>Store</td>
+              <td>Rewards</td>
+              <td>Status</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>01 Jan, 2024</td>
+              <td>Nintendo Switch OLED model With Neon Red & Neon Blue Joy-Con</td>
+              <td>Amazon India</td>
+              <td>₹698</td>
+              <td><a class="plain_link" href="#">Upload Bill</a></td>
+            </tr>
+            <tr>
+              <td>28 Dec, 2023</td>
+              <td>Genuine Leather Slip On For Men (Black)</td>
+              <td>Amazon India</td>
+              <td>₹224</td>
+              <td>Expired</td>
+            </tr>
+            <tr>
+              <td>19 Dec, 2023</td>
+              <td>Nintendo Switch OLED model With Neon Red & Neon Blue Joy-Con</td>
+              <td>Amazon India</td>
+              <td>₹564</td>
+              <td>Expired</td>
+            </tr>
+            <tr>
+              <td>16 Dec, 2023</td>
+              <td>Ustraa Ammunition Cologne - 100 ml - Perfume for Men</td>
+              <td>Amazon India</td>
+              <td>₹124</td>
+              <td><a class="plain_link" href="#">Upload Bill</a></td>
+            </tr>
+            <tr>
+              <td>11 Dec, 2023</td>
+              <td>Nintendo Switch OLED model With Neon Red & Neon Blue Joy-Con</td>
+              <td>Amazon India</td>
+              <td>₹40</td>
+              <td>Expired</td>
+            </tr>
+            <tr>
+              <td>15 Nov, 2023</td>
+              <td>Casio MJ-12D 150 Steps Check and Correct Desktop Calculator</td>
+              <td>Amazon India</td>
+              <td>₹410</td>
+              <td><a class="plain_link" href="#">Upload Bill</a></td>
+            </tr>
+            <tr>
+              <td>14 Nov, 2023</td>
+              <td>Allen Solly Men's Cotton Crew Neck Sweatshirt</td>
+              <td>Amazon India</td>
+              <td>₹20</td>
+              <td><a class="plain_link" href="#">Upload Bill</a></td>
+            </tr>
+            <tr>
+              <td>31 Oct, 2023</td>
+              <td>U.S. POLO ASSN. Mens Clanal Sneakers</td>
+              <td>Amazon India</td>
+              <td>₹38</td>
+              <td>Expired</td>
+            </tr>
+            <tr>
+              <td>11 Oct, 2023</td>
+              <td>Vu 139 cm (55 inches) Premium Series 4K Ultra HD Smart LED Google TV</td>
+              <td>Amazon India</td>
+              <td>₹882</td>
+              <td>Expired</td>
+            </tr>
+            <tr>
+              <td>01 Jan, 2024</td>
+              <td>Nintendo Switch OLED model With Neon Red & Neon Blue Joy-Con</td>
+              <td>Amazon India</td>
+              <td>₹698</td>
+              <td><a class="plain_link" href="#">Upload Bill</a></td>
+            </tr>
+            <tr>
+              <td>28 Dec, 2023</td>
+              <td>Genuine Leather Slip On For Men (Black)</td>
+              <td>Amazon India</td>
+              <td>₹224</td>
+              <td>Expired</td>
+            </tr>
+            <tr>
+              <td>19 Dec, 2023</td>
+              <td>Nintendo Switch OLED model With Neon Red & Neon Blue Joy-Con</td>
+              <td>Amazon India</td>
+              <td>₹564</td>
+              <td>Expired</td>
+            </tr>
+            <tr>
+              <td>16 Dec, 2023</td>
+              <td>Ustraa Ammunition Cologne - 100 ml - Perfume for Men</td>
+              <td>Amazon India</td>
+              <td>₹124</td>
+              <td><a class="plain_link" href="#">Upload Bill</a></td>
+            </tr>
+            <tr>
+              <td>11 Dec, 2023</td>
+              <td>Nintendo Switch OLED model With Neon Red & Neon Blue Joy-Con</td>
+              <td>Amazon India</td>
+              <td>₹40</td>
+              <td>Expired</td>
+            </tr>
+            <tr>
+              <td>15 Nov, 2023</td>
+              <td>Casio MJ-12D 150 Steps Check and Correct Desktop Calculator</td>
+              <td>Amazon India</td>
+              <td>₹410</td>
+              <td><a class="plain_link" href="#">Upload Bill</a></td>
+            </tr>
+            <tr>
+              <td>14 Nov, 2023</td>
+              <td>Allen Solly Men's Cotton Crew Neck Sweatshirt</td>
+              <td>Amazon India</td>
+              <td>₹20</td>
+              <td><a class="plain_link" href="#">Upload Bill</a></td>
+            </tr>
+            <tr>
+              <td>31 Oct, 2023</td>
+              <td>U.S. POLO ASSN. Mens Clanal Sneakers</td>
+              <td>Amazon India</td>
+              <td>₹38</td>
+              <td>Expired</td>
+            </tr>
+            <tr>
+              <td>11 Oct, 2023</td>
+              <td>Vu 139 cm (55 inches) Premium Series 4K Ultra HD Smart LED Google TV</td>
+              <td>Amazon India</td>
+              <td>₹882</td>
+              <td>Expired</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+  <footer id="footer">
+    <section id="nav">
+      <div class="label">Navigation</div>
+      <nav class="navBlock">
+        <a href="./">Home</a>
+        <a href="./products.html">Products</a>
+        <a href="#faqs">FAQ's</a>
+        <a href="./index.html#about">About</a>
+        <a href="#footer">Contact</a>
+      </nav>
+    </section>
+    <section id="search">
+      <div class="label">Search</div>
+      <div class="contentBlock">
+        <div class="search">
+          <svg viewBox="0 0 30 30"><use xlink:href="./img/all_svgs.svg#search"></use></svg>
+          <input type="search" name="Search Products" placeholder="Search Products">
+        </div>
+        <div class="seperator"></div>
+        <p class="copyright">© 2023 Shop2Cash. All Rights Reserved</p>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="label">Contact</div>
+      <div class="contentBlock">
+        <div class="phoneEmail">
+          <span>
+            <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#phone"></use></svg>
+            <a href="tel:+919030067149">+91 90300-67149</a>
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#email"></use></svg>
+            <a href = "mailto:help@shop2cash.in">help@shop2cash.in</a>
+          </span>
+        </div>
+        <div class="social">
+          <span class="button fancyBorder">
+            <svg viewBox="0 0 30 30"><use xlink:href="./img/all_svgs.svg#facebook"></use></svg>
+          </span>
+          <span class="button fancyBorder">
+            <svg viewBox="0 0 30 30"><use xlink:href="./img/all_svgs.svg#twitter"></use></svg>
+          </span>
+          <span class="button fancyBorder">
+            <svg viewBox="0 0 30 30"><use xlink:href="./img/all_svgs.svg#whatsapp"></use></svg>
+          </span>
+        </div>
+      </div>
+    </section>
+  </footer>
+
+  <section id="loginContainer" class="overlayContainer">
+    <header>
+      <img class="logo" src="./img/shop2cash_logo.svg">
+      <div class="tabContainer">
+        <span class="active loginTab">Login</span>
+        <span class="registerTab">Register</span>
+      </div>
+    </header>
+    <div class="inputs login active">
+      <div class="inputBlock">
+        <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#email"></use></svg>
+        <input type="email" placeholder="Email">
+      </div>
+      <div class="inputBlock">
+        <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#password"></use></svg>
+        <input type="password" placeholder="Password">
+      </div>
+      <a class="forgotPassword plain_link" href="#">Forgot Password?</a>
+      <input id="submit" type="submit" value="Login">
+    </div>
+    <div class="inputs register">
+      <div class="inputBlock">
+        <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#user"></use></svg>
+        <input type="text" placeholder="Full Name">
+      </div>
+      <div class="inputBlock">
+        <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#phone"></use></svg>
+        <input type="number" placeholder="Phone Number">
+      </div>
+      <div class="inputBlock">
+        <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#email"></use></svg>
+        <input type="email" placeholder="Email">
+      </div>
+      <div class="inputBlock">
+        <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#password"></use></svg>
+        <input type="password" placeholder="Password">
+      </div>
+      <a class="forgotPassword plain_link" style="margin-left: 0;">To verify your email, we will send you a mail with an OTP.</a>
+      <input id="submit" type="submit" value="Register">
+    </div>
+  </section>
+
+  <div id="overlay"></div>
+
+
+
+  <script src="./js/modernizr-3.11.2.min.js"></script>
+  <script src="./js/plugins.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/umbrellajs"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
