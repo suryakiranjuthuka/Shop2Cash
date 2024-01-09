@@ -70,6 +70,15 @@
           letter-spacing: 0.24rem;
           text-transform: uppercase;
         }
+        &.active {
+          background-color: #fcf8ff66;
+          svg {
+            fill: var(--primary-4);
+          }
+          .name {
+            color: var(--primary-4);
+          }
+        }
       }
       #accountDropdown {
         opacity: 0;
