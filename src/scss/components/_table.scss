@@ -21,19 +21,13 @@ $table_border: 1px solid $table_border_color;
 }
 
 .table thead tr td {
-  // text-transform: uppercase;
-  // font-size: var(--fs-14);
   font-weight: var(--fw-bold);
-  // color: var(--primary-3);
-  // color: var(--primary-1);
   letter-spacing: .1rem;
-  // min-width: 120px;
-    background: rgba(149, 116, 221, .06);
-    // background-color: var(whi);
+  background: #f8f4fd !important; // rgba(149, 116, 221, .06)
 }
 
 .scroll-container {
-  background: rgba(#FCF8FF, 0.5);
+  background: #fdfbff; // rgba(#FCF8FF, 0.5);
   overflow: auto;
   margin-bottom: 40px;
   border-left: $table_border;
@@ -55,11 +49,7 @@ $table_border: 1px solid $table_border_color;
   position: sticky;
   left: 0;
   border-left: none;
-  // background: var(--light-bg);
-  // background: #f4f4f4;
-  // color: #212121;
-  // font-weight: bold;
-  // white-space: nowrap;
+    background: #fdfbff; // rgba(#FCF8FF, 0.5);
 
   &:after {
     content: "";
@@ -78,7 +68,6 @@ $table_border: 1px solid $table_border_color;
 
 // Table in List view
 .table.tableList {
-  // border: 1px solid var(--light-border3);
   tr {
     border-bottom: 1px solid var(--light-border3);
     &:last-of-type {
@@ -91,7 +80,6 @@ $table_border: 1px solid $table_border_color;
     &:first-of-type {
       &:after {
         width: 0px;
-        // background: $table_border_color;
       }
     }
   }
