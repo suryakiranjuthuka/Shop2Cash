@@ -252,79 +252,13 @@
   <!-- ##### Include Footer #####-->
   <?php include './php_includes/footer.php'; ?>
 
-  <section id="gameSelection" class="overlayContainer">
-    <div class="selectionBlock">
-      <h2>Select A Game</h2>
-      <div class="games">
-        <a><img class="mine" src="./img/discount_bank/mine_game.png"></a>
-        <a><img class="scratch" src="./img/discount_bank/scratch_game.png"></a>
-      </div>
-    </div>
-    <ul class="infoBlock">
-      <li>Earn upto 100% Cashback as Reward</li>
-      <li>Buy the product within 30 minutes to avail the Reward</li>
-    </ul>
-  </section>
+  <!-- ##### Include Game Selection Block #####-->
+  <?php include './php_includes/game_selection.php'; ?>
+  <!-- ##### Include RedirectTo Block #####-->
+  <?php include './php_includes/redirect_to.php'; ?>
+  <!-- ##### Include Login/Register Block #####-->
+  <?php include './php_includes/login.php'; ?>
 
-  <section id="redirectTo" class="overlayContainer productCard">
-    <h2>Cashback Activated</h2>
-    <p class="info">Complete your purchase with merchant and return to upload the bill on your Shop2Cash profile.</p>
-    <section class="pathAnimate">
-      <img class="logo" src="./img/shop2cash_logo.svg">
-      <div class="redirectToIndicator">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <img class="logo" src="./img/amazon_logo1.svg">
-    </section>
-    <p class="info">Cashback will be credited between 2-30 days.</p>
-    <p class="info">If you are not redirected automatically, <a class="plain_link" style="font-weight:700;">Click here</a></p>
-  </section>
-
-  <section id="loginContainer" class="overlayContainer">
-    <header>
-      <img class="logo" src="./img/shop2cash_logo.svg">
-      <div class="tabContainer">
-        <span class="active loginTab">Login</span>
-        <span class="registerTab">Register</span>
-      </div>
-    </header>
-    <div class="inputs login active">
-      <div class="inputBlock">
-        <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#email"></use></svg>
-        <input type="email" placeholder="Email">
-      </div>
-      <div class="inputBlock">
-        <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#password"></use></svg>
-        <input type="password" placeholder="Password">
-      </div>
-      <a class="forgotPassword plain_link" href="#">Forgot Password?</a>
-      <input id="submit" type="submit" value="Login">
-    </div>
-    <div class="inputs register">
-      <div class="inputBlock">
-        <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#user"></use></svg>
-        <input type="text" placeholder="Full Name">
-      </div>
-      <div class="inputBlock">
-        <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#phone"></use></svg>
-        <input type="number" placeholder="Phone Number">
-      </div>
-      <div class="inputBlock">
-        <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#email"></use></svg>
-        <input type="email" placeholder="Email">
-      </div>
-      <div class="inputBlock">
-        <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#password"></use></svg>
-        <input type="password" placeholder="Password">
-      </div>
-      <a class="forgotPassword plain_link" style="margin-left: 0;">To verify your email, we will send you a mail with an OTP.</a>
-      <input id="submit" type="submit" value="Register">
-    </div>
-  </section>
 
   <div id="overlay"></div>
 

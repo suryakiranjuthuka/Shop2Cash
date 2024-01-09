@@ -12,10 +12,10 @@
       <div id="accountDropdown">
         <div class="user_name">Welcome Surya</div>
         <a href="#"><svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#account1"></use></svg>My Account</a>
-        <a href="#"><svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#game2"></use></svg>My Games</a>
+        <a href="./my_games.php"><svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#game2"></use></svg>My Games</a>
         <a href="#"><svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#link"></use></svg>My Links</a>
         <a href="#"><svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#redeem"></use></svg>My Rewards</a>
-        <a href="#"><svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#wallet"></use></svg>My Wallet</a>
+        <a href="./my_wallet.php"><svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#wallet"></use></svg>My Wallet</a>
         <a href="#"><svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#payments"></use></svg>Withdraw</a>
         <a href="#"><svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#logout"></use></svg>Logout</a>
       </div>

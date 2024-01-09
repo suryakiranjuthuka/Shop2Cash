@@ -16,27 +16,54 @@
 
   <div id="productsContainer">
 
-    <div id="filters">
-      <span class="filterPosition">
+    <div id="filters" class="sidebar">
+      <span class="sidebarPosition">
         <div class="searchBlock search">
           <svg viewBox="0 0 30 30"><use xlink:href="./img/all_svgs.svg#search"></use></svg>
           <input type="search" name="Search Products" placeholder="Search in Fashion">
         </div>
-        <section class="productFilters">
+        <section class="contentBlock">
           <header>
             <p>Filters</p>
             <svg viewBox="0 0 30 30"><use xlink:href="./img/all_svgs.svg#filter"></use></svg>
           </header>
           <section class="category">
-            <a href="#"><span>Health & Beauty</span></a>
-            <a href="#"><span>Gifts & Toys</span></a>
-            <a class="active" href="#"><span>Fashion</span></a>
-            <a href="#"><span>Sports</span></a>
-            <a href="#"><span>Home & Kitchen</span></a>
-            <a href="#"><span>Electronics</span></a>
-            <a href="#"><span>Groceries</span></a>
-            <a href="#"><span>Food</span></a>
-            <a href="#"><span>Others</span></a>
+            <a href="#">
+              <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#category"></use></svg>
+              <span>Health & Beauty</span>
+            </a>
+            <a href="#">
+              <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#category"></use></svg>
+              <span>Gifts & Toys</span>
+            </a>
+            <a class="active" href="#">
+              <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#check"></use></svg>
+              <span>Fashion</span>
+            </a>
+            <a href="#">
+              <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#category"></use></svg>
+              <span>Sports</span>
+            </a>
+            <a href="#">
+              <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#category"></use></svg>
+              <span>Home & Kitchen</span>
+            </a>
+            <a href="#">
+              <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#category"></use></svg>
+              <span>Electronics</span>
+            </a>
+            <a href="#">
+              <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#category"></use></svg>
+              <span>Groceries</span>
+            </a>
+            <a href="#">
+              <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#category"></use></svg>
+              <span>Food</span>
+            </a>
+            <a href="#">
+              <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#category"></use></svg>
+              <span>Others</span>
+            </a>
           </section>
         </section>
       </span>
@@ -45,24 +72,24 @@
     <div class="wrapper">
 
       <section id="appliedFilters">
-        <div class="filterButton">
-          <svg viewBox="0 0 30 30"><use xlink:href="./img/all_svgs.svg#filter"></use></svg>
+        <div class="sidebarTrigger">
+          <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#filter"></use></svg> Filters
         </div>
         <div>
-          <a class="appliedFilterTitle" href="./products.php">SEARCH:</a>
-          <a href="#" class="chip">
+          <span class="appliedFilterTitle">SEARCH:</span>
+          <div href="#" class="chip">
             <svg viewBox="0 0 30 30"><use xlink:href="./img/all_svgs.svg#search"></use></svg>
             <span>Allen Solley Jacket</span>
             <svg class="close" viewBox="0 0 30 30"><use xlink:href="./img/all_svgs.svg#close"></use></svg>
-          </a>
+          </div>
         </div>
         <div>
-          <a class="appliedFilterTitle" href="./products.php">CATEGORY:</a>
-          <a href="#" class="chip">
+          <span class="appliedFilterTitle">CATEGORY:</span>
+          <div class="chip">
             <svg viewBox="0 0 30 30"><use xlink:href="./img/all_svgs.svg#category"></use></svg>
             <span>Fashion</span>
             <svg class="close" viewBox="0 0 30 30"><use xlink:href="./img/all_svgs.svg#close"></use></svg>
-          </a>
+          </div>
         </div>
 
       </section>
@@ -406,8 +433,19 @@
           </footer>
         </div>
 
-
       </section>
+
+      <!-- Pagination Controls -->
+      <section id="pagination">
+        <a class="disabled prevNext" href="#"><svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#prev"></use></svg></a>
+        <a href="#">1</a>
+        <a class="active" href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">...</a>
+        <a href="#">48</a>
+        <a class="prevNext" href="#"><svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#next"></use></svg></a>
+      </section>
+
     </div>
   </div>
 
@@ -417,62 +455,11 @@
   <!-- ##### Include Footer #####-->
   <?php include './php_includes/footer.php'; ?>
 
+  <!-- ##### Include Game Selection Block #####-->
+  <?php include './php_includes/game_selection.php'; ?>
+  <!-- ##### Include Login/Register Block #####-->
+  <?php include './php_includes/login.php'; ?>
 
-  <section id="gameSelection" class="overlayContainer">
-    <div class="selectionBlock">
-      <h2>Select A Game</h2>
-      <div class="games">
-        <a><img class="mine" src="./img/discount_bank/mine_game.png"></a>
-        <a><img class="scratch" src="./img/discount_bank/scratch_game.png"></a>
-      </div>
-    </div>
-    <ul class="infoBlock">
-      <li>Earn upto 100% Cashback as Reward</li>
-      <li>Buy the product within 30 minutes to avail the Reward</li>
-    </ul>
-  </section>
-
-  <section id="loginContainer" class="overlayContainer">
-    <header>
-      <img class="logo" src="./img/shop2cash_logo.svg">
-      <div class="tabContainer">
-        <span class="active loginTab">Login</span>
-        <span class="registerTab">Register</span>
-      </div>
-    </header>
-    <div class="inputs login active">
-      <div class="inputBlock">
-        <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#email"></use></svg>
-        <input type="email" placeholder="Email">
-      </div>
-      <div class="inputBlock">
-        <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#password"></use></svg>
-        <input type="password" placeholder="Password">
-      </div>
-      <a class="forgotPassword plain_link" href="#">Forgot Password?</a>
-      <input id="submit" type="submit" value="Login">
-    </div>
-    <div class="inputs register">
-      <div class="inputBlock">
-        <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#user"></use></svg>
-        <input type="text" placeholder="Full Name">
-      </div>
-      <div class="inputBlock">
-        <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#phone"></use></svg>
-        <input type="number" placeholder="Phone Number">
-      </div>
-      <div class="inputBlock">
-        <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#email"></use></svg>
-        <input type="email" placeholder="Email">
-      </div>
-      <div class="inputBlock">
-        <svg viewBox="0 0 24 24"><use xlink:href="./img/all_svgs.svg#password"></use></svg>
-        <input type="password" placeholder="Password">
-      </div>
-      <a class="forgotPassword plain_link" style="margin-left: 0;">To verify your email, we will send you a mail with an OTP.</a>
-      <input id="submit" type="submit" value="Register">
-    </div>
-  </section>
 
   <div id="overlay"></div>
 
