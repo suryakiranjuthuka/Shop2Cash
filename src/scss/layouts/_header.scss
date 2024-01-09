@@ -45,6 +45,7 @@
       justify-content: center;
       margin-left: 2.4rem;
       cursor: pointer;
+      transition: all .1s;
       svg {
         width: 3rem;
         height: 3rem;
@@ -279,6 +280,18 @@
           }
           &.active {
             transform: translate(10px, 0px);
+          }
+        }
+        &:hover {
+          border-bottom-left-radius: 1.2rem;
+          border-bottom-right-radius: 1.2rem;
+          background-color: var(--light-bg);
+          border-color: var(--light-border);
+          svg {
+            fill: var(--primary-4);
+          }
+          .name {
+            color: var(--primary-4);
           }
         }
       }

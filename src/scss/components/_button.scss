@@ -54,11 +54,12 @@
 
 
 // Standard Button Style
-.button {
+body .button {
   position: relative;
   padding: 0.8rem 1.55rem;
   border-radius: 1rem;
 
+  color: var(--primary-1);
   font-size: var(--fs-12);
   font-weight: var(--fw-medium);
   line-height: 133.2%; /* 1.5984rem */
@@ -185,7 +186,7 @@
 
 
 // Plain Link Styles
-.plain_link {
+body .plain_link {
   font-size: var(--fs-14);
   color: rgb(85, 26, 139);
   letter-spacing: .4px;
@@ -206,6 +207,7 @@
   background: var(--light-bg);
   border: 1px solid var(--light-border);
   box-shadow: var(--shadow-card-low);
+  cursor: pointer;
   &:hover {
     svg.close {
       fill: var(--primary-6);

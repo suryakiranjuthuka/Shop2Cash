@@ -42,6 +42,45 @@ h2 {
 	text-transform: uppercase;
 }
 
+h3 {
+	color: var(--primary-3, #3C096C);
+	/* font-size: 2.4rem; */
+	/* 75% of the base size */
+	font-family: var(--ff-body);
+	font-size: 2.4rem;
+	font-style: normal;
+	font-weight: var(--fw-bold);
+	line-height: 165%; /* 3.96rem */
+	letter-spacing: 0.1rem; /* 0.4rem; */
+	// text-transform: uppercase;
+}
+
+h4 {
+	color: var(--primary-3, #3C096C);
+	/* font-size: 2.4rem; */
+	/* 75% of the base size */
+	font-family: var(--ff-body);
+	font-size: 2rem;
+	font-style: normal;
+	font-weight: var(--fw-bold);
+	line-height: 165%; /* 3.96rem */
+	letter-spacing: 0.08rem; /* 0.4rem; */
+	// text-transform: uppercase;
+}
+
+h5 {
+	color: var(--primary-3, #3C096C);
+	/* font-size: 2.4rem; */
+	/* 75% of the base size */
+	font-family: var(--ff-body);
+	font-size: 1.8rem;
+	font-style: normal;
+	font-weight: var(--fw-bold);
+	line-height: 165%; /* 3.96rem */
+	letter-spacing: 0.08rem; /* 0.4rem; */
+	// text-transform: uppercase;
+}
+
 .label {
 	/* Label */
 	color: var(--primary-1, #10002B);
@@ -62,4 +101,8 @@ p, li {
 	font-size: var(--fs-16);
 	font-weight: var(--fw-regular);
 	line-height: 165%; /* 2.64rem */
+}
+
+p.small {
+	font-size: var(--fs-14);
 }
