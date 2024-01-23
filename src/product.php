@@ -15,7 +15,7 @@
   <div id="productContainer">
     <section id="stepper">
       <div class="step done">
-        <span><svg viewBox="0 0 14 14"><use xlink:href="./img/all_svgs.svg#check"></use></svg></span>
+        <span><svg viewBox="0 0 14 14"><use xlink:href="./img/all_svgs.svg#tick"></use></svg></span>
         <p>Select Product</p>
       </div>
       <span class="line"></span>
